@@ -1,0 +1,115 @@
+LoginButton,dismissToolTip,Dismisses the Tooltip if it is currently visible
+ShareOpenGraphContent.Builder,setPreviewPropertyName,Sets the property name for the primary ShareOpenGraphObject in the action.
+GameRequestContent.Builder,setObjectId,"Sets the open graph id of the object that action type will be performed on Only valid (and required) for ActionTypes SEND, ASKFOR"
+GraphRequestBatch,getBatchApplicationId,Getter for the batch application id.
+LoginButton,getToolTipMode,Return the current LoginButton.ToolTipMode for this LoginButton
+GraphRequest,getDefaultBatchApplicationId,"Gets the default Facebook application ID that will be used to submit batched requests. Batched requests require an application ID, so either at least one request in a batch must provide an access token or the application ID must be specified explicitly."
+FacebookSdk,getApplicationName,Gets the Facebook application name of the current app. This should only be called after the SDK has been initialized by calling FacebookSdk.sdkInitialize().
+LoginButton,getToolTipDisplayTime,Gets the current amount of time (in ms) that the tool tip will be displayed to the user.
+GameRequestContent,getRecipients,Gets the user IDs or user names the request will be sent to.
+GameRequestDialog.Result,getRequestId,Returns the request ID.
+Profile,getLastName,Getter for the last name of the profile.
+AppGroupCreationContent.Builder,setName,Sets the name of the group that will be created.
+DeviceLoginManager,getDeviceAuthTargetUserId,"Get the target user id for the device request, if any."
+ShareVideoContent,getContentDescription,Returns:The description of the video.
+LoginFragment,getLayoutResId,onResumepublic void onResume()
+ShareMessengerURLActionButton,getShouldHideWebviewShareButton,Deprecated. 
+CodelessLoggingEventListener,getOnClickListener,CodelessLoggingEventListener.AutoLoggingOnClickListener
+AppEvent,getName,getIsImplicitpublic boolean getIsImplicit()
+GraphRequest,setSkipClientToken,This is an internal function that is not meant to be used by developers.
+ShareContent.Builder,setPeopleIds,Set the list of Ids for taggable people to tag with this content.
+ShareMessengerMediaTemplateContent,getAttachmentId,Deprecated. 
+FacebookButtonBase,setInternalOnClickListener,关注我们产品人工智能AR/VR业务工具游戏开源工具发布社交集成社交临场感计划Developer CirclesF8 开发者大会初创公司计划ThreatExchange支持开发者支持漏洞开放平台状态Facebook for Developers 社群小组站点地图新闻博客开放平台计划中心成功案例视频Facebook for Developers 主页关注我们 © 2020 Facebook 简介创建广告工作机会开发者政策平台条款隐私权政策Cookie条款中文(简体)Bahasa IndonesiaDeutschEnglish (US)EspañolEspañol (España)Français (France)ItalianoPortuguês (Brasil)Tiếng ViệtРусскийالعربيةภาษาไทย한국어中文(香港)中文(台灣)日本語中文(简体)
+ShareCameraEffectContent,getEffectId,"Returns the Effect Id represented in this content instance, as set in the Builder."
+ShareOpenGraphContent,getPreviewPropertyName,The property name for the primary ShareOpenGraphObject in the action.
+ShareVideoContent.Builder,setContentDescription,Sets the description of the video.
+LoginButton,setToolTipDisplayTime,Sets the amount of time (in milliseconds) that the tool tip will be shown to the user. The default is 6000L. Any value that is less than or equal to zero will cause the tool tip to be displayed indefinitely.
+GameRequestContent.Builder,setRecipients,"An array of user IDs, usernames or invite tokens of people to send request. If this is not specified, a friend selector will be displayed and the user can select up to 50 friends. This is equivalent to the ""to"" parameter when using the web game request dialog."
+ShareContent,getPageId,"For shares into Messenger, this pageID will be used to map the app to page and attach attribution to the share."
+AppEventsLogger,getAnonymousAppDeviceGUID,Each app/device pair gets an GUID that is sent back with App Events and persisted with this app/device pair.
+LikeView,setObjectIdAndType,Deprecated. LikeView is deprecated
+FacebookSdk,setApplicationName,Sets the Facebook application name for the current app.
+ShareButtonBase,getShareContent,Returns the share content from the button.
+AppEventsLogger,getUserID,Returns the set user id else null.
+AppLinkData,createFromActivity,Parses out any app link data from the Intent of the Activity passed in.
+AppEventsLogger,setUserID,Sets a user id to associate with all app events. This can be used to associate your own user id with the app events logged from this instance of an application. The user ID will be persisted between application instances.
+AppGroupCreationContent,getName,Gets the name of the group that will be created.
+ShareContent,getPeopleIds,List of Ids for taggable people to tag with this content.  See documentation for  Taggable Friends.
+AccessToken,getUserId,Returns the user id for this access token.
+AppGroupCreationContent,getDescription,Gets the description of the group that will be created.
+AppEvent,isChecksumValid,toStringpublic java.lang.String toString()Overrides:toString in class java.lang.Object
+LoginButton,setToolTipStyle,Sets the style (background) of the Tool Tip popup. Currently a blue style and a black style are supported. Blue is default
+DeviceLoginManager,setDeviceAuthTargetUserId,Optional. Set to target the device request to a specific user.
+PlaceInfoRequestParams.Builder,setPlaceId,Sets the ID of the place to be queried.
+Profile,getMiddleName,Getter for the middle name of the profile.
+DeviceShareButton,getShareOnClickListener,关注我们产品人工智能AR/VR业务工具游戏开源工具发布社交集成社交临场感计划Developer CirclesF8 开发者大会初创公司计划ThreatExchange支持开发者支持漏洞开放平台状态Facebook for Developers 社群小组站点地图新闻博客开放平台计划中心成功案例视频Facebook for Developers 主页关注我们 © 2020 Facebook 简介创建广告工作机会开发者政策平台条款隐私权政策Cookie条款中文(简体)Bahasa IndonesiaDeutschEnglish (US)EspañolEspañol (España)Français (France)ItalianoPortuguês (Brasil)Tiếng ViệtРусскийالعربيةภาษาไทย한국어中文(香港)中文(台灣)日本語中文(简体)
+GameRequestDialog.Result,getRequestRecipients,Returns request recipients.
+AppEventsLogger,setPushNotificationsRegistrationId,Sets and sends registration id to register the current app for push notifications.
+ShareLinkContent,getContentDescription,"Deprecated. As of Graph API 2.9 this field is deprecated and may not function as expected. For more information, see https://developers.facebook.com/docs/apps/changelog#v2_9_deprecations. The description of the link. If not specified, this field is automatically populated by information scraped from the link, typically the title of the page."
+FacebookButtonBase,callExternalOnClickListener,setInternalOnClickListenerprotected void setInternalOnClickListener(OnClickListener l)
+ShareVideoContent.Builder,setVideo,ShareVideoContent.Builder
+GameRequestContent,getObjectId,Gets the open graph id of the object that action type will be performed on
+Profile,getId,Getter for the id of the profile.
+DeviceShareButton,setShareContent,Sets the share content on the button.
+ShareMessengerURLActionButton.Builder,setWebviewHeightRatio,ShareMessengerURLActionButton.WebviewHeightRatio
+AppEventsLogger,getApplicationId,Returns the app ID this logger was configured to log to.
+CodelessLoggingEventListener,getOnItemClickListener,关注我们产品人工智能AR/VR业务工具游戏开源工具发布社交集成社交临场感计划Developer CirclesF8 开发者大会初创公司计划ThreatExchange支持开发者支持漏洞开放平台状态Facebook for Developers 社群小组站点地图新闻博客开放平台计划中心成功案例视频Facebook for Developers 主页关注我们 © 2020 Facebook 简介创建广告工作机会开发者政策平台条款隐私权政策Cookie条款中文(简体)Bahasa IndonesiaDeutschEnglish (US)EspañolEspañol (España)Français (France)ItalianoPortuguês (Brasil)Tiếng ViệtРусскийالعربيةภาษาไทย한국어中文(香港)中文(台灣)日本語中文(简体)
+ProfilePictureView,setProfileId,Parameters:profileId - The profileId NULL/Empty String will show the blank profile photo
+FacebookButtonBase,setOnClickListener,getRequestCodepublic int getRequestCode()Returns the request code used for this Button.Returns:the request code.
+GraphRequest,newCustomAudienceThirdPartyIdRequest,GraphRequest
+FacebookButtonBase,measureTextWidth,"configureButtonprotected void configureButton(Context context,
+                               AttributeSet attrs,
+                               int defStyleAttr,
+                               int defStyleRes)"
+ShareVideoContent,getVideo,Video to be shared.
+FacebookSdk,getAdvertiserIDCollectionEnabled,Returns:the advertiserID collection flag for the application
+CodelessLoggingEventListener.AutoLoggingOnClickListener,onClick,getSupportCodelessLoggingpublic boolean getSupportCodelessLogging()
+FacebookSdk,setApplicationId,Sets the Facebook application ID for the current app.
+ShareApi,getShareContent,Returns the content to be shared.
+ShareButtonBase,canShare,getShareOnClickListenerprotected OnClickListener getShareOnClickListener()
+ShareContent,getShareHashtag,"Gets the ShareHashtag, if one has been set, for this content."
+GraphRequest,executeConnectionAsync,GraphRequestAsyncTask
+ShareApi,share,FacebookCallback
+AppEventsLogger,clearUserID,Clears the currently set user id.
+DeviceLoginButton,getNewLoginClickListener,Overrides:getNewLoginClickListener in class LoginButton
+Profile,getFirstName,Getter for the first name of the profile.
+AccessToken,getApplicationId,Gets the ID of the Facebook Application associated with this access token.
+ShareCameraEffectContent.Builder,setEffectId,Sets the Effect Id for the Effect represented by this content instance. This must be an Id of an effect that is published and approved.
+FacebookRequestError,getConnection,Returns the HTTP connection that was used to make the request.
+GraphRequest,setBatchEntryName,Sets the name of this request's entry in a batched request. This value is only used if this request is submitted as part of a batched request. It can be used to specified dependencies between requests. See Batch Requests in the Graph API documentation for more details.
+GraphRequest,getBatchEntryName,"Returns:the name of this requests batch entry, or null if none has been specified"
+GraphRequest,setDefaultBatchApplicationId,"Sets the default application ID that will be used to submit batched requests if none of those requests specifies an access token. Batched requests require an application ID, so either at least one request in a batch must specify an access token or the application ID must be specified explicitly."
+Sharer.Result,getPostId,"Returns the post id, if available."
+ShareContent.Builder,setPageId,Set the Id of the Facebook page this share is associated with.
+ShareButtonBase,getShareOnClickListener,"getDialogprotected abstract com.facebook.internal.FacebookDialogBase<ShareContent,Sharer.Result> getDialog()"
+GraphRequest,executeConnectionAndWait,GraphRequestBatch
+GraphResponse,getConnection,"Returns the HttpURLConnection that this response was generated from. If the response was retrieved from the cache, this will be null."
+AppGroupCreationContent.Builder,setDescription,Sets the description of the group that will be created.
+AppInviteContent.Builder.Destination,equalsName,Deprecated. 
+LoginButton,getNewLoginClickListener,LoginButton.LoginClickListener
+ProfilePictureView,getProfileId,Returns the profile Id for the current profile photo
+AppEventsLogger,logProductItem,AppEventsLogger.ProductAvailability
+Profile,getName,Getter for the name of the profile.
+ShareApi,canShare,"Returns true if the content can be shared. Warns if the access token is missing the publish_actions permission. Doesn't fail when this permission is missing, because the app could have been granted that permission in another installation."
+ShareContent,getPlaceId,The Id for a place to tag with this content.
+ShareMessengerURLActionButton.Builder,setShouldHideWebviewShareButton,Set whether we want to hide the share button in the webview or not. This controls whether we want to hide the share button in the webview or not. It is useful to hide the share button when the webview is user-specific and contains sensitive information Defaults to NO.
+FacebookSdk,setAdvertiserIDCollectionEnabled,Sets the advertiserID collection flag for the application
+CreateAppGroupDialog.Result,getId,Deprecated. 
+CodelessLoggingEventListener.AutoLoggingOnItemClickListener,onItemClick,getSupportCodelessLoggingpublic boolean getSupportCodelessLogging()
+FacebookSdk,getApplicationId,Gets the Facebook application ID for the current app. This should only be called after the SDK has been initialized by calling FacebookSdk.sdkInitialize().
+ShareMessengerMediaTemplateContent.Builder,setAttachmentId,"Set the attachmentID of the item to share. Optional, but either attachmentID or mediaURL must be specified."
+AppEventsLogger,isValidForAccessToken,Determines if the logger is valid for the given access token.
+DeviceAuthDialog,getLayoutResId,onErrorprotected void onError(FacebookException ex)
+ShareButtonBase,setShareContent,Sets the share content on the button.
+ViewOnClickListener,onClick,关注我们产品人工智能AR/VR业务工具游戏开源工具发布社交集成社交临场感计划Developer CirclesF8 开发者大会初创公司计划ThreatExchange支持开发者支持漏洞开放平台状态Facebook for Developers 社群小组站点地图新闻博客开放平台计划中心成功案例视频Facebook for Developers 主页关注我们 © 2020 Facebook 简介创建广告工作机会开发者政策平台条款隐私权政策Cookie条款中文(简体)Bahasa IndonesiaDeutschEnglish (US)EspañolEspañol (España)Français (France)ItalianoPortuguês (Brasil)Tiếng ViệtРусскийالعربيةภาษาไทย한국어中文(香港)中文(台灣)日本語中文(简体)
+DeviceShareButton,getShareContent,Returns the share content from the button.
+PlaceInfoRequestParams,getPlaceId,Returns:the ID of the place to be queried.
+LoginButton,setToolTipMode,"Sets the mode of the Tool Tip popup. Currently supported modes are default (normal behavior), always_on (popup remains up until forcibly dismissed), and always_off (popup doesn't show)"
+GraphRequestBatch,setBatchApplicationId,Parameters:batchApplicationId - The batch application id.
+PlaceManager,newPlaceSearchRequestForLocation,PlaceSearchRequestParams
+ShareContent.Builder,setPlaceId,Set the Id for a place to tag with this content.
+ShareMessengerURLActionButton,getWebviewHeightRatio,ShareMessengerURLActionButton.WebviewHeightRatio
+ShareContent.Builder,setShareHashtag,ShareHashtag
+ShareLinkContent.Builder,setContentDescription,"Deprecated. As of Graph API 2.9 this field is deprecated and may not function as expected. Set the contentDescription of the link. For more information, see https://developers.facebook.com/docs/apps/changelog#v2_9_deprecations."
+PlaceManager.OnRequestReadyCallback,onLocationError,Method invoked when the request can't be generated due to an error retrieving the current device location.
+GraphRequest,toHttpConnection,Serializes one or more requests but does not execute them. The resulting HttpURLConnection can be executed explicitly by the caller.

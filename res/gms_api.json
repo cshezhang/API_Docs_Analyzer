@@ -1,0 +1,70 @@
+{
+    "Advertising_ID": [
+        {"type": "api", "classname": "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;", "methodname": "getAdvertisingIdInfo"}
+    ],
+    "Current_Location": [
+        {"type": "api", "classname": "Lcom/google/android/gms/location/FusedLocationProviderClient;", "methodname": "getLastLocation"},
+        {"type": "api", "classname": "Lcom/google/android/gms/ads/AdRequest$Builder;", "methodname": "setLocation"},
+        {"type": "api", "classname": "Lcom/google/android/gms/location/LocationResult;", "methodname": "getLastLocation"}
+    ],
+    "Shopping_Information": [
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/ecommerce/Product;", "methodname": "setName"},
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/ecommerce/Product;", "methodname": "setPrice"}
+    ],
+    "Shipping_Address": [
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/ecommerce/ProductAction;", "methodname": "setTransactionShipping"},
+        {"type": "api", "classname": "Lcom/google/android/gms/wallet/PaymentData;", "methodname": "getShippingAddress"}
+    ],
+    "Transaction_Information": [
+
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/ecommerce/ProductAction;", "methodname": "setTransactionRevenue"},
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/ecommerce/ProductAction;", "methodname": "setTransactionTax"},
+        {"type": "api", "classname": "Lcom/google/android/gms/wallet/PaymentDataRequest$Builder;", "methodname": "setTransactionInfo"}
+    ],
+    "Fitness": [
+        {"type": "api", "classname": "Lcom/google/android/gms/fitness/request/SessionInsertRequest$Builder;", "methodname": "addDataSet"},
+        {"type": "api", "classname": "Lcom/google/android/gms/fitness/HistoryClient;", "methodname": "insertData"},
+        {"type": "api", "classname": "Lcom/google/android/gms/fitness/RecordingClient;", "methodname": "subscribe", "source" : "https://developers.google.com/android/reference/com/google/android/gms/fitness/RecordingClient#subscribe(com.google.android.gms.fitness.data.DataType)"}
+    ],
+    "Gender": [
+        {"type": "api", "classname": "Lcom/google/android/gms/ads/AdRequest$Builder;", "methodname": "setGender"}
+    ],
+    "Birthday": [
+        {"type": "api", "classname": "Lcom/google/android/gms/ads/AdRequest$Builder;", "methodname": "setBirthday"}
+    ],
+    "Browse_History": [
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/Tracker;", "methodname": "setScreenName"}
+    ],
+    "Username": [
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/credentials/Credential$Builder;", "methodname": "<init>"},
+        {"type": "api", "classname": "Lcom/google/android/gms/wallet/LoyaltyWalletObject$Builder;", "methodname": "setAccountName"},
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;", "methodname": "setAccountName"},
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/credentials/Credential;", "methodname": "getName"},
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;", "methodname": "getDisplayName"}
+    ],
+    "Password": [
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/credentials/Credential$Builder;", "methodname": "setPassword"},
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/credentials/Credential;", "methodname": "getPassword"}
+    ],
+    "Email_Address": [
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;", "methodname": "getEmail"},
+        {"type": "api", "classname": "Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;", "methodname": "requestEmail"}
+    ],
+    "Login_Record": [
+
+    ],
+    "Click_Record": [
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/HitBuilders$EventBuilder;", "methodname": "setCategory"},
+        {"type": "api", "classname": "Lcom/google/android/gms/analytics/HitBuilders$EventBuilder;", "methodname": "setAction"}
+    ],
+    "GoogleAds": [
+        {"type": "api", "classname": "Lcom/google/android/gms/ads/AdRequest$Builder;", "methodname": "addKeyword"}
+    ],
+    "FirebaseAnalytics": [
+        {"type": "api", "classname": "Lcom/google/firebase/analytics/FirebaseAnalytics;", "methodname": "logEvent", "descriptor": "(Ljava/lang/String; Landroid/os/Bundle;)V", "fuzzy": true},
+        {"type": "api", "classname": "Lcom/google/firebase/analytics/FirebaseAnalytics;", "methodname": "setUserProperty", "descriptor": "(Ljava/lang/String; Ljava/lang/String;)V", "fuzzy": true}
+    ],
+    "FCM": [
+    ]
+}
+

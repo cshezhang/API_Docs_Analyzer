@@ -1,0 +1,345 @@
+{
+    "name": "PrivacyTree",
+    "children":[
+        {
+            "name": "Personal",
+            "children": [
+                {
+                    "name": "Account",
+                    "children": [
+                        {
+                            "name": "Username"
+                        },
+                        {
+                            "name": "Password"
+                        }
+                    ]
+                },
+                {
+                    "name":"hardware_id"
+                },
+                {
+                    "name": "ad_id"
+                },
+                {
+                    "name": "id"
+                },
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "Criminal_Record"
+                },
+                {
+                    "name": "Preference"
+                },
+                {
+                    "name": "Hobby"
+                },
+                {
+                    "name": "Favorite"
+                },
+                {
+                    "name": "Favourite"
+                },
+                {
+                    "name": "Marital"
+                },
+                {
+                    "name": "Birthday"
+                },
+                {
+                    "name": "Gender"
+                },
+                {
+                    "name": "Nationality"
+                },
+                {
+                    "name": "Sensitive",
+                    "children": [
+                        {
+                            "name": "Philosophical_Beliefs"
+                        },
+                        {
+                            "name": "Political_Beliefs"
+                        },
+                        {
+                            "name": "Racial_Ethnic_Origin"
+                        },
+                        {
+                            "name": "Religious_Beliefs"
+                        },
+                        {
+                            "name": "Sexuality"
+                        }
+                    ]
+                },
+                {
+                    "name": "Residential_Address"
+                },
+                {
+                    "name" : "LineNumber"
+                },
+                {
+                    "name" : "Address"
+                }
+            ]
+        },
+        {
+            "name": "Device_Usage",
+            "children": [
+                {
+                    "name": "Browse_History"
+                },
+                {
+                    "name": "Click"
+                },
+                {
+                    "name": "hit"
+                },
+                {
+                    "name": "Interactions",
+                    "children": [
+                        {
+                            "name": "Comment"
+                        },
+                        {
+                            "name": "Share"
+                        }
+                    ]
+                },
+                {
+                    "name": "Login_Record"
+                },
+                {
+                    "name": "Search_Queries"
+                },
+                {
+                    "name": "Wishlist"
+                }
+            ]
+        },
+        {
+            "name": "Education",
+            "children": [
+                {
+                    "name": "Education_Experience"
+                },
+                {
+                    "name": "Transcript"
+                }
+            ]
+        },
+        {
+            "name": "Employment",
+            "children": [
+                {
+                    "name": "Company"
+                },
+                {
+                    "name": "Job_Title"
+                },
+                {
+                    "name": "Profession"
+                },
+                {
+                    "name": "Work_Experience"
+                }
+            ]
+        },
+        {
+            "name": "Transaction",
+            "children": [
+                {
+                    "name": "Merchant"
+                },
+                {
+                    "name": "Price"
+                },
+                {
+                    "name": "Revenue"
+                },
+                {
+                    "name": "Receipt"
+                },
+                {
+                    "name": "Product"
+                },
+                {
+                    "name": "Shipping"
+                },
+                {
+                    "name": "Credit_Card_Number"
+                },
+                {
+                    "name": "Payment"
+                },
+                {
+                    "name": "Currency"
+                }
+            ]
+        },
+        {
+            "name": "Health",
+            "children": [
+                {
+                    "name": "Blood_Preesure"
+                },
+                {
+                    "name": "Body_Measurement",
+                    "children": [
+                        {
+                            "name": "Body_Temperature"
+                        },
+                        {
+                            "name": "Body_Fat"
+                        }
+                    ]
+                },
+                {
+                    "name": "Calorie"
+                },
+                {
+                    "name": "Heart_Rate"
+                },
+                {
+                    "name": "Height"
+                },
+                {
+                    "name": "Movement_Distance"
+                },
+                {
+                    "name": "Nutrition"
+                },
+                {
+                    "name": "Stepcount"
+                },
+                {
+                    "name": "Weight"
+                }
+            ]
+        },
+        {
+            "name": "Device_Identifier",
+            "children": [
+                {
+                    "name": "Device_Identifier",
+                    "children": [
+                        {
+                            "name": "Advertising"
+                        },
+                        {
+                            "name": "Android_ID"
+                        },
+                        {
+                            "name": "AD_ID"
+                        },
+                        {
+                            "name": "Device_ID"
+                        },
+                        {
+                            "name": "IMEI"
+                        },
+                        {
+                            "name": "IMSI"
+                        },
+                        {
+                            "name": "IP"
+                        },
+                        {
+                            "name" : "Internet_Protocal"
+                        },
+                        {
+                            "name": "MAC"
+                        }
+                    ]
+                },
+                {
+                    "name": "Social_Identifier",
+                    "children": [
+                        {
+                            "name": "Email_Address"
+                        },
+                        {
+                            "name": "Phone_Number"
+                        },
+                        {
+                            "name": "Social_Security_Code"
+                        },
+                        {
+                            "name": "Social_Media_Identifier"
+                        },
+                        {
+                            "name": "Passport"
+                        },
+                        {
+                            "name": "Driver_License"
+                        }
+                    ]
+                },
+                {
+                    "name": "Biometric_Identifier",
+                    "children": [
+                        {
+                            "name": "Voiceprint"
+                        },
+                        {
+                            "name": "Faceprint"
+                        },
+                        {
+                            "name": "Fingerprint"
+                        },
+                        {
+                            "name": "DNA"
+                        },
+                        {
+                            "name": "Iris_Image"
+                        },
+                        {
+                            "name": "Retina"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Location",
+            "children": [
+                {
+                    "name": "Current_Location"
+                },
+                {
+                    "name": "Inferred_Location",
+                    "children": [
+                        {
+                            "name": "Often_Visit_Positions"
+                        },
+                        {
+                            "name": "Visited_Place"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Connection",
+            "children": [
+                {
+                    "name": "Email_History"
+                },
+                {
+                    "name": "Chat_Record"
+                },
+                {
+                    "name": "Friends_List"
+                },
+                {
+                    "name": "Address_Book"
+                },
+                {
+                    "name": "Call_Record"
+                }
+            ]
+        }
+    ]
+}

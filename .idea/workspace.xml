@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="ff1bb75b-5fa8-402c-84b1-f1eeacb3ce33" />
+  <component name="ProjectId" id="1hIfwNS9V5pfGoXrUQMVUx6ueSR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\API_Docs_Analyzer\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Project\API_Docs_Analyzer\util" />
+      <recent name="E:\Project\API_Docs_Analyzer\parsers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.API_Doc_Analyzer">
+    <configuration name="API_Doc_Analyzer" type="PythonConfigurationType" factoryName="Python">
+      <module name="API_Docs_Analyzer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\Project\API_Docs_Analyzer\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="java &quot;E:\Lab_Project\dataset_science\API_Docs\Parser&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Crawler" type="PythonConfigurationType" factoryName="Python">
+      <module name="API_Docs_Analyzer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\Project\API_Docs_Analyzer\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/javadoc_crawler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Crawler" />
+      <item itemvalue="Python.API_Doc_Analyzer" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="" />
+      <created>1599703765039</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599703765039</updated>
+      <workItem from="1599703780302" duration="23716000" />
+      <workItem from="1599747011244" duration="2853000" />
+      <workItem from="1599787055789" duration="1360000" />
+      <workItem from="1599811291934" duration="4929000" />
+      <workItem from="1599907813265" duration="599000" />
+      <workItem from="1600046307660" duration="2824000" />
+      <workItem from="1600152259039" duration="4761000" />
+      <workItem from="1600218324289" duration="13995000" />
+      <workItem from="1600304286343" duration="7732000" />
+      <workItem from="1600317734336" duration="11804000" />
+      <workItem from="1600334522151" duration="634000" />
+      <workItem from="1600336508505" duration="4548000" />
+      <workItem from="1600341457944" duration="5589000" />
+      <workItem from="1600357711115" duration="1692000" />
+      <workItem from="1600391531835" duration="1227000" />
+      <workItem from="1600410848775" duration="3250000" />
+      <workItem from="1600654367521" duration="21060000" />
+      <workItem from="1600693580083" duration="1235000" />
+      <workItem from="1600762628072" duration="754000" />
+      <workItem from="1600841448174" duration="1200000" />
+      <workItem from="1600913961039" duration="508000" />
+      <workItem from="1600914483968" duration="1020000" />
+      <workItem from="1600915523066" duration="10344000" />
+      <workItem from="1600934275867" duration="6369000" />
+      <workItem from="1600956625935" duration="934000" />
+      <workItem from="1601016836513" duration="856000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601017017629">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1601017017629" />
+    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1600655670711">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600655670711" />
+    <state width="1235" height="454" key="GridCell.Tab.0.bottom" timestamp="1601038787454">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="454" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601038787454" />
+    <state width="1235" height="454" key="GridCell.Tab.0.center" timestamp="1601038787454">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="454" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601038787454" />
+    <state width="1235" height="454" key="GridCell.Tab.0.left" timestamp="1601038787453">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="454" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601038787453" />
+    <state width="1235" height="454" key="GridCell.Tab.0.right" timestamp="1601038787454">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="454" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601038787454" />
+    <state width="1235" height="179" key="GridCell.Tab.1.bottom" timestamp="1600934216716">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="179" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600934216716" />
+    <state width="1235" height="179" key="GridCell.Tab.1.center" timestamp="1600934216716">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="179" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600934216716" />
+    <state width="1235" height="179" key="GridCell.Tab.1.left" timestamp="1600934216716">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="179" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600934216716" />
+    <state width="1235" height="179" key="GridCell.Tab.1.right" timestamp="1600934216716">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1235" height="179" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600934216716" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1600914971538">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600914971538" />
+    <state x="321" y="78" width="773" height="590" key="find.popup" timestamp="1600239101374">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="321" y="78" width="773" height="590" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600239101374" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600692570440">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600692570440" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/parsers/table.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/parsers/pushwoosh.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="'class' in next_tag.attrs.keys()" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1601016910190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$main.coverage" NAME="main Coverage Results" MODIFIED="1599814312186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$API_Doc_Analyzer.coverage" NAME="API_Doc_Analyzer Coverage Results" MODIFIED="1601017018309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
