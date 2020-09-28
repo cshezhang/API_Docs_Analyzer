@@ -1,7 +1,6 @@
 
-
-
 # CountlyConfig config = (new CountlyConfig(appC, COUNTLY_APP_KEY, COUNTLY_SERVER_URL));config.setDeviceId("YOUR_DEVICE_ID");Countly.sharedInstance().init(config);
+
 
 def main(codes):
     lines = codes.split(";")
@@ -19,4 +18,5 @@ def main(codes):
 
 
 if __name__ == '__main__':
-    main("CountlyConfig config = (new CountlyConfig(appC, COUNTLY_APP_KEY, COUNTLY_SERVER_URL));config.setDeviceId(\"YOUR_DEVICE_ID\");Countly.sharedInstance().init(config);")
+    main \
+        ("CountlyConfig config = (new CountlyConfig(appC, COUNTLY_APP_KEY, COUNTLY_SERVER_URL));config.setDeviceId(\"YOUR_DEVICE_ID\");Countly.sharedInstance().init(config);")

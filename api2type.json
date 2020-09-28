@@ -1,7 +1,10 @@
 {
-  "Java" : ["Adjust", "DeployGate", "Tapjoy", "Amazon Mobile Ads", "Upsight", "Vungle", "QOS"],
-  "Markdown" : [],
+  "Java" : [
+    "Adjust", "DeployGate", "Tapjoy", "Amazon Mobile Ads", "Upsight", "Vungle", "QOS",
+    "TencentMap-2D", "TencentLocation", "TencentMap-3D", "Tune"
+  ],
   "GMS" : ["GMS"],
-  "Code" : [""],
-  "Facebook" : ["Facebook Android SDK", "Facebook Audience Network"]
+  "Facebook" : ["Facebook Android SDK", "Facebook Audience Network"],
+  "AppBrain" : ["AppBrain"],
+  "SilverJava" : ["Appsfire"]
 }

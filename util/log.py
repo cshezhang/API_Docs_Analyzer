@@ -12,6 +12,7 @@ log_colors_config = {
     'CRITICAL': 'red',
 }
 
+
 class Log:
 
     def __init__(self, logname='Access_log'):
@@ -59,5 +60,6 @@ class Log:
 
     def error(self, message):
         self.console('error', message)
+
 
 logger = Log()

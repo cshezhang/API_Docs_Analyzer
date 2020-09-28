@@ -3,6 +3,7 @@ import lief
 from util.config import Config
 from res.traverseSensitiveSources import sensitive_keywords
 from util.Command import shell_command
+from util.log import logger
 
 
 # This parser also can process jar file if dx provided.
@@ -16,11 +17,11 @@ class DexFileParser:
             target_path = source_folder + "\\" + file_name + ".dex"
             source_path = dex_path
             dx_cmd = Config.dx_path + " --dex --output=" + target_path + " " + source_path
-            print(dx_cmd)
+            # print(dx_cmd)
             return_code, out, err = shell_command(dx_cmd)
-            print(return_code)
-            print(out)
-            print(str(err))
+            # print(return_code)
+            # print(out)
+            print(err.decode())
         else:
             target_path = dex_path
         self.dex = lief.DEX.parse(target_path)
@@ -55,12 +56,11 @@ class DexFileParser:
         return self.methods
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
-        print("--------------------------------------")
-        print("API SUM=" + str(len(self.apis)))
-        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+        # logger.info("--------------------------------------")
+        # for api in self.apis:
+        #     logger.info(api)
+        # logger.info("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     logger.info(sensitive_api)
+        logger.info("API SUM=" + str(len(self.apis)))
+        logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))

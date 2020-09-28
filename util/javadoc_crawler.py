@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 
 def main():
-    target = "Parser"
+    target = "Sunshine"
     file = "E:/Code/" + target + "_allclasses.html"
     soup = BeautifulSoup(open(file, encoding='utf-8'), features='html.parser')
     tag_list = soup.find_all()

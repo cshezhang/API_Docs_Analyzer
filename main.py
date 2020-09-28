@@ -1,3 +1,4 @@
+import os
 import sys
 
 from util.log import logger
@@ -9,12 +10,29 @@ from parsers.facebook import FacebookDocParser
 from parsers.table import TableDocParser
 from parsers.javalike import JavaLikeDocParser
 from parsers.pushwoosh import PushwooshDocParser
+from parsers.appbrain import AppbrainDocParser
+from parsers.silverjava import SilverJavaDocParser
+from util.traverseFolder import get_first_layer_files
 
 
 def main():
     parser_type = sys.argv[1]
     target_folder = sys.argv[2]
     Config.target_folder = target_folder
+    if parser_type.lower() == 'jar_folder':
+        logger.info("Jar Folder")
+        if not os.path.isdir(target_folder):
+            logger.error("Not a Folder! Exiting...")
+            return
+        jar_files = get_first_layer_files(target_folder, False)
+        for jar_file in jar_files:
+            logger.info("Processing File=" + jar_file)
+            try:
+                parser = DexFileParser(jar_file)
+                parser.run()
+                parser.print_results()
+            except:
+                logger.error("Exception!")
     if parser_type.lower() == 'facebook':
         logger.info("facebook")
         parser = FacebookDocParser()
@@ -49,6 +67,16 @@ def main():
     if parser_type.lower() == 'dex':
         logger.info("Dex")
         parser = DexFileParser(target_folder)
+        parser.run()
+        parser.print_results()
+    if parser_type.lower() == 'appbrain':
+        logger.info("AppBrain")
+        parser = AppbrainDocParser()
+        parser.run()
+        parser.print_results()
+    if parser_type.lower() == 'silverjava':
+        logger.info("Appsfire")
+        parser = SilverJavaDocParser()
         parser.run()
         parser.print_results()
 

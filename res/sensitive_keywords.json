@@ -55,30 +55,40 @@
                     "name": "Nationality"
                 },
                 {
-                    "name": "Sensitive",
-                    "children": [
-                        {
-                            "name": "Philosophical_Beliefs"
-                        },
-                        {
-                            "name": "Political_Beliefs"
-                        },
-                        {
-                            "name": "Racial_Ethnic_Origin"
-                        },
-                        {
-                            "name": "Religious_Beliefs"
-                        },
-                        {
-                            "name": "Sexuality"
-                        }
-                    ]
+                    "name": "Philosophical"
                 },
                 {
-                    "name": "Residential_Address"
+                    "name": "Philosophy"
                 },
                 {
-                    "name" : "LineNumber"
+                    "name": "Political"
+                },
+                {
+                    "name": "Politics"
+                },
+                {
+                    "name": "Racial"
+                },
+                {
+                    "name": "Race"
+                },
+                {
+                    "name": "Religious"
+                },
+                {
+                    "name": "Religion"
+                },
+                {
+                    "name": "Sexuality"
+                },
+                {
+                    "name": "Residential"
+                },
+                {
+                    "name": "Resident"
+                },
+                {
+                    "name" : "Line_Number"
                 },
                 {
                     "name" : "Address"
@@ -95,7 +105,7 @@
                     "name": "Click"
                 },
                 {
-                    "name": "hit"
+                    "name": "Hit"
                 },
                 {
                     "name": "Interactions",

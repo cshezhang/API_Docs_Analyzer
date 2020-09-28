@@ -12,15 +12,31 @@ def get_first_layer_folders(dir_):
     return folders
 
 
-def get_first_layer_files(dir_):
+def get_first_layer_files(dir_, html=True):
     files = []
     file_list = os.listdir(dir_)
     for i in range(0, len(file_list)):
         path = os.path.join(dir_, file_list[i])
         if os.path.isfile(path):
-            if ".html" in path:
+            if html:
+                if ".html" in path:
+                    files.append(path)
+            else:
                 files.append(path)
     return files
+
+
+def get_all_files_in_javadoc(dir_):
+    files_ = []
+    list_ = os.listdir(dir_)
+    for i in range(0, len(list_)):
+        path = os.path.join(dir_, list_[i])
+        if os.path.isdir(path):
+            files_.extend(get_all_files_in_javadoc(path))
+        if os.path.isfile(path):
+            if "-" not in path and ".html" in path:
+                files_.append(path)
+    return files_
 
 
 def get_all_files(dir_):

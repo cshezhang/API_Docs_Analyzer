@@ -1,4 +1,4 @@
-# Java_Doc_Analyzer is used to automatically extract sensitive APIs from java-style api docs.
+# Silver_Java_Doc_Analyzer is used to automatically extract sensitive APIs from java-style api docs.
 # Senstive API is based on the related keyword match.
 
 import io
@@ -12,7 +12,7 @@ from res.traverseSensitiveSources import get_sensitive_keywords
 from util.traverseFolder import get_first_layer_files, get_first_layer_folders
 
 
-class JavaDocParser:
+class SilverJavaDocParser:
 
     def __init__(self):
         self.processing_class = ""
@@ -59,31 +59,27 @@ class JavaDocParser:
         for i in range(0, len(tag_list)):
             tag = tag_list[i]
             is_method_section = False
-            if tag.name == 'h3':
+            if tag.name == 'h2':
                 print(tag.getText())
                 des_text = tag.getText()
-                if "Method Detail" in des_text or "方法详细资料" in des_text:
+                if "Member Function Documentation" in des_text:
                     is_method_section = True
                 if not is_method_section:
                     continue
                 for j in range(i + 1, len(tag_list)):
                     next_tag = tag_list[j]
-                    if next_tag.name == 'h4':
+                    if next_tag.name == "td" and "class" in next_tag.attrs.keys() and "memname" in next_tag.attrs["class"]:
                         if j + 1 >= len(tag_list):
                             break
-                        api_name = next_tag.getText()
+                        signature = next_tag.getText()
+                        api_name = signature.split(".")[-1]
+                        # api_name = api_name[: api_name.rfind("(")]
                         api_names.add(api_name)
-                        pre_tag = tag_list[j + 1]
-                        if pre_tag.name == "pre":
-                            signature = pre_tag.getText()
-                        else:
-                            continue
                         self.apis.append(api_name)
-                        api_names.add(api_name)
                         api2signature[api_name] = signature
-                        if j + 2 < len(tag_list) and tag_list[j + 2].name == "div":
-                            description = tag_list[j + 2].getText()
-                            api2des[api_name] = description
+                        # if j + 2 < len(tag_list) and tag_list[j + 2].name == "div":
+                        #     description = tag_list[j + 2].getText()
+                        #     api2des[api_name] = description
         # print("first=" + str(len(self.apis)))
         # print("second=" + str(len(api2des)))
         for api in api_names:
