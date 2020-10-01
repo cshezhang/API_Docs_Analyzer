@@ -54,15 +54,23 @@ class GmsDocParser:
         api2des = {}
         tp = 0
         fp = 0
+        for tag in tag_list:
+            # print(tag.name)
+            # if tag.name == "meta":
+                # print(tag.attrs)
+            if tag.name == "meta" and "property" in tag.attrs.keys() and tag["property"] == "og:url":
+                full_class_name = tag["content"][ len("https://developers.google.com/android/reference/") : ]
+                logger.info(full_class_name)
+                break
         for i in range(0, len(tag_list)):
             tag = tag_list[i]  # tag is a table class used to parse method.
-            if tag.name == 'table':
+            if tag.name == "table":
                 if len(tag.find_all("tr")) <= 0 or len(tag.find_all("td")) <= 0:
                     continue
                 title_name = ""  # title_name: The name of the title.
                 for j in range(i - 1, -1, -1):  # Search for the table name.
                     pre_tag = tag_list[j]
-                    if 'h' in pre_tag.name and pre_tag.name not in blacklist:
+                    if "h" in pre_tag.name and pre_tag.name not in blacklist:
                         title_name = pre_tag.getText()
                         break
                 if ("Method Summary" in title_name or "Field Summary" in title_name) and "Inherited" not in title_name:
@@ -117,29 +125,29 @@ class GmsDocParser:
                     privacy_item = keywords
                     break
             if is_sensitive:
-                self.sensitive_apis.add((self.processing_class, api_name, description, privacy_item))
+                self.sensitive_apis.append([full_class_name, api_name, privacy_item, description])
                 fp = fp + 1
                 continue
             tp = tp + 1
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
-        print("**************************************")
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
+        logger.info("**************************************")
         for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
-        print("--------------------------------------")
-        print("API SUM=" + str(len(self.apis)))
-        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+            logger.info(sensitive_api)
+        logger.info("--------------------------------------")
+        logger.info("API SUM=" + str(len(self.apis)))
+        logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("facebook.csv", "w") as csv_file:
-            fieldnames = ["Class", "API_Name", "Description"]
+        with open("GMS.csv", "w") as csv_file:
+            fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
                 writer.writerow(
-                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]}
+                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
                 )

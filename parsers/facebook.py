@@ -63,6 +63,12 @@ class FacebookDocParser:
         tp = 0
         fp = 0
         method_tag = False
+        full_class_name = ""
+        for tag in tag_list:
+            if tag.name == "li":
+                txt = tag.getText()
+                if "com.facebook" in txt:
+                    full_class_name = tag.getText()
         for i in range(0, len(tag_list)):
             tag = tag_list[i]  # tag is a table class used to parse method.
             if tag.name == "span" and "Method Summary" in tag.getText():
@@ -105,16 +111,16 @@ class FacebookDocParser:
                 if is_sensitive:
                     break
             if is_sensitive:
-                self.sensitive_apis.add((self.processing_class, api_name, description, privacy_item))
+                self.sensitive_apis.append((full_class_name, api_name, description, privacy_item))
                 fp = fp + 1
                 continue
             tp = tp + 1
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
         print("**************************************")
         for sensitive_api in self.sensitive_apis:
             print(sensitive_api)
@@ -123,11 +129,12 @@ class FacebookDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("facebook.csv", "w", encoding='utf-8') as csv_file:
-            fieldnames = ["Class", "API_Name", "Description"]
+        csv_name = Config.target_folder.split("\\")[-1]
+        with open(csv_name, "w", encoding='utf-8') as csv_file:
+            fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
                 writer.writerow(
-                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]}
+                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
                 )

@@ -1,4 +1,5 @@
 import os
+import csv
 import lief
 from util.config import Config
 from res.traverseSensitiveSources import sensitive_keywords
@@ -10,7 +11,7 @@ from util.log import logger
 class DexFileParser:
 
     def __init__(self, dex_path):
-        print(dex_path)
+        self.dex_name = dex_path.split("\\")[-1][ : -4]
         if ".jar" in dex_path:
             source_folder = os.path.dirname(dex_path)
             file_name = os.path.basename(dex_path)[ : -4]
@@ -46,7 +47,8 @@ class DexFileParser:
                     if keyword not in method.name:
                         tag = False
                 if tag:
-                    self.sensitive_apis.append(method.name)
+                    print(keywords)
+                    self.sensitive_apis.append([method.cls.fullname, method.name, keywords])
                     break
 
     def get_all_classes(self):
@@ -59,8 +61,19 @@ class DexFileParser:
         # logger.info("--------------------------------------")
         # for api in self.apis:
         #     logger.info(api)
-        # logger.info("**************************************")
-        # for sensitive_api in self.sensitive_apis:
-        #     logger.info(sensitive_api)
+        logger.info("**************************************")
+        for sensitive_api in self.sensitive_apis:
+            logger.info(sensitive_api)
         logger.info("API SUM=" + str(len(self.apis)))
         logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+
+    def print_to_csv(self):
+        csv_name = self.dex_name + ".csv"
+        with open(csv_name, "w") as csv_file:
+            fieldnames = ["Class", "API_Name", "Reason"]
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            # writer.writeheader()
+            for sensitive_api in self.sensitive_apis:
+                writer.writerow(
+                    {"Class" : sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
+                )

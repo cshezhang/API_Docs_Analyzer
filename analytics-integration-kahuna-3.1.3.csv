@@ -1,0 +1,7 @@
+Lcom/segment/analytics/Properties;,name,"('name',)"
+Lcom/segment/analytics/internal/AbstractIntegration;,identify,"('id',)"
+Lcom/segment/analytics/internal/integrations/KahunaIntegration;,identify,"('id',)"
+Lcom/segment/analytics/internal/integrations/KahunaIntegration;,trackAddedProduct,"('Product',)"
+Lcom/segment/analytics/internal/integrations/KahunaIntegration;,trackAddedProductCategory,"('Product',)"
+Lcom/segment/analytics/internal/integrations/KahunaIntegration;,trackViewedProduct,"('Product',)"
+Lcom/segment/analytics/internal/integrations/KahunaIntegration;,trackViewedProductCategory,"('Product',)"

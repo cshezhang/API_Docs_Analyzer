@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parsers/appbrain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parsers/silverjava.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api2type.json" beforeDir="false" afterPath="$PROJECT_DIR$/api2type.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/appbrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/appbrain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parsers/dex.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/dex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/facebook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/gms.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/gms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parsers/java.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/java.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sensitive_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/sensitive_keywords.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/javadoc_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/javadoc_crawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/snippetAPIExtract.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/snippetAPIExtract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/traverseFolder.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/traverseFolder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/silverjava.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/silverjava.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +36,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -71,7 +67,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="dex &quot;E:\Lab_Project\dataset_science\API_Docs\agora-rtm-sdk.jar&quot;" />
+      <option name="PARAMETERS" value="Java &quot;E:\Lab_Project\dataset_science\API_Docs\Android_Docs\Ably&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -156,7 +152,8 @@
       <workItem from="1601016836513" duration="856000" />
       <workItem from="1601188465668" duration="8165000" />
       <workItem from="1601258221604" duration="7453000" />
-      <workItem from="1601271420783" duration="1551000" />
+      <workItem from="1601271420783" duration="12996000" />
+      <workItem from="1601426931595" duration="15847000" />
     </task>
     <servers />
   </component>
@@ -164,46 +161,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601266799659">
+    <state x="92" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601429027037">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1601266799659" />
+    <state x="92" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1601429027037" />
     <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1600655670711">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600655670711" />
-    <state width="1235" height="179" key="GridCell.Tab.0.bottom" timestamp="1601267378799">
+    <state width="1235" height="36" key="GridCell.Tab.0.bottom" timestamp="1601464390555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
-    <state width="1235" height="179" key="GridCell.Tab.0.center" timestamp="1601267378799">
+    <state width="1235" height="36" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601464390555" />
+    <state width="1235" height="36" key="GridCell.Tab.0.center" timestamp="1601464390555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
-    <state width="1235" height="179" key="GridCell.Tab.0.left" timestamp="1601267378797">
+    <state width="1235" height="36" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601464390555" />
+    <state width="1235" height="36" key="GridCell.Tab.0.left" timestamp="1601464390555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601267378797" />
-    <state width="1235" height="179" key="GridCell.Tab.0.right" timestamp="1601267378799">
+    <state width="1235" height="36" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601464390555" />
+    <state width="1235" height="36" key="GridCell.Tab.0.right" timestamp="1601464390555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
-    <state width="1235" height="179" key="GridCell.Tab.1.bottom" timestamp="1601267378799">
+    <state width="1235" height="36" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601464390555" />
+    <state width="1235" height="45" key="GridCell.Tab.1.bottom" timestamp="1601291461645">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
-    <state width="1235" height="179" key="GridCell.Tab.1.center" timestamp="1601267378799">
+    <state width="1235" height="45" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601291461645" />
+    <state width="1235" height="45" key="GridCell.Tab.1.center" timestamp="1601291461645">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
-    <state width="1235" height="179" key="GridCell.Tab.1.left" timestamp="1601267378799">
+    <state width="1235" height="45" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1601291461645" />
+    <state width="1235" height="45" key="GridCell.Tab.1.left" timestamp="1601291461645">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
-    <state width="1235" height="179" key="GridCell.Tab.1.right" timestamp="1601267378799">
+    <state width="1235" height="45" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1601291461645" />
+    <state width="1235" height="45" key="GridCell.Tab.1.right" timestamp="1601291461645">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1235" height="179" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1601267378799" />
+    <state width="1235" height="45" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1601291461645" />
     <state x="141" y="0" key="SettingsEditor" timestamp="1600914971538">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -241,6 +238,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/API_Docs_Analyzer$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1601265402757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/API_Docs_Analyzer$main.coverage" NAME="main Coverage Results" MODIFIED="1599814312186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
-    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$API_Doc_Analyzer.coverage" NAME="API_Doc_Analyzer Coverage Results" MODIFIED="1601266800125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$API_Doc_Analyzer.coverage" NAME="API_Doc_Analyzer Coverage Results" MODIFIED="1601434604951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

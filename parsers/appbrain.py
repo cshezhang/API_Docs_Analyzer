@@ -52,7 +52,7 @@ class AppbrainDocParser:
 
     def get_privacy(self, tag_list):
         api_names = set()
-        api2des = {}
+        # api2des = {}
         api2signature = {}
         tp = 0
         fp = 0

@@ -1,10 +1,18 @@
 {
   "Java" : [
-    "Adjust", "DeployGate", "Tapjoy", "Amazon Mobile Ads", "Upsight", "Vungle", "QOS",
+    "Ably", "AdColony", "Adjust", "Amazon Mobile Ads", "Amplitude", "AppBoy", "AppLovin",
+    "AppsFlyer", "AskingPoint", "Autonavi_Android_Location", "Autonavi_Android_map", "AvosCloud",
+    "Baidu_Panorama", "BaiduLoc", "BaiduMap_AndroidSDK", "BeaconInSpace", "BugSnag","ChartBoost",
+    "CometChat", "ComScore", "Crashlytics", "Dynatrace", "Estimote", "Flurry", "Fyber",
+    "Gimbal", "Glide", "Glympse", "DeployGate", "Tapjoy", "Upsight", "Vungle", "QOS",
     "TencentMap-2D", "TencentLocation", "TencentMap-3D", "Tune"
+  ],
+  "Javalike" : [
+    "Ad4Screen", "AltBeacon"
   ],
   "GMS" : ["GMS"],
   "Facebook" : ["Facebook Android SDK", "Facebook Audience Network"],
   "AppBrain" : ["AppBrain"],
-  "SilverJava" : ["Appsfire"]
+  "SilverJava" : ["Appsfire"],
+  "bak" : ["ironSource"]
 }

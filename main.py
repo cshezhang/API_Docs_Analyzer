@@ -31,8 +31,21 @@ def main():
                 parser = DexFileParser(jar_file)
                 parser.run()
                 parser.print_results()
+                parser.print_to_csv()
             except:
                 logger.error("Exception!")
+    if parser_type.lower() == 'javadoc_folder':
+        logger.info("Java Doc Folder")
+        if not os.path.isdir(target_folder):
+            logger.error("Not a Folder! Exiting...")
+            return
+        javadoc_folders = get_first_layer_files(target_folder, False)
+        for javadoc in javadoc_folders:
+            logger.info("Processing File=" + javadoc)
+            parser = JavaDocParser(javadoc)
+            parser.run()
+            parser.print_results()
+            parser.print_to_csv()
     if parser_type.lower() == 'facebook':
         logger.info("facebook")
         parser = FacebookDocParser()
@@ -44,11 +57,13 @@ def main():
         parser = GmsDocParser()
         parser.run()
         parser.print_results()
+        parser.print_to_csv()
     if parser_type.lower() == 'java':
         logger.info('Java')
         parser = JavaDocParser()
         parser.run()
         parser.print_results()
+        parser.print_to_csv()
     if parser_type.lower() == 'table':
         logger.info('Table')
         parser = TableDocParser()
@@ -69,6 +84,17 @@ def main():
         parser = DexFileParser(target_folder)
         parser.run()
         parser.print_results()
+        parser.print_to_csv()
+    if parser_type.lower() == "dexs":
+        logger.info("Dexs")
+        logger.info(target_folder)
+        files = get_first_layer_files(target_folder, False)
+        # print(len(files))
+        for file in files:
+            parser = DexFileParser(file)
+            parser.run()
+            parser.print_results()
+            parser.print_to_csv()
     if parser_type.lower() == 'appbrain':
         logger.info("AppBrain")
         parser = AppbrainDocParser()

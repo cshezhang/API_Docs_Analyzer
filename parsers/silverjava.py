@@ -52,7 +52,7 @@ class SilverJavaDocParser:
 
     def get_privacy(self, tag_list):
         api_names = set()
-        api2des = {}
+        # api2des = {}
         api2signature = {}
         tp = 0
         fp = 0
@@ -129,7 +129,7 @@ class SilverJavaDocParser:
 
     def print_to_csv(self):
         with open("facebook.csv", "w") as csv_file:
-            fieldnames = ["Class", "API_Name", "Description"]
+            fieldnames = ["Class", "API_Name"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:

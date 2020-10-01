@@ -16,6 +16,7 @@ class JavaDocParser:
 
     def __init__(self):
         self.processing_class = ""
+        self.full_class_name = ""
         self.sensitive_keywords = set()
         self.apis = []
         self.sensitive_apis = []
@@ -42,9 +43,20 @@ class JavaDocParser:
         for i in range(0, len(files_list)):
             file = files_list[i]
             self.processing_class = file.split("\\")[-1].split(" ")[0]
+            # We should consider the full class name here.
             logger.info("Processing Class=" + self.processing_class)
             soup = BeautifulSoup(open(file, encoding='utf-8'), features='html.parser')
             tag_list = soup.find_all()
+            full_name_find = False
+            for j in range(0, len(tag_list)):
+                tag = tag_list[j]
+                if tag.name == "h2":
+                    next_tag = tag_list[j - 1]
+                    self.full_class_name = next_tag.getText() + "." + self.processing_class[ : -5]
+                    break
+                if full_name_find:
+                    break
+            logger.info("FULL_CLASS_NAME=" + self.full_class_name)
             c_tp, c_fp = self.get_privacy(tag_list)
             tp = tp + c_tp
             fp = fp + c_fp
@@ -60,9 +72,8 @@ class JavaDocParser:
             tag = tag_list[i]
             is_method_section = False
             if tag.name == 'h3':
-                print(tag.getText())
                 des_text = tag.getText()
-                if "Method Detail" in des_text or "方法详细资料" in des_text:
+                if "Method Detail" in des_text or "方法详细资料" in des_text or "メソッドの詳細" in des_text:
                     is_method_section = True
                 if not is_method_section:
                     continue
@@ -121,9 +132,9 @@ class JavaDocParser:
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
         print("**************************************")
         for sensitive_api in self.sensitive_apis:
             print(sensitive_api)
@@ -132,11 +143,12 @@ class JavaDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("facebook.csv", "w") as csv_file:
-            fieldnames = ["Class", "API_Name", "Description"]
+        csv_name = Config.target_folder.split("\\")[-1] + ".csv"
+        with open(csv_name, "w") as csv_file:
+            fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
                 writer.writerow(
-                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]}
+                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
                 )
