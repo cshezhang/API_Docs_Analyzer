@@ -3,14 +3,46 @@
   <component name="ChangeListManager">
     <list default="true" id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api2type.json" beforeDir="false" afterPath="$PROJECT_DIR$/api2type.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/appbrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/appbrain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/dex.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/dex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/facebook.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/gms.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/gms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/java.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/java.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/silverjava.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/silverjava.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMap_Search_V7.6.0_20200819.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/AMap_Search_V7.6.0_20200819.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ably.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Ably.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdBuddizSDK_1.4.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/AdBuddizSDK_1.4.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Amap_2DMap_V6.0.0_20191106.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Amap_2DMap_V6.0.0_20191106.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Map3D_SDK_V7.6.0_20200819.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Android_Map3D_SDK_V7.6.0_20200819.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atlas-appflood-admob-2.21.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Atlas-appflood-admob-2.21.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Branch.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Branch.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BranchMetrics-5.0.3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/BranchMetrics-5.0.3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BugSense-3.6.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/BugSense-3.6.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bump.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Bump.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cuebiq-QuantcastAndroidSdk-1.5.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Cuebiq-QuantcastAndroidSdk-1.5.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FOX_Android_SDK_4.6.2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/FOX_Android_SDK_4.6.2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facebook Android SDK" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Facebook Android SDK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fyber.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Fyber.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GMS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/GMS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAnalytics-imei.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/GameAnalytics-imei.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAnalytics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/GameAnalytics.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeTui-sdk-2.14.1.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/GeTui-sdk-2.14.1.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InMobi-ads-7.2.8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/InMobi-ads-7.2.8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KaKao-android-sdk-analytics-1.0.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/KaKao-android-sdk-analytics-1.0.9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Liquid-android-2.1.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Liquid-android-2.1.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapBox-android-sdk-0.7.4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/MapBox-android-sdk-0.7.4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MobFox.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/MobFox.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OkHttp-4.9.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/OkHttp-4.9.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PushApps-v1.9.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/PushApps-v1.9.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PushBots-lib-3.3.2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/PushBots-lib-3.3.2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RevMob-4.3.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/RevMob-4.3.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reveal-1.4.22.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Reveal-1.4.22.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reyun-2.7.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Reyun-2.7.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tappx-sdk-3.1.10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Tappx-sdk-3.1.10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenjin-android-sdk-1.9.3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Tenjin-android-sdk-1.9.3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Umeng-analytics-6.1.4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/Umeng-analytics-6.1.4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeCloud_pushservice_1.4.4_pro.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/WeCloud_pushservice_1.4.4_pro.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agora-rtm-sdk.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/agora-rtm-sdk.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-integration-kahuna-3.1.3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/analytics-integration-kahuna-3.1.3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/facebook.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook_android_sdk.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/facebook_android_sdk.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facebook_audience_network.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/facebook_audience_network.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTarget.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/myTarget.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xtify-android-sdk-2.6.4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api_results/xtify-android-sdk-2.6.4.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +186,8 @@
       <workItem from="1601258221604" duration="7453000" />
       <workItem from="1601271420783" duration="12996000" />
       <workItem from="1601426931595" duration="15847000" />
+      <workItem from="1601885276831" duration="758000" />
+      <workItem from="1602119408214" duration="651000" />
     </task>
     <servers />
   </component>
