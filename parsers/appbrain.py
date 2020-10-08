@@ -117,9 +117,9 @@ class AppbrainDocParser:
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
         print("**************************************")
         for sensitive_api in self.sensitive_apis:
             print(sensitive_api)
@@ -128,7 +128,7 @@ class AppbrainDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("appbrain.csv", "w") as csv_file:
+        with open("./api_results/appbrain.csv", "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Description"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()

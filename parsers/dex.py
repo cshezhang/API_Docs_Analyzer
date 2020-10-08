@@ -68,7 +68,7 @@ class DexFileParser:
         logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        csv_name = self.dex_name + ".csv"
+        csv_name = "./api_results/" + self.dex_name + ".csv"
         with open(csv_name, "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)

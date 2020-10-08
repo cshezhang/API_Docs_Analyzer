@@ -128,7 +128,7 @@ class SilverJavaDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("facebook.csv", "w") as csv_file:
+        with open("./api_results/silverjava.csv", "w") as csv_file:
             fieldnames = ["Class", "API_Name"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()

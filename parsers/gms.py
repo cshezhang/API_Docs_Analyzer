@@ -143,7 +143,7 @@ class GmsDocParser:
         logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("GMS.csv", "w") as csv_file:
+        with open("./api_results/GMS.csv", "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()

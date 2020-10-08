@@ -129,7 +129,7 @@ class FacebookDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        csv_name = Config.target_folder.split("\\")[-1]
+        csv_name = "./api_results/" + Config.target_folder.split("\\")[-1]
         with open(csv_name, "w", encoding='utf-8') as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)

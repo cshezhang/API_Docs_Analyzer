@@ -143,7 +143,7 @@ class JavaDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        csv_name = Config.target_folder.split("\\")[-1] + ".csv"
+        csv_name = "./api_results/" + Config.target_folder.split("\\")[-1] + ".csv"
         with open(csv_name, "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
