@@ -9,27 +9,30 @@ from bs4 import BeautifulSoup
 from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
-from util.traverseFolder import get_first_layer_files, get_first_layer_folders
+from util.traverseFolder import get_first_layer_files, get_first_layer_folders, check_api
 
 
 class JavaDocParser:
 
-    def __init__(self):
+    def __init__(self, target_folder=""):
         self.processing_class = ""
         self.full_class_name = ""
         self.sensitive_keywords = set()
         self.apis = []
         self.sensitive_apis = []
+        if target_folder == "":
+            self.api_folders = get_first_layer_folders(Config.target_folder)
+        else:
+            self.api_folders = get_first_layer_folders(target_folder)
 
     def run(self):
         self.sensitive_keywords = get_sensitive_keywords()
-        print(self.sensitive_keywords)
         sum_tp = 0
         sum_fp = 0
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
-        api_folders = get_first_layer_folders(Config.target_folder)
-        for api_folder in api_folders:
-            logger.info("Processing Folder:" + str(api_folder))
+        # sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+        # api_folders = get_first_layer_folders(Config.target_folder)
+        for api_folder in self.api_folders:
+            # logger.info("Processing Folder:" + str(api_folder))
             (tp, fp) = self.process_api(api_folder)
             sum_tp = sum_tp + tp
             sum_fp = sum_fp + fp
@@ -44,19 +47,25 @@ class JavaDocParser:
             file = files_list[i]
             self.processing_class = file.split("\\")[-1].split(" ")[0]
             # We should consider the full class name here.
-            logger.info("Processing Class=" + self.processing_class)
-            soup = BeautifulSoup(open(file, encoding='utf-8'), features='html.parser')
+            # logger.info("Processing Class=" + self.processing_class)
+            # logger.info(file)
+            try:
+                soup = BeautifulSoup(open(file, encoding="gb18030"), features='html.parser')
+            except:
+                soup = BeautifulSoup(open(file, encoding="utf-8"), features='html.parser')
+            # utf-8
+            # soup = BeautifulSoup(html_file, features='html.parser')
             tag_list = soup.find_all()
             full_name_find = False
             for j in range(0, len(tag_list)):
                 tag = tag_list[j]
                 if tag.name == "h2":
                     next_tag = tag_list[j - 1]
-                    self.full_class_name = next_tag.getText() + "." + self.processing_class[ : -5]
+                    self.full_class_name = next_tag.getText() + "." + self.processing_class[: -5]
                     break
                 if full_name_find:
                     break
-            logger.info("FULL_CLASS_NAME=" + self.full_class_name)
+            # logger.info("FULL_CLASS_NAME=" + self.full_class_name)
             c_tp, c_fp = self.get_privacy(tag_list)
             tp = tp + c_tp
             fp = fp + c_fp
@@ -109,7 +118,7 @@ class JavaDocParser:
                     privacy_item = keywords
                     break
             if is_sensitive:
-                self.sensitive_apis.append((self.processing_class, api, privacy_item))
+                self.sensitive_apis.append((self.full_class_name, api, privacy_item))
                 fp = fp + 1
                 continue
             tp = tp + 1
@@ -135,20 +144,23 @@ class JavaDocParser:
         # print("--------------------------------------")
         # for api in self.apis:
         #     print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
         print("--------------------------------------")
         print("API SUM=" + str(len(self.apis)))
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        csv_name = "./api_results/" + Config.target_folder.split("\\")[-1] + ".csv"
-        with open(csv_name, "w") as csv_file:
-            fieldnames = ["Class", "API_Name", "Reason"]
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            # writer.writeheader()
-            for sensitive_api in self.sensitive_apis:
-                writer.writerow(
-                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
-                )
+        # print("SELF=" + self.api_folders[0])
+        csv_name = ".\\api_results\\java\\" + self.api_folders[0].split("\\")[-2] + ".csv"
+        logger.info("CSV_Name=" + csv_name)
+        csv_file = open(csv_name, "w")
+        fieldnames = ["Class", "API_Name", "Reason"]
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        # writer.writeheader()
+        for sensitive_api in self.sensitive_apis:
+            if check_api(sensitive_api[1]):
+                writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
+        csv_file.close()
+

@@ -1,4 +1,0 @@
-Lco/cyberz/common/ids/FingerPrint;,setFingerprintId,"('Fingerprint',)"
-Lco/cyberz/fox/FoxTrackOption;,addBuid,"('ad', 'id')"
-Lco/cyberz/fox/FoxTrackOption;,getBuid,"('id',)"
-Lco/cyberz/fox/service/FoxEvent;,setXtid,"('id',)"

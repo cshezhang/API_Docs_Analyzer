@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
-from util.traverseFolder import get_first_layer_files, get_first_layer_folders
+from util.traverseFolder import get_first_layer_files, get_first_layer_folders, check_api
 
 
 class AppbrainDocParser:
@@ -133,6 +133,5 @@ class AppbrainDocParser:
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                writer.writerow(
-                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]}
-                )
+                if check_api(sensitive_api[1]):
+                    writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]})

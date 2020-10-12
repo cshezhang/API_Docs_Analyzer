@@ -3,6 +3,7 @@ import csv
 import lief
 from util.config import Config
 from res.traverseSensitiveSources import sensitive_keywords
+from util.traverseFolder import check_api
 from util.Command import shell_command
 from util.log import logger
 
@@ -68,12 +69,14 @@ class DexFileParser:
         logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        csv_name = "./api_results/" + self.dex_name + ".csv"
+        csv_name = "./api_results/dex/" + self.dex_name + ".csv"
         with open(csv_name, "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
+                if not check_api(sensitive_api[1]):
+                    continue
                 writer.writerow(
                     {"Class" : sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
                 )

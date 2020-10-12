@@ -1,3 +1,0 @@
-Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getDefaultMeid,"('id',)"
-Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getMeidByIndex,"('id',)"
-Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getMeids,"('id',)"

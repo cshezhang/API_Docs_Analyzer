@@ -1,7 +1,0 @@
-Lcom/bugsense/trace/CryptoHttpClient;,createClientConnectionManager,"('Connection',)"
-Lcom/bugsense/trace/UidManager;,generateUid,"('id',)"
-Lcom/bugsense/trace/UidManager;,getUid,"('id',)"
-Lcom/bugsense/trace/UidManager;,saveUid,"('id',)"
-Lcom/bugsense/trace/Utils;,CheckNetworkConnection,"('Connection',)"
-Lorg/apache/http/conn/ssl/SSLSocketFactory;,setHostnameVerifier,"('name',)"
-Lorg/apache/http/params/HttpConnectionParams;,setConnectionTimeout,"('Connection',)"

@@ -12,7 +12,7 @@ from parsers.javalike import JavaLikeDocParser
 from parsers.pushwoosh import PushwooshDocParser
 from parsers.appbrain import AppbrainDocParser
 from parsers.silverjava import SilverJavaDocParser
-from util.traverseFolder import get_first_layer_files
+from util.traverseFolder import get_first_layer_folders, get_first_layer_files
 
 
 def main():
@@ -35,17 +35,19 @@ def main():
             except:
                 logger.error("Exception!")
     if parser_type.lower() == 'javadoc_folder':
-        logger.info("Java Doc Folder")
+        logger.info("Java Doc Folder=" + target_folder)
         if not os.path.isdir(target_folder):
             logger.error("Not a Folder! Exiting...")
             return
-        javadoc_folders = get_first_layer_files(target_folder, False)
+        javadoc_folders = get_first_layer_folders(target_folder)
         for javadoc in javadoc_folders:
-            logger.info("Processing File=" + javadoc)
+            logger.info("Processing JavaDoc=" + javadoc)
+            # print(javadoc)
             parser = JavaDocParser(javadoc)
             parser.run()
-            parser.print_results()
+            # parser.print_results()
             parser.print_to_csv()
+            # break
     if parser_type.lower() == 'facebook':
         logger.info("facebook")
         parser = FacebookDocParser()
@@ -91,10 +93,13 @@ def main():
         files = get_first_layer_files(target_folder, False)
         # print(len(files))
         for file in files:
-            parser = DexFileParser(file)
-            parser.run()
-            parser.print_results()
-            parser.print_to_csv()
+            try:
+                parser = DexFileParser(file)
+                parser.run()
+                parser.print_results()
+                parser.print_to_csv()
+            except:
+                print(str(file) + " Error!")
     if parser_type.lower() == 'appbrain':
         logger.info("AppBrain")
         parser = AppbrainDocParser()
