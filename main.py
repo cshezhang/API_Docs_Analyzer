@@ -32,7 +32,8 @@ def main():
                 parser.run()
                 parser.print_results()
                 parser.print_to_csv()
-            except:
+            except Exception as e:
+                print(e)
                 logger.error("Exception!")
     if parser_type.lower() == 'javadoc_folder':
         logger.info("Java Doc Folder=" + target_folder)
@@ -48,8 +49,19 @@ def main():
             # parser.print_results()
             parser.print_to_csv()
             # break
+    if parser_type.lower() == 'facebooks':
+        logger.info("Facebook Docs")
+        facebook_folders = get_first_layer_folders(target_folder)
+        for facebook_doc in facebook_folders:
+            logger.info("Processing Facebook Doc=" + facebook_doc)
+            # print(javadoc)
+            parser = FacebookDocParser(facebook_doc)
+            parser.run()
+            # parser.print_results()
+            parser.print_to_csv()
+            # break
     if parser_type.lower() == 'facebook':
-        logger.info("facebook")
+        logger.info("Facebook")
         parser = FacebookDocParser()
         parser.run()
         parser.print_results()
@@ -71,6 +83,17 @@ def main():
         parser = TableDocParser()
         parser.run()
         parser.print_results()
+    if parser_type.lower() == 'javalikes':
+        logger.info("Javalike Docs")
+        javalike_folders = get_first_layer_folders(target_folder)
+        for javalike_doc in javalike_folders:
+            logger.info("Processing Facebook Doc=" + javalike_doc)
+            # print(javadoc)
+            parser = JavaLikeDocParser(javalike_doc)
+            parser.run()
+            # parser.print_results()
+            parser.print_to_csv()
+            # break
     if parser_type.lower() == 'javalike':
         logger.info('Java-like')
         parser = JavaLikeDocParser()
@@ -94,17 +117,19 @@ def main():
         # print(len(files))
         for file in files:
             try:
+                logger.info("Processing File=" + file)
                 parser = DexFileParser(file)
                 parser.run()
-                parser.print_results()
+                # parser.print_results()
                 parser.print_to_csv()
-            except:
-                print(str(file) + " Error!")
+            except Exception as e:
+                print(e)
     if parser_type.lower() == 'appbrain':
         logger.info("AppBrain")
         parser = AppbrainDocParser()
         parser.run()
         parser.print_results()
+        parser.print_to_csv()
     if parser_type.lower() == 'silverjava':
         logger.info("Appsfire")
         parser = SilverJavaDocParser()

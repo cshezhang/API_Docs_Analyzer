@@ -11,6 +11,9 @@
                             "name": "AccountID"
                         },
                         {
+                            "name": "UserID"
+                        },
+                        {
                             "name": "Username"
                         },
                         {
@@ -80,10 +83,7 @@
                     "name": "Resident"
                 },
                 {
-                    "name" : "Line_Number"
-                },
-                {
-                    "name" : "Address"
+                    "name": "Line_Number"
                 }
             ]
         },
@@ -241,6 +241,9 @@
                             "name": "IP_Address"
                         },
                         {
+                            "name": "Bluetooth_Address"
+                        },
+                        {
                             "name" : "Internet_Protocal"
                         },
                         {
@@ -253,6 +256,9 @@
                     "children": [
                         {
                             "name": "Email_Address"
+                        },
+                        {
+                           "name" : "Address"
                         },
                         {
                             "name": "Phone_Number"

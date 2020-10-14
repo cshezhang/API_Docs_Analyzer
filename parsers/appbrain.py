@@ -22,7 +22,7 @@ class AppbrainDocParser:
 
     def run(self):
         self.sensitive_keywords = get_sensitive_keywords()
-        print(self.sensitive_keywords)
+        # print(self.sensitive_keywords)
         sum_tp = 0
         sum_fp = 0
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
@@ -62,7 +62,7 @@ class AppbrainDocParser:
             if tag.name == 'h2':
                 # print(tag.getText())
                 des_text = tag.getText()
-                if "Method Detail" in des_text:
+                if "Methods" in des_text:
                     is_method_section = True
                 if not is_method_section:
                     continue
@@ -117,18 +117,18 @@ class AppbrainDocParser:
         return tp, fp
 
     def print_results(self):
-        # print("--------------------------------------")
-        # for api in self.apis:
-        #     print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
+        print("--------------------------------------")
+        for api in self.apis:
+            print(api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
         print("--------------------------------------")
         print("API SUM=" + str(len(self.apis)))
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        with open("./api_results/appbrain.csv", "w") as csv_file:
+        with open(".\\api_results\\appbrain\\appbrain.csv", "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Description"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()

@@ -9,27 +9,30 @@ from bs4 import BeautifulSoup
 from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
-from util.traverseFolder import get_first_layer_folders, get_first_layer_files
+from util.traverseFolder import get_first_layer_folders, get_first_layer_files, check_api
 
 
 class FacebookDocParser:
 
-    def __init__(self):
+    def __init__(self, target_folder=""):
         self.processing_class = ""
         self.sensitive_keywords = set()
         self.apis = []
         self.sensitive_apis = []
+        if target_folder == "":
+            self.api_folders = get_first_layer_folders(Config.target_folder)
+        else:
+            self.api_folders = get_first_layer_folders(target_folder)
 
     def run(self):
         self.sensitive_keywords = get_sensitive_keywords()
-        print(self.sensitive_keywords)
         # logger.info("keywords=" + str(self.sensitive_keywords))
         sum_tp = 0
         sum_fp = 0
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
-        api_folders = get_first_layer_folders(Config.target_folder)
-        for api_folder in api_folders:
-            logger.info("Processing Folder:" + str(api_folder))
+        # sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+        # api_folders = get_first_layer_folders(Config.target_folder)
+        for api_folder in self.api_folders:
+            # logger.info("Processing Folder:" + str(api_folder))
             (tp, fp) = self.process_api(api_folder)
             sum_tp = sum_tp + tp
             sum_fp = sum_fp + fp
@@ -50,7 +53,7 @@ class FacebookDocParser:
             file = files_list[i]
             # logger.info("Processing File=" + str(file))
             self.processing_class = file.split("\\")[-1].split(" ")[0]
-            logger.info("Current Class=" + self.processing_class)
+            # logger.info("Current Class=" + self.processing_class)
             soup = BeautifulSoup(open(file, encoding='utf-8'), features='html.parser')
             tag_list = soup.find_all()
             (c_tp, c_fp) = self.get_privacy(tag_list)
@@ -121,20 +124,22 @@ class FacebookDocParser:
         # print("--------------------------------------")
         # for api in self.apis:
         #     print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
         print("--------------------------------------")
         print("API SUM=" + str(len(self.apis)))
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        csv_name = "./api_results/" + Config.target_folder.split("\\")[-1]
+        csv_name = ".\\api_results\\facebook\\" + self.api_folders[0].split("\\")[-2] + ".csv"
+        print("CSV_Name=" + csv_name)
         with open(csv_name, "w", encoding='utf-8') as csv_file:
-            fieldnames = ["Class", "API_Name", "Reason"]
+            fieldnames = ["Class", "API_Name"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                writer.writerow(
-                    {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
-                )
+                if check_api(sensitive_api[1]):
+                    writer.writerow(
+                        # {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
+                        {"Class": sensitive_api[0], "API_Name": sensitive_api[1]})

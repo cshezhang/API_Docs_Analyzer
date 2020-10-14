@@ -3,7 +3,7 @@ import json
 
 def get_sensitive_keywords():
     # Get sensitive keywords from our json file.
-    keywords = set()
+    keywords = []
     tree_file = open(".\\res\\sensitive_keywords.json", "r")
     tree_dict = json.load(tree_file)
     tree_file.close()
@@ -17,8 +17,8 @@ def get_sensitive_keywords():
             for child_node in head["children"]:
                 que.append(child_node)
     for item in privacy_words:
-        words = tuple(item.split("_"))
-        keywords.add(words)
+        words = item.split("_")
+        keywords.append(words)
     return keywords
 
 

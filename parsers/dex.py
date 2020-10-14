@@ -22,8 +22,10 @@ class DexFileParser:
             # print(dx_cmd)
             return_code, out, err = shell_command(dx_cmd)
             # print(return_code)
-            # print(out)
-            print(err.decode())
+            if return_code == 1:
+                print(out)
+            else:
+                print(err.decode())
         else:
             target_path = dex_path
         self.dex = lief.DEX.parse(target_path)
@@ -45,11 +47,14 @@ class DexFileParser:
             for keywords in sensitive_keywords:
                 tag = True
                 for keyword in keywords:
-                    if keyword not in method.name:
+                    if keyword.lower() not in method.name.lower():
                         tag = False
                 if tag:
-                    print(keywords)
-                    self.sensitive_apis.append([method.cls.fullname, method.name, keywords])
+                    privacy_item = ""
+                    for keyword in keywords:
+                        privacy_item = privacy_item + keyword + "_"
+                    privacy_item = privacy_item[ : -1]
+                    self.sensitive_apis.append([method.cls.fullname, method.name, privacy_item])
                     break
 
     def get_all_classes(self):
@@ -77,6 +82,4 @@ class DexFileParser:
             for sensitive_api in self.sensitive_apis:
                 if not check_api(sensitive_api[1]):
                     continue
-                writer.writerow(
-                    {"Class" : sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
-                )
+                writer.writerow({"Class" : sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
