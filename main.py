@@ -34,7 +34,6 @@ def main():
                 parser.print_to_csv()
             except Exception as e:
                 print(e)
-                logger.error("Exception!")
     if parser_type.lower() == 'javadoc_folder':
         logger.info("Java Doc Folder=" + target_folder)
         if not os.path.isdir(target_folder):

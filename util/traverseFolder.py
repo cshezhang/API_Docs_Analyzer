@@ -10,6 +10,8 @@ def check_api(temp_api):
     # black_list.append("")
     # black_list.append("")
     api = temp_api.lower()
+    if api == 'getage' or api == 'setage':
+        return True
     # if not (api.startswith("get") or api.startswith("set")):
     #     return False
     if "location" in api and not ("get" not in api and "set" not in api):
