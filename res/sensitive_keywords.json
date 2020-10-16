@@ -108,10 +108,16 @@
                     "name": "Login_Record"
                 },
                 {
+                    "name": "Log_Login"
+                },
+                {
                     "name": "Search_Queries"
                 },
                 {
                     "name": "Wishlist"
+                },
+                {
+                    "name": "Add_To_Cart"
                 }
             ]
         },

@@ -16,7 +16,7 @@ def check_api(temp_api):
     #     return False
     if "location" in api and not ("get" not in api and "set" not in api):
         return False
-    if "click" in api and "onclick" not in api:
+    if "click" in api and ("onclick" not in api and "clicked" not in api):
         return False
     start_words = ["waitfor", "doNotRead", "maybe", "to", "clear", "config", "setis", "setneed", "onreceive", "onreceive", "handle", "unset", "delete", "stop", "Notify", "trigger", "warn", "use"]
     end_words = ["TimeImmediately", "Callback", "Format", "num", "space", "Configeration", "source", "type", "purpose", "option", "report", "area", "Reset", "Surpport", "Configuration", "Mode", "Describe", "disabled", "Clickable", "Notify"]

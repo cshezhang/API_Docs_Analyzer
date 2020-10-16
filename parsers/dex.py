@@ -43,6 +43,10 @@ class DexFileParser:
                 continue
             if len(method.name) == 1:
                 continue
+            para_list = method.prototype.parameters_type
+            if len(para_list) == 2:
+                if para_list[0] == "Ljava/lang/String;" and para_list[1] == "Ljava/lang/String;":
+                    print(method)
             self.apis.append(method.name)
             for keywords in sensitive_keywords:
                 tag = True

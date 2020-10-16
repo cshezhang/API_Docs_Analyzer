@@ -31,7 +31,7 @@ def main():
                 parser = DexFileParser(jar_file)
                 parser.run()
                 parser.print_results()
-                parser.print_to_csv()
+                # parser.print_to_csv()
             except Exception as e:
                 print(e)
     if parser_type.lower() == 'javadoc_folder':
