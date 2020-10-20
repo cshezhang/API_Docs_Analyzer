@@ -1,0 +1,306 @@
+{
+    "name": "PrivacyTree",
+    "children":[
+        {
+            "name": "Personal_Information",
+            "children": [
+                {
+                    "name": "Account_Information",
+                    "children": [
+                        {
+                            "name": "Username"
+                        },
+                        {
+                            "name": "Password"
+                        }
+                    ]
+                },
+                {
+                    "name": "Criminal_Record"
+                },
+                {
+                    "name": "Preference",
+                    "synonym": "Hobby,Favourite,Favorite"
+                },
+                {
+                    "name": "Marital_Status",
+                    "synonym": "Marital"
+                },
+                {
+                    "name": "Birthday",
+                    "synonym": "date_of_birth"
+                },
+                {
+                    "name": "Gender"
+                },
+                {
+                    "name": "Nationality"
+                },
+                {
+                    "name": "Philosophical",
+                    "synonym": "Philosophy"
+                },
+                {
+                    "name": "Political",
+                    "synonym": "Politics"
+                },
+                {
+                    "name": "Racial"
+                },
+                {
+                    "name": "Religious",
+                    "synonym": "Religion"
+                },
+                {
+                    "name": "Sexuality"
+                },
+                {
+                    "name": "Residential_Address",
+                    "synonym": "Resident"
+                }
+            ]
+        },
+        {
+            "name": "Device_Usage",
+            "children": [
+                {
+                    "name": "Browse_History"
+                },
+                {
+                    "name": "Click_Record",
+                    "synonym": "Click,Hit_Record,Hit"
+                },
+                {
+                    "name": "Interactions",
+                    "children": [
+                        {
+                            "name": "Comment"
+                        }
+                    ]
+                },
+                {
+                    "name": "Login_Record",
+                    "synonym": "Log_Login"
+                },
+                {
+                    "name": "Search_Queries"
+                },
+                {
+                    "name": "Wishlist",
+                    "synonym": "Add_To_Cart"
+                }
+            ]
+        },
+        {
+            "name": "Education",
+            "children": [
+                {
+                    "name": "Education_Experience",
+                    "children": [
+                        {
+                            "name": "Highest_Degree"
+                        }
+                    ]
+                },
+                {
+                    "name": "Transcript"
+                }
+            ]
+        },
+        {
+            "name": "Employment",
+            "children": [
+                {
+                    "name": "Company"
+                },
+                {
+                    "name": "Job_Title"
+                },
+                {
+                    "name": "Profession"
+                },
+                {
+                    "name": "Work_Experience"
+                }
+            ]
+        },
+        {
+            "name": "Transaction_Information",
+            "children": [
+                {
+                    "name": "Merchant_Information"
+                },
+                {
+                    "name": "Price_Information"
+                },
+                {
+                    "name": "Product_Description",
+                    "synonym": "Product_Name"
+                },
+                {
+                    "name": "Shipping_Address"
+                },
+                {
+                    "name": "Credit_Card_Number"
+                },
+                {
+                    "name": "Payment_Type",
+                    "synonym": "Currency"
+                }
+            ]
+        },
+        {
+            "name": "Health",
+            "children": [
+                {
+                    "name": "Blood_Pressure"
+                },
+                {
+                    "name": "Body_Measurement",
+                    "children": [
+                        {
+                            "name": "Body_Temperature"
+                        },
+                        {
+                            "name": "Body_Fat_Percentage"
+                        }
+                    ]
+                },
+                {
+                    "name": "Heart_Rate"
+                },
+
+                {
+                    "name": "Movement_Distance"
+                },
+                {
+                    "name": "Nutrition"
+                },
+                {
+                    "name": "Step_Count"
+                }
+            ]
+        },
+        {
+            "name": "Identifier_Information",
+            "children": [
+                {
+                    "name": "Device_Identifier",
+                    "children": [
+                        {
+                            "name": "Advertising_ID",
+                            "synonym": "ad_id,Advertising_Identity"
+                        },
+                        {
+                            "name": "Device_ID",
+                            "synonym": "Android_ID"
+                        },
+                        {
+                            "name": "IMEI"
+                        },
+                        {
+                            "name": "IMSI"
+                        },
+                        {
+                            "name": "IP_Address",
+                            "synonym": "Internet_Protocal_Address"
+                        },
+                        {
+                            "name": "Hardware_ID",
+                            "synonym": "Bluetooth_Address"
+                        },
+                        {
+                            "name": "MAC_Address"
+                        }
+                    ]
+                },
+                {
+                    "name": "Social_Identifier",
+                    "children": [
+                        {
+                            "name": "Email_Address"
+                        },
+                        {
+                            "name": "Phone_Number",
+                            "synonym": "Line_Number"
+                        },
+                        {
+                            "name": "Social_Security_Code"
+                        },
+                        {
+                            "name": "Social_Media_Identifier"
+                        },
+                        {
+                            "name": "Passport_Number"
+                        },
+                        {
+                            "name": "Driver_License_Number"
+                        }
+                    ]
+                },
+                {
+                    "name": "Biometric_Identifier",
+                    "children": [
+                        {
+                            "name": "Voiceprint"
+                        },
+                        {
+                            "name": "Faceprint"
+                        },
+                        {
+                            "name": "Fingerprint"
+                        },
+                        {
+                            "name": "Iris_Image"
+                        },
+                        {
+                            "name": "Retina"
+                        }
+                    ]
+                },
+                {
+                    "name": "User_ID",
+                    "children": [
+                        {
+                            "name": "Google_ID"
+                        },
+                        {
+                            "name": "Twitter_ID"
+                        },
+                        {
+                            "name": "Amazon_ID"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Location",
+            "children": [
+                {
+                    "name": "Current_Location"
+                }
+            ]
+        },
+        {
+            "name": "Connection_Info",
+            "children": [
+                {
+                    "name": "Email_History"
+                },
+                {
+                    "name": "Chat_Record"
+                },
+                {
+                    "name": "Friends_List"
+                },
+                {
+                    "name": "Address_Book"
+                },
+                {
+                    "name": "Call_Record"
+                }
+            ]
+        }
+    ]
+}

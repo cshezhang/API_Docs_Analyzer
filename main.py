@@ -19,6 +19,26 @@ def main():
     parser_type = sys.argv[1]
     target_folder = sys.argv[2]
     Config.target_folder = target_folder
+    if parser_type.lower() == 'all':
+        javadoc_folders = get_first_layer_folders(Config.javadoc_folder_path)
+        for javadoc in javadoc_folders:
+            logger.info("Processing JavaDoc=" + javadoc)
+            # print(javadoc)
+            parser = JavaDocParser(javadoc)
+            parser.run()
+            # parser.print_results()
+            parser.print_to_csv()
+            # break
+        jar_files = get_first_layer_files(Config.jar_folder_path, False)
+        for jar_file in jar_files:
+            logger.info("Processing File=" + jar_file)
+            try:
+                parser = DexFileParser(jar_file)
+                parser.run()
+                parser.print_results()
+                # parser.print_to_csv()
+            except Exception as e:
+                print(e)
     if parser_type.lower() == 'jar_folder':
         logger.info("Jar Folder")
         if not os.path.isdir(target_folder):
@@ -82,7 +102,7 @@ def main():
         parser = TableDocParser()
         parser.run()
         parser.print_results()
-    if parser_type.lower() == 'javalikes':
+    if parser_type.lower() == 'javalike_folder':
         logger.info("Javalike Docs")
         javalike_folders = get_first_layer_folders(target_folder)
         for javalike_doc in javalike_folders:

@@ -139,8 +139,8 @@ class JavaLikeDocParser:
     def print_to_csv(self):
         csv_name = "./api_results/javalike/" + self.api_folders[0].split("\\")[-2] + ".csv"
         with open(csv_name, "w") as csv_file:
-            fieldnames = ["Class", "API_Name", "Privacy_Item", "Description"]
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            field_names = ["Class", "API_Name", "Privacy_Item", "Description"]
+            writer = csv.DictWriter(csv_file, fieldnames=field_names)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
                 if check_api(sensitive_api[1]):

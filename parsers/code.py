@@ -10,7 +10,7 @@ from res.traverseSensitiveSources import get_sensitive_keywords
 from util.traverseFolder import get_first_layer_files, get_all_files
 
 
-class CodeDocParser:
+class TutorialParser:
 
     def __init__(self):
         self.processing_class = ""
@@ -56,8 +56,6 @@ class CodeDocParser:
             if tag.name == 'code':
                 print(tag.getText())
                 print("--------------------------------")
-        if True == True:
-            return
         for i in range(0, len(tag_list)):
             tag = tag_list[i]  # tag is a table class used to parse method.
             if tag.name == 'table':
