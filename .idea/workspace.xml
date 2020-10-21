@@ -19,20 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/API_Docs_Analyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/API_Docs_Analyzer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/dex.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/dex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/facebook.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/java.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/java.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/javalike.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/javalike.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sensitive_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/sensitive_keywords.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/log.py" afterDir="false" />
-    </list>
+    <list default="true" id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,7 +197,7 @@
       <workItem from="1603181999552" duration="749000" />
       <workItem from="1603182756982" duration="2692000" />
       <workItem from="1603187151563" duration="4727000" />
-      <workItem from="1603243235177" duration="4869000" />
+      <workItem from="1603243235177" duration="5613000" />
     </task>
     <servers />
   </component>
