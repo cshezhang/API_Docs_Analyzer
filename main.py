@@ -59,11 +59,11 @@ def parse_javadoc_folder(target_folder):
         # break
 
 
-def parse_appbrain_doc():
-    logger.info("AppBrain")
-    parser = AppbrainDocParser()
+def parse_appbrain_doc(target_folder):
+    logger.info("AppBrain Folder=" + target_folder)
+    parser = AppbrainDocParser(target_folder)
     parser.run()
-    parser.print_results()
+    # parser.print_results()
     parser.print_to_csv()
 
 
@@ -140,13 +140,15 @@ def main():
         parse_silverjava_doc()
     if parser_type.lower() == 'all_test':
         jar_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Jars"
-        javadoc_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Java"
+        javadoc_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Java_Test"
         facebook_doc_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Facebook"
         javalike_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Javalike"
+        appbrain_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\AppBrain"
         parse_jar_folder(jar_folder)
         parse_javadoc_folder(javadoc_folder)
         parse_facebook_folder(facebook_doc_folder)
         parse_javalike_doc(javalike_folder)
+        parse_appbrain_doc(appbrain_folder)
         # parse_silverjava_doc()
         # parse_pushwoosh()
 

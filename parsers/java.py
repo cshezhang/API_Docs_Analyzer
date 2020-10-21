@@ -8,7 +8,8 @@ from bs4 import BeautifulSoup
 from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
-from util.traverseFolder import get_first_layer_files, get_first_layer_folders, check_api
+from util.traverseFolder import get_first_layer_files, get_first_layer_folders
+from util.MethodChecker import check_api, check_api_by_keywords
 
 
 class JavaDocParser:
@@ -96,16 +97,7 @@ class JavaDocParser:
         for i in range(0, len(api_names)):
             api_name = api_names[i]
             api_description = api_descriptions[i]
-            is_sensitive = False
-            privacy_item = ""
-            for keywords in self.sensitive_keywords:
-                is_sensitive = True
-                for keyword in keywords:
-                    if keyword.lower() not in api_name.lower():
-                        is_sensitive = False
-                if is_sensitive:
-                    privacy_item = keywords
-                    break
+            is_sensitive, privacy_item = check_api_by_keywords(api_name)
             if is_sensitive:
                 api_description = api_description.replace("\n", " ")
                 self.sensitive_apis.append((pkg_name + "." + classname, api_name, privacy_item, api_description))

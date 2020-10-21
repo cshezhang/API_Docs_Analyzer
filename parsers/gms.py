@@ -9,7 +9,8 @@ from bs4 import BeautifulSoup
 from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
-from util.traverseFolder import get_first_layer_files, get_first_layer_folders, check_api
+from util.traverseFolder import get_first_layer_files, get_first_layer_folders
+from util.MethodChecker import check_api, check_api_by_keywords
 
 
 class GmsDocParser:
@@ -55,11 +56,8 @@ class GmsDocParser:
         tp = 0
         fp = 0
         for tag in tag_list:
-            # print(tag.name)
-            # if tag.name == "meta":
-                # print(tag.attrs)
             if tag.name == "meta" and "property" in tag.attrs.keys() and tag["property"] == "og:url":
-                full_class_name = tag["content"][ len("https://developers.google.com/android/reference/") : ]
+                full_class_name = tag["content"][len("https://developers.google.com/android/reference/"):]
                 logger.info(full_class_name)
                 break
         for i in range(0, len(tag_list)):
@@ -113,17 +111,7 @@ class GmsDocParser:
                     if no:
                         descriptions.append("No Description!")
         for api_name, description in api2des.items():
-            is_sensitive = False
-            privacy_item = ""
-            for keywords in self.sensitive_keywords:
-                is_sensitive = True
-                # if keyword in description.lower() or keyword in api_name.lower():
-                for keyword in keywords:  # 一个隐私项可能有多个keyword，比如Device_ID
-                    if keyword.lower() not in api_name.lower():
-                        is_sensitive = False
-                if is_sensitive:
-                    privacy_item = keywords
-                    break
+            is_sensitive, privacy_item = check_api_by_keywords(api_name)
             if is_sensitive:
                 self.sensitive_apis.append([full_class_name, api_name, privacy_item, description])
                 fp = fp + 1

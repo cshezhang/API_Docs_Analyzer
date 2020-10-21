@@ -2,10 +2,8 @@ import os
 import csv
 import lief
 from util.config import Config
-from res.traverseSensitiveSources import sensitive_keywords
-from util.traverseFolder import check_api
+from util.MethodChecker import check_api, check_api_by_keywords
 from util.Command import shell_command
-from util.log import logger
 
 
 # This parser also can process jar file if dx provided.
@@ -22,7 +20,7 @@ class DexFileParser:
             # print(dx_cmd)
             if not os.path.exists(target_path):
                 return_code, out, err = shell_command(dx_cmd)
-            # print(return_code)
+                # print(return_code)
                 if return_code == 1:
                     print(out)
                 else:
@@ -49,19 +47,9 @@ class DexFileParser:
                 if para_list[0] == "Ljava/lang/String;" and para_list[1] == "Ljava/lang/String;":
                     print(method)
             self.apis.append(method.name)
-            for keywords in sensitive_keywords:
-                tag = True
-                for keyword in keywords:
-                    if keyword.lower() not in method.name.lower():
-                        tag = False
-                if tag:
-                    privacy_item = ""
-                    for keyword in keywords:
-                        privacy_item = privacy_item + keyword + "_"
-                    privacy_item = privacy_item[: -1]
-                    privacy_item = privacy_item.replace("\n", " ")
-                    self.sensitive_apis.append([method.cls.fullname, method.name, privacy_item])
-                    break
+            is_sensitive, privacy_item = check_api_by_keywords(method.name)
+            if is_sensitive:
+                self.sensitive_apis.append([method.cls.fullname, method.name, privacy_item])
 
     def get_all_classes(self):
         return self.classes
@@ -70,14 +58,14 @@ class DexFileParser:
         return self.methods
 
     def print_results(self):
-        # logger.info("--------------------------------------")
-        # for api in self.apis:
-        #     logger.info(api)
-        logger.info("**************************************")
+        print("--------------------------------------")
+        for api in self.apis:
+            print(api)
+        print("**************************************")
         for sensitive_api in self.sensitive_apis:
-            logger.info(sensitive_api)
-        logger.info("API SUM=" + str(len(self.apis)))
-        logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+            print(sensitive_api)
+        print("API SUM=" + str(len(self.apis)))
+        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
         if not os.path.exists("./api_results/dex/"):
@@ -88,6 +76,9 @@ class DexFileParser:
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                if not check_api(sensitive_api[1]):
-                    continue
-                writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
+                if check_api(sensitive_api[1]):
+                    writer.writerow({
+                        "Class": sensitive_api[0],
+                        "API_Name": sensitive_api[1],
+                        "Reason": sensitive_api[2]
+                        })
