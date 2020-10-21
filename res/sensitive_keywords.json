@@ -108,7 +108,7 @@
                     "name": "Login_Record"
                 },
                 {
-                    "name": "Log_Login"
+                    "name": "loglogin"
                 },
                 {
                     "name": "Search_Queries"

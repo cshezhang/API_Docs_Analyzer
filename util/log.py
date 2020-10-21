@@ -16,11 +16,12 @@ log_colors_config = {
 class Log:
 
     def __init__(self, logname='Access_log'):
-        self.logname = os.path.join("C:\\Users\\wayne\\log", '%s' % logname)
+        self.logname = os.path.join("C:\\Users\\Rainy\\log", '%s' % logname)
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
         self.formatter = colorlog.ColoredFormatter(
-            '%(log_color)s[%(asctime)s] [%(filename)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %(message)s',
+            '%(log_color)s[%(asctime)s] [%(filename)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %('
+            'message)s',
             log_colors=log_colors_config)  # 日志输出格式
 
     def console(self, level, message):

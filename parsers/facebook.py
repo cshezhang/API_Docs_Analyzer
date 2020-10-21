@@ -1,12 +1,10 @@
 # APIDoc_Analyzer is used to automatically extract sensitive API from Facebook-style Docs.
 # Senstive API is based on the related keyword.
 
-import io
-import sys
+import os
 import csv
 from bs4 import BeautifulSoup
 
-from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
 from util.traverseFolder import get_first_layer_folders, get_first_layer_files, check_api
@@ -36,7 +34,7 @@ class FacebookDocParser:
             (tp, fp) = self.process_api(api_folder)
             sum_tp = sum_tp + tp
             sum_fp = sum_fp + fp
-        print("SUM=" + str(len(self.apis)))
+        # print("SUM=" + str(len(self.apis)))
         # print("SUM_TP=" + str(sum_tp))
         # print("SUM_FP=" + str(sum_fp))
         # logger.info("-----Sensitive Results-----")
@@ -132,14 +130,14 @@ class FacebookDocParser:
         print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
+        if not os.path.exists(".\\api_results\\facebook\\"):
+            os.mkdir(".\\api_results\\facebook")
         csv_name = ".\\api_results\\facebook\\" + self.api_folders[0].split("\\")[-2] + ".csv"
         print("CSV_Name=" + csv_name)
         with open(csv_name, "w", encoding='utf-8') as csv_file:
-            fieldnames = ["Class", "API_Name"]
+            fieldnames = ["Class", "API_Name", "Description"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
                 if check_api(sensitive_api[1]):
-                    writer.writerow(
-                        # {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
-                        {"Class": sensitive_api[0], "API_Name": sensitive_api[1]})
+                    writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]})

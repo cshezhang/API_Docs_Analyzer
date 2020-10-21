@@ -1,6 +1,7 @@
 # Java_Doc_Analyzer is used to automatically extract sensitive APIs from java-style api docs.
 # Senstive API is based on the related keyword match.
 
+import os
 import csv
 from bs4 import BeautifulSoup
 
@@ -106,6 +107,7 @@ class JavaDocParser:
                     privacy_item = keywords
                     break
             if is_sensitive:
+                api_description = api_description.replace("\n", " ")
                 self.sensitive_apis.append((pkg_name + "." + classname, api_name, privacy_item, api_description))
                 if pkg_name == "":
                     logger.error(classname)
@@ -127,6 +129,8 @@ class JavaDocParser:
         # print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
+        if not os.path.exists(".\\api_results\\java\\"):
+            os.mkdir(".\\api_results\\java")
         csv_name = ".\\api_results\\java\\" + self.api_folders[0].split("\\")[-2] + ".csv"
         csv_file = open(csv_name, "w", encoding="utf-8")
         field_names = ["Class", "API_Name", "Privacy_Item", "Description"]

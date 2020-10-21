@@ -20,17 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f990547-82c6-48fc-a3fe-7e5f649a5f28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/Tree.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/API_Docs_Analyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/API_Docs_Analyzer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsers/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/dex.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/dex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsers/facebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/facebook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parsers/java.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/java.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parsers/javalike.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsers/javalike.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/jar_test.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/jar_test.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sensitive_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/res/sensitive_keywords.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/log.py" afterDir="false" />
     </list>
@@ -49,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="5fd72683-1789-4f29-8496-9af8e1ac83c4" />
+  <component name="JupyterTrust" id="aed31124-8442-42a9-80be-a09e6ad699a6" />
   <component name="ProjectId" id="1hIfwNS9V5pfGoXrUQMVUx6ueSR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,8 +61,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CondaEnv" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -90,7 +89,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="all &quot;C:\Users\wayne\E\Lab_Project\dataset_science\API_Docs\Android_Docs\Java&quot;" />
+      <option name="PARAMETERS" value="all_test &quot;C:\Users\wayne\E\Lab_Project\dataset_science\API_Docs\Android_Docs\Java&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -207,6 +206,11 @@
       <workItem from="1603095726578" duration="1023000" />
       <workItem from="1603096760589" duration="6975000" />
       <workItem from="1603177480648" duration="1393000" />
+      <workItem from="1603181342853" duration="211000" />
+      <workItem from="1603181999552" duration="749000" />
+      <workItem from="1603182756982" duration="2692000" />
+      <workItem from="1603187151563" duration="4727000" />
+      <workItem from="1603243235177" duration="4869000" />
     </task>
     <servers />
   </component>
@@ -230,36 +234,36 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="232" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1602816818808" />
-    <state x="110" y="0" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603178803304">
+    <state x="110" y="0" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603247545288">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="92" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602757574843" />
-    <state x="110" y="0" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1603178803304" />
+    <state x="110" y="0" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1603247545288" />
     <state x="463" y="91" key="FileChooserDialogImpl" timestamp="1603096398428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602122882479" />
     <state x="463" y="91" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603096398428" />
-    <state width="1493" height="130" key="GridCell.Tab.0.bottom" timestamp="1603178811624">
+    <state width="1491" height="177" key="GridCell.Tab.0.bottom" timestamp="1603249110495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1235" height="100" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602764208903" />
-    <state width="1493" height="130" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603178811624" />
-    <state width="1493" height="130" key="GridCell.Tab.0.center" timestamp="1603178811624">
+    <state width="1491" height="177" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603249110495" />
+    <state width="1491" height="177" key="GridCell.Tab.0.center" timestamp="1603249110495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1235" height="100" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602764208903" />
-    <state width="1493" height="130" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603178811624" />
-    <state width="1493" height="130" key="GridCell.Tab.0.left" timestamp="1603178811624">
+    <state width="1491" height="177" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603249110495" />
+    <state width="1491" height="177" key="GridCell.Tab.0.left" timestamp="1603249110495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1235" height="100" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602764208903" />
-    <state width="1493" height="130" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603178811624" />
-    <state width="1493" height="130" key="GridCell.Tab.0.right" timestamp="1603178811624">
+    <state width="1491" height="177" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603249110495" />
+    <state width="1491" height="177" key="GridCell.Tab.0.right" timestamp="1603249110495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1235" height="100" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602764208903" />
-    <state width="1493" height="130" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603178811624" />
+    <state width="1491" height="177" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603249110495" />
     <state width="1235" height="194" key="GridCell.Tab.1.bottom" timestamp="1602580396104">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -276,23 +280,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1235" height="194" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1602580396104" />
-    <state x="169" y="0" key="SettingsEditor" timestamp="1603097431455">
+    <state x="169" y="0" key="SettingsEditor" timestamp="1603249080341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602502376012" />
-    <state x="169" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603097431455" />
+    <state x="169" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603249080341" />
     <state x="349" y="67" key="editAsTableFormatDialogDimension" timestamp="1603097198561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="67" key="editAsTableFormatDialogDimension/0.0.1536.824@0.0.1536.824" timestamp="1603097198561" />
-    <state x="321" y="78" width="773" height="590" key="find.popup" timestamp="1602141837172">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="385" y="95" width="928" height="715" key="find.popup" timestamp="1603189184701">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="321" y="78" width="773" height="590" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1602141837172" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602141979556">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="385" y="95" width="928" height="715" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603189184701" />
+    <state x="364" y="1" width="807" height="822" key="search.everywhere.popup" timestamp="1603187640432">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602141979556" />
+    <state x="364" y="1" width="807" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603187640432" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -317,8 +323,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/API_Docs_Analyzer$main.coverage" NAME="main Coverage Results" MODIFIED="1599814312186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
-    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1601265402757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
-    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$API_Doc_Analyzer.coverage" NAME="API_Doc_Analyzer Coverage Results" MODIFIED="1603178811584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$API_Doc_Analyzer.coverage" NAME="API_Doc_Analyzer Coverage Results" MODIFIED="1603249110489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/API_Docs_Analyzer$SDK2Name.coverage" NAME="SDK2Name Coverage Results" MODIFIED="1602147259412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/API_Docs_Analyzer$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1601265402757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
   </component>
 </project>

@@ -12,20 +12,21 @@ from util.log import logger
 class DexFileParser:
 
     def __init__(self, dex_path):
-        self.dex_name = dex_path.split("\\")[-1][ : -4]
+        self.dex_name = dex_path.split("\\")[-1][: -4]
         if ".jar" in dex_path:
             source_folder = os.path.dirname(dex_path)
-            file_name = os.path.basename(dex_path)[ : -4]
+            file_name = os.path.basename(dex_path)[: -4]
             target_path = source_folder + "\\" + file_name + ".dex"
             source_path = dex_path
             dx_cmd = Config.dx_path + " --dex --output=" + target_path + " " + source_path
             # print(dx_cmd)
-            return_code, out, err = shell_command(dx_cmd)
+            if not os.path.exists(target_path):
+                return_code, out, err = shell_command(dx_cmd)
             # print(return_code)
-            if return_code == 1:
-                print(out)
-            else:
-                print(err.decode())
+                if return_code == 1:
+                    print(out)
+                else:
+                    print(err.decode())
         else:
             target_path = dex_path
         self.dex = lief.DEX.parse(target_path)
@@ -57,7 +58,8 @@ class DexFileParser:
                     privacy_item = ""
                     for keyword in keywords:
                         privacy_item = privacy_item + keyword + "_"
-                    privacy_item = privacy_item[ : -1]
+                    privacy_item = privacy_item[: -1]
+                    privacy_item = privacy_item.replace("\n", " ")
                     self.sensitive_apis.append([method.cls.fullname, method.name, privacy_item])
                     break
 
@@ -78,6 +80,8 @@ class DexFileParser:
         logger.info("Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
+        if not os.path.exists("./api_results/dex/"):
+            os.mkdir("./api_results/dex")
         csv_name = "./api_results/dex/" + self.dex_name + ".csv"
         with open(csv_name, "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
@@ -86,4 +90,4 @@ class DexFileParser:
             for sensitive_api in self.sensitive_apis:
                 if not check_api(sensitive_api[1]):
                     continue
-                writer.writerow({"Class" : sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
+                writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]})
