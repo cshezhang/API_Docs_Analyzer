@@ -10,7 +10,7 @@ from util.log import logger
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
 from util.traverseFolder import get_first_layer_files, get_first_layer_folders
-from util.MethodChecker import check_api, check_api_by_keywords
+from util.MethodChecker import filter_api, check_api_by_keywords
 
 
 class GmsDocParser:
@@ -136,7 +136,7 @@ class GmsDocParser:
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                if check_api(sensitive_api):
+                if filter_api(sensitive_api):
                     writer.writerow(
                         {"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Reason": sensitive_api[2]}
                     )

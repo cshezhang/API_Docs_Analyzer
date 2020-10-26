@@ -6,7 +6,7 @@ import csv
 from bs4 import BeautifulSoup
 
 from util.traverseFolder import get_first_layer_files, get_first_layer_folders
-from util.MethodChecker import check_api, check_api_by_keywords
+from util.MethodChecker import filter_api, check_api_by_class
 
 
 class AppbrainDocParser:
@@ -79,7 +79,7 @@ class AppbrainDocParser:
         # print("first=" + str(len(self.apis)))
         # print("second=" + str(len(api2des)))
         for api in api_names:
-            is_sensitive, privacy_item = check_api_by_keywords(api)
+            is_sensitive, privacy_item = check_api_by_class(self.processing_class, api)
             if is_sensitive:
                 self.sensitive_apis.append((self.processing_class, api, privacy_item))
                 fp = fp + 1
@@ -88,23 +88,25 @@ class AppbrainDocParser:
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
-        print("--------------------------------------")
-        print("API SUM=" + str(len(self.apis)))
-        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
+        # print("--------------------------------------")
+        print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
         if not os.path.exists(".\\api_results\\appbrain"):
             os.mkdir(".\\api_results\\appbrain")
+        sensitive_cnt = 0
         with open(".\\api_results\\appbrain\\appbrain.csv", "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Description"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                if check_api(sensitive_api[1]):
+                if filter_api(sensitive_api[1]):
                     writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]})
+                    sensitive_cnt = sensitive_cnt + 1
+        print("Sensitive API SUM=" + str(sensitive_cnt))

@@ -2,7 +2,7 @@ import os
 import csv
 import lief
 from util.config import Config
-from util.MethodChecker import check_api, check_api_by_keywords
+from util.MethodChecker import filter_api, check_api_by_class
 from util.Command import shell_command
 
 
@@ -40,14 +40,17 @@ class DexFileParser:
                 continue
             if "<init>" == method.name or "<clinit>" == method.name or "toString" == method.name or "clone" == method.name:
                 continue
-            if len(method.name) == 1:
-                continue
-            para_list = method.prototype.parameters_type
-            if len(para_list) == 2:
-                if para_list[0] == "Ljava/lang/String;" and para_list[1] == "Ljava/lang/String;":
-                    print(method)
+            # 过滤混淆
+            # if len(method.name) == 1:
+            #     continue
+            # para_list = method.prototype.parameters_type
+            # if len(para_list) == 2:
+            #     if para_list[0] == "Ljava/lang/String;" and para_list[1] == "Ljava/lang/String;":
+            #         print(method)
+            # if str(method.name).lower() == "getcachedlocation":
+            #     a = 10
             self.apis.append(method.name)
-            is_sensitive, privacy_item = check_api_by_keywords(method.name)
+            is_sensitive, privacy_item = check_api_by_class(method.cls.fullname, method.name)
             if is_sensitive:
                 self.sensitive_apis.append([method.cls.fullname, method.name, privacy_item])
 
@@ -58,27 +61,31 @@ class DexFileParser:
         return self.methods
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
-        print("API SUM=" + str(len(self.apis)))
-        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
+        print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
         if not os.path.exists("./api_results/dex/"):
             os.mkdir("./api_results/dex")
         csv_name = "./api_results/dex/" + self.dex_name + ".csv"
+        sensitive_cnt = 0
         with open(csv_name, "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                if check_api(sensitive_api[1]):
+                # if sensitive_api[1].lower() == "getcachedlocation":
+                #     a = 10
+                if filter_api(sensitive_api[1]):
                     writer.writerow({
                         "Class": sensitive_api[0],
                         "API_Name": sensitive_api[1],
                         "Reason": sensitive_api[2]
                         })
+                    sensitive_cnt = sensitive_cnt + 1
+        print("Sensitive API SUM=" + str(sensitive_cnt))

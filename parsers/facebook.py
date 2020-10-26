@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
 from util.traverseFolder import get_first_layer_folders, get_first_layer_files
-from util.MethodChecker import check_api, check_api_by_keywords
+from util.MethodChecker import filter_api, check_api_by_class
 
 
 class FacebookDocParser:
@@ -84,7 +84,7 @@ class FacebookDocParser:
                     des = tag_list[i + 2].getText()
                 api2des[tag.getText()] = des
         for api_name, description in api2des.items():
-            is_sensitive, privacy_item = check_api_by_keywords(api_name)
+            is_sensitive, privacy_item = check_api_by_class(full_class_name, api_name)
             if is_sensitive:
                 description = description.replace("\n", " ")
                 self.sensitive_apis.append((full_class_name, api_name, description, privacy_item))
@@ -94,25 +94,28 @@ class FacebookDocParser:
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
-        print("--------------------------------------")
-        print("API SUM=" + str(len(self.apis)))
-        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
+        # print("--------------------------------------")
+        print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
         if not os.path.exists(".\\api_results\\facebook\\"):
             os.mkdir(".\\api_results\\facebook")
         csv_name = ".\\api_results\\facebook\\" + self.api_folders[0].split("\\")[-2] + ".csv"
-        print("CSV_Name=" + csv_name)
+        # print("CSV_Name=" + csv_name)
+        sensitive_cnt = 0
         with open(csv_name, "w", encoding='utf-8') as csv_file:
             fieldnames = ["Class", "API_Name", "Description"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                if check_api(sensitive_api[1]):
-                    writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Description": sensitive_api[2]})
+                if filter_api(sensitive_api[1]):
+                    writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1],
+                                     "Description": sensitive_api[2]})
+                    sensitive_cnt = sensitive_cnt + 1
+        print("Sensitive API SUM=" + str(sensitive_cnt))

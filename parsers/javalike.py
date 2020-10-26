@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from util.config import Config
 from res.traverseSensitiveSources import get_sensitive_keywords
 from util.traverseFolder import get_first_layer_files, get_first_layer_folders
-from util.MethodChecker import check_api, check_api_by_keywords
+from util.MethodChecker import filter_api, check_api_by_class
 
 
 class JavaLikeDocParser:
@@ -81,7 +81,7 @@ class JavaLikeDocParser:
             api = api_names[i]
             self.apis.add(api)
             api_description = api_descriptions[i]
-            is_sensitive, privacy_item = check_api_by_keywords(api)
+            is_sensitive, privacy_item = check_api_by_class(self.processing_class, api)
             if is_sensitive:
                 api_description = api_description.replace("\n", " ")
                 self.sensitive_apis.append((self.processing_class, api, privacy_item, api_description))
@@ -91,23 +91,26 @@ class JavaLikeDocParser:
         return tp, fp
 
     def print_results(self):
-        print("--------------------------------------")
-        for api in self.apis:
-            print(api)
-        print("**************************************")
-        for sensitive_api in self.sensitive_apis:
-            print(sensitive_api)
-        print("--------------------------------------")
-        print("API SUM=" + str(len(self.apis)))
-        print("Sensitive API SUM=" + str(len(self.sensitive_apis)))
+        # print("--------------------------------------")
+        # for api in self.apis:
+        #     print(api)
+        # print("**************************************")
+        # for sensitive_api in self.sensitive_apis:
+        #     print(sensitive_api)
+        # print("--------------------------------------")
+        print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
         if not os.path.exists(".\\api_results\\javalike"):
             os.mkdir(".\\api_results\\javalike")
         csv_name = ".\\api_results\\javalike\\" + self.api_folders[0].split("\\")[-2] + ".csv"
+        sensitive_cnt = 0
         with open(csv_name, "w") as csv_file:
             field_names = ["Class", "API_Name", "Privacy_Item", "Description"]
             writer = csv.DictWriter(csv_file, fieldnames=field_names)
             for sensitive_api in self.sensitive_apis:
-                if check_api(sensitive_api[1]):
-                    writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1], "Privacy_Item": sensitive_api[2], "Description": sensitive_api[3]})
+                if filter_api(sensitive_api[1]):
+                    writer.writerow({"Class": sensitive_api[0], "API_Name": sensitive_api[1],
+                                     "Privacy_Item": sensitive_api[2], "Description": sensitive_api[3]})
+                    sensitive_cnt = sensitive_cnt + 1
+        print("Sensitive API SUM=" + str(sensitive_cnt))
