@@ -138,11 +138,11 @@ def process_results():
                 if "logevent" in line or "GeneralLogEvent" in line or "trackEvent" in line or \
                         "GeneralUserProperty" in line:
                     general_cnt = general_cnt + 1
-            if sum_cnt > 0:
+            if sum_cnt >= 0:
                 if general_cnt >= 0:
                     csv_cnt = csv_cnt + 1
                     print(csv_name + "," + str(sum_cnt) + "," + str(general_cnt))
-                    loss = loss + (sum_cnt - general_cnt) / sum_cnt
+                    # loss = loss + (sum_cnt - general_cnt) / sum_cnt
 
 
 def main():
@@ -170,7 +170,7 @@ def main():
     if parser_type.lower() == 'silverjava':
         parse_silverjava_doc()
     if parser_type.lower() == 'all_test':
-        jar_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Jars"
+        jar_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\jar_test"
         javadoc_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Java_Test"
         facebook_doc_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Facebook"
         javalike_folder = "C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\Android_Docs\\Javalike"
