@@ -13,7 +13,8 @@ from util.MethodChecker import filter_api, check_api_by_class
 
 class JavaLikeDocParser:
 
-    def __init__(self, target_folder=""):
+    def __init__(self, sdk_name, target_folder=""):
+        self.sdk_name = sdk_name
         self.apis = set()
         self.processing_class = ""
         self.sensitive_keywords = set()
@@ -101,6 +102,7 @@ class JavaLikeDocParser:
         print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
+
         if not os.path.exists(".\\api_results\\javalike"):
             os.mkdir(".\\api_results\\javalike")
         csv_name = ".\\api_results\\javalike\\" + self.api_folders[0].split("\\")[-2] + ".csv"

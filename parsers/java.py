@@ -14,7 +14,8 @@ from util.MethodChecker import filter_api, check_api_by_class
 
 class JavaDocParser:
 
-    def __init__(self, target_folder=""):
+    def __init__(self, sdk_name, target_folder=""):
+        self.sdk_name = sdk_name
         self.processing_class = ""
         self.apis = []
         self.sensitive_keywords = set()
@@ -114,10 +115,14 @@ class JavaDocParser:
         print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        if not os.path.exists(".\\api_results\\java\\"):
-            os.mkdir(".\\api_results\\java")
-        csv_name = ".\\api_results\\java\\" + self.api_folders[0].split("\\")[-2] + ".csv"
-        csv_file = open(csv_name, "w", encoding="utf-8")
+        target_folder = ".\\api_results"
+        if not os.path.exists(target_folder):
+            os.mkdir(target_folder)
+        target_folder += os.sep + self.sdk_name
+        if not os.path.exists(target_folder):
+            os.mkdir(target_folder)
+        csv_path = target_folder + os.sep + self.api_folders[0].split("\\")[-2] + ".csv"
+        csv_file = open(csv_path, "w", encoding="utf-8")
         field_names = ["Class", "API_Name", "Privacy_Item", "Description"]
         writer = csv.DictWriter(csv_file, fieldnames=field_names)
         # writer.writeheader()

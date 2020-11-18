@@ -36,27 +36,30 @@ def get_first_layer_files(dir_, html=True):
     return files
 
 
-def get_all_files_in_javadoc(dir_):
-    files_ = []
-    list_ = os.listdir(dir_)
+def get_all_files_in_javadoc(target_dir):
+    file_list = []
+    list_ = os.listdir(target_dir)
     for i in range(0, len(list_)):
-        path = os.path.join(dir_, list_[i])
+        path = os.path.join(target_dir, list_[i])
         if os.path.isdir(path):
-            files_.extend(get_all_files_in_javadoc(path))
+            file_list.extend(get_all_files_in_javadoc(path))
         if os.path.isfile(path):
             if "-" not in path and ".html" in path:
-                files_.append(path)
-    return files_
+                file_list.append(path)
+    return file_list
 
 
-def get_all_files(dir_):
-    files_ = []
-    list_ = os.listdir(dir_)
+def get_all_files(target_dir, html=True):
+    file_list = []
+    list_ = os.listdir(target_dir)
     for i in range(0, len(list_)):
-        path = os.path.join(dir_, list_[i])
+        path = os.path.join(target_dir, list_[i])
         if os.path.isdir(path):
-            files_.extend(get_all_files(path))
+            file_list.extend(get_all_files(path, html))
         if os.path.isfile(path):
-            if ".html" in path:
-                files_.append(path)
-    return files_
+            if html:
+                if ".html" in path:
+                    file_list.append(path)
+            else:
+                file_list.append(path)
+    return file_list

@@ -9,7 +9,8 @@ from util.Command import shell_command
 # This parser also can process jar file if dx provided.
 class DexFileParser:
 
-    def __init__(self, dex_path):
+    def __init__(self, sdk_name, dex_path):
+        self.sdk_name = sdk_name
         self.dex_name = dex_path.split("\\")[-1][: -4]
         if ".jar" in dex_path:
             source_folder = os.path.dirname(dex_path)
@@ -40,15 +41,13 @@ class DexFileParser:
                 continue
             if "<init>" == method.name or "<clinit>" == method.name or "toString" == method.name or "clone" == method.name:
                 continue
-            # 过滤混淆
+            # Naive rules to filter obfuscated identifiers
             # if len(method.name) == 1:
             #     continue
             # para_list = method.prototype.parameters_type
             # if len(para_list) == 2:
             #     if para_list[0] == "Ljava/lang/String;" and para_list[1] == "Ljava/lang/String;":
             #         print(method)
-            # if str(method.name).lower() == "getcachedlocation":
-            #     a = 10
             self.apis.append(method.name)
             is_sensitive, privacy_item = check_api_by_class(method.cls.fullname, method.name)
             if is_sensitive:
@@ -70,17 +69,19 @@ class DexFileParser:
         print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        if not os.path.exists("./api_results/dex/"):
-            os.mkdir("./api_results/dex")
-        csv_name = "./api_results/dex/" + self.dex_name + ".csv"
+        target_folder = ".\\api_results"
+        if not os.path.exists(target_folder):
+            os.mkdir(target_folder)
+        target_folder += os.sep + self.sdk_name
+        if not os.path.exists(target_folder):
+            os.mkdir(target_folder)
+        csv_name = target_folder + os.sep + self.dex_name + ".csv"
         sensitive_cnt = 0
         with open(csv_name, "w") as csv_file:
             fieldnames = ["Class", "API_Name", "Reason"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             # writer.writeheader()
             for sensitive_api in self.sensitive_apis:
-                # if sensitive_api[1].lower() == "getcachedlocation":
-                #     a = 10
                 if filter_api(sensitive_api[1]):
                     writer.writerow({
                         "Class": sensitive_api[0],
