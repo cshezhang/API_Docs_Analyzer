@@ -196,14 +196,14 @@ def process_javadoc_package_folder(target_folder):
 
 
 def main():
-    # javadoc_folders = get_first_layer_folders("C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\History\\javadoc")
-    # for javadoc_folder in javadoc_folders:
-    #     print("Processing Folder=" + javadoc_folder)
-    #     process_javadoc_package_folder(javadoc_folder)
-    jar_folders = get_first_layer_folders("C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\History\\jars")
-    for jar_folder in jar_folders:
-        print("Processing Jar Folder=" + jar_folder)
-        process_jar_package_folder(jar_folder)
+    javadoc_folders = get_first_layer_folders("C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\History\\javadocs")
+    for javadoc_folder in javadoc_folders:
+        print("Processing Folder=" + javadoc_folder)
+        process_javadoc_package_folder(javadoc_folder)
+    # jar_folders = get_first_layer_folders("C:\\Users\\Rainy\\Lab_Project\\dataset_science\\API_Docs\\History\\jars")
+    # for jar_folder in jar_folders:
+    #     print("Processing Jar Folder=" + jar_folder)
+    #     process_jar_package_folder(jar_folder)
     # if not os.path.exists("./api_results"):
     #     os.mkdir("./api_results")
     # parser_type = sys.argv[1]

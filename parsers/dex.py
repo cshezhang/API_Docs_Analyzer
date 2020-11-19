@@ -69,7 +69,7 @@ class DexFileParser:
         print("API SUM=" + str(len(self.apis)) + "  Sensitive API SUM=" + str(len(self.sensitive_apis)))
 
     def print_to_csv(self):
-        target_folder = ".\\api_results"
+        target_folder = "." + os.sep + "api_results"
         if not os.path.exists(target_folder):
             os.mkdir(target_folder)
         target_folder += os.sep + self.sdk_name
