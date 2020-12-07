@@ -1,0 +1,22 @@
+Lcom/urbanairship/UAirship;,getLocationClient,['Location']
+Lcom/urbanairship/actions/RateAppActivity$1;,onClick,['Click']
+Lcom/urbanairship/actions/RateAppActivity$2;,onClick,['Click']
+Lcom/urbanairship/actions/RateAppActivity;,onCloseButtonClick,['Click']
+Lcom/urbanairship/analytics/AccountEventTemplate;,setTransactionId,['Transaction']
+Lcom/urbanairship/analytics/AssociatedIdentifiers$Editor;,setAdvertisingId,"['Advertising', 'ID']"
+Lcom/urbanairship/analytics/AssociatedIdentifiers;,getAdvertisingId,"['Advertising', 'ID']"
+Lcom/urbanairship/analytics/CustomEvent$Builder;,setTransactionId,['Transaction']
+Lcom/urbanairship/analytics/CustomEvent;,getTransactionId,['Transaction']
+Lcom/urbanairship/analytics/RetailEventTemplate;,newAddedToCartTemplate,"['Add', 'To', 'Cart']"
+Lcom/urbanairship/analytics/RetailEventTemplate;,setTransactionId,['Transaction']
+Lcom/urbanairship/analytics/location/CircularRegion;,getLatitude,['Latitude']
+Lcom/urbanairship/analytics/location/ProximityRegion;,getLatitude,['Latitude']
+Lcom/urbanairship/analytics/location/RegionEvent;,regionEventLatitudeIsValid,['Latitude']
+Lcom/urbanairship/channel/ChannelRegistrationPayload$Builder;,setAccengageDeviceId,"['Device', 'ID']"
+Lcom/urbanairship/channel/ChannelRegistrationPayload$Builder;,setLocationSettings,['Location']
+Lcom/urbanairship/channel/ChannelRegistrationPayload$Builder;,setNamedUserId,['UserID']
+Lcom/urbanairship/channel/ChannelRegistrationPayload$Builder;,setUserId,['UserID']
+Lcom/urbanairship/channel/NamedUser;,updateNamedUserId,['UserID']
+Lcom/urbanairship/modules/Modules;,adId,['adid']
+Lcom/urbanairship/modules/location/AirshipLocationClient;,setBackgroundLocationAllowed,['Location']
+Lcom/urbanairship/modules/location/LocationModule;,getLocationClient,['Location']

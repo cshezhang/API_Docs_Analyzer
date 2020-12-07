@@ -1,0 +1,13 @@
+ly.count.android.sdk.AdvertisingIdAdapter,setAdvertisingId,"['Advertising', 'ID']",
+ly.count.android.sdk.AdvertisingIdAdapter,cacheAdvertisingID,"['Advertising', 'ID']",
+ly.count.android.sdk.ConnectionQueue,setDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.ConnectionQueue,changeDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.Countly,changeDeviceIdWithoutMerge,"['Device', 'ID']",
+ly.count.android.sdk.Countly,changeDeviceIdWithMerge,"['Device', 'ID']",Changes current device id to the one specified in parameter. Merges user profile with new id  (if any) with old profile.
+ly.count.android.sdk.Countly,changeDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.Countly,changeDeviceId,"['Device', 'ID']",Deprecated. use 'changeDeviceIdWithMerge'
+ly.count.android.sdk.Countly,setLocation,['Location'],
+ly.count.android.sdk.Countly,getDeviceID,"['Device', 'ID']",Returns the device id used by countly for this device
+ly.count.android.sdk.CountlyConfig,setDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.CountlyConfig,setDisableLocation,['Location'],
+ly.count.android.sdk.CountlyConfig,setLocation,['Location'],

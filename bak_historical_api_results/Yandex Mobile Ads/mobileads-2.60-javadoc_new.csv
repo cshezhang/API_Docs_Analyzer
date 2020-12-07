@@ -1,0 +1,3 @@
+com.yandex.mobile.ads.nativeads.NativeAdAssets,getPrice,['Price'],Returns price.  Available in app install ads.
+com.yandex.mobile.ads.nativeads.NativeAdViewBinder.Builder,setPriceView,['Price'],
+com.yandex.mobile.ads.nativeads.NativeAppInstallAdView,setPriceView,['Price'],Sets view for app price.

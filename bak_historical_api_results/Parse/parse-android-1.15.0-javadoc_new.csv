@@ -1,0 +1,11 @@
+com.parse.ParseAnalytics,trackEvent,['GeneralLogEvent'],
+com.parse.ParseAnalytics,trackEvent,['GeneralLogEvent'],
+com.parse.ParseGeoPoint,setLatitude,['Latitude'],"Set latitude. Valid range is (-90.0, 90.0). Extremes should not be used."
+com.parse.ParseGeoPoint,getLatitude,['Latitude'],Get latitude.
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseUser,setUsername,['Username'],
+com.parse.ParseUser,getUsername,['Username'],
+com.parse.ParseUser,setPassword,['Password'],

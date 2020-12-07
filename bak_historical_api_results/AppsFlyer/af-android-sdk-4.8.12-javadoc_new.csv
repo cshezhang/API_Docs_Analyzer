@@ -1,0 +1,9 @@
+com.appsflyer.AppsFlyerLib,setImeiData,['IMEI'],
+com.appsflyer.AppsFlyerLib,setAndroidIdData,['AndroidID'],
+com.appsflyer.AppsFlyerLib,setAppUserId,['UserID'],Deprecated. use setCustomerUserId(String) instead
+com.appsflyer.AppsFlyerLib,setCustomerUserId,['UserID'],
+com.appsflyer.AppsFlyerLib,setCollectAndroidID,['AndroidID'],
+com.appsflyer.AppsFlyerLib,setCollectIMEI,['IMEI'],
+com.appsflyer.AppsFlyerLib,setCollectFingerPrint,['Fingerprint'],Deprecated. 
+com.appsflyer.AppsFlyerLib,setCurrencyCode,['Currency'],
+com.appsflyer.AppsFlyerLib,trackEvent,['GeneralLogEvent'],

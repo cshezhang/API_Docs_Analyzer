@@ -1,0 +1,108 @@
+com.amplitude.api.Amplitude,logEvent,['GeneralLogEvent'],Deprecated. 
+com.amplitude.api.Amplitude,logEvent,['GeneralLogEvent'],Deprecated. 
+com.amplitude.api.Amplitude,setUserProperties,['GeneralUserProperty'],Deprecated. 
+com.amplitude.api.Amplitude,setUserProperties,['GeneralUserProperty'],Deprecated. 
+com.amplitude.api.Amplitude,setUserId,['UserID'],Deprecated. 
+com.amplitude.api.Amplitude,getDeviceId,"['Device', 'ID']",Deprecated. 
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],Log an event with the specified event type.  Note: this is asynchronous and happens on a background thread.
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],Log an event with the specified event type and event properties.  Note: this is asynchronous and happens on a background thread.
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],"Log an event with the specified event type, event properties, with optional out of session  flag. If out of session is true, then the sessionId will be -1 for the event, indicating  that it is not part of the current session. Note: this might be useful when logging events  for notifications received.  Note: this is asynchronous and happens on a background thread."
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],"Log an event with the specified event type, event properties, and groups. Use this to set  event-level groups, meaning the group(s) set only apply for this specific event and does  not persist on the user.  Note: this is asynchronous and happens on a background thread."
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],"Log event with the specified event type, event properties, groups, with optional out of  session flag. If out of session is true, then the sessionId will be -1 for the event,  indicating that it is not part of the current session. Note: this might be useful when  logging events for notifications received.  Note: this is asynchronous and happens on a background thread."
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],"Log event with the specified event type, event properties, groups, timestamp, with optional  out of session flag. If out of session is true, then the sessionId will be -1 for the event,  indicating that it is not part of the current session. Note: this might be useful when  logging events for notifications received.  Note: this is asynchronous and happens on a background thread."
+com.amplitude.api.AmplitudeClient,logEventSync,['GeneralLogEvent'],Log an event with the specified event type.  Note: this is version is synchronous and blocks the main thread until done.
+com.amplitude.api.AmplitudeClient,logEventSync,['GeneralLogEvent'],Log an event with the specified event type and event properties.  Note: this is version is synchronous and blocks the main thread until done.
+com.amplitude.api.AmplitudeClient,logEventSync,['GeneralLogEvent'],"Log an event with the specified event type, event properties, with optional out of session  flag. If out of session is true, then the sessionId will be -1 for the event, indicating  that it is not part of the current session. Note: this might be useful when logging events  for notifications received.  Note: this is version is synchronous and blocks the main thread until done."
+com.amplitude.api.AmplitudeClient,logEventSync,['GeneralLogEvent'],"Log an event with the specified event type, event properties, and groups. Use this to set  event-level groups, meaning the group(s) set only apply for this specific event and does  not persist on the user.  Note: this is version is synchronous and blocks the main thread until done."
+com.amplitude.api.AmplitudeClient,logEventSync,['GeneralLogEvent'],"Log event with the specified event type, event properties, groups, with optional out of  session flag. If out of session is true, then the sessionId will be -1 for the event,  indicating that it is not part of the current session. Note: this might be useful when  logging events for notifications received.  Note: this is version is synchronous and blocks the main thread until done."
+com.amplitude.api.AmplitudeClient,logEventSync,['GeneralLogEvent'],"Log event with the specified event type, event properties, groups, timestamp,  with optional  sout of ession flag. If out of session is true, then the sessionId will be -1 for the event,  indicating that it is not part of the current session. Note: this might be useful when  logging events for notifications received.  Note: this is version is synchronous and blocks the main thread until done."
+com.amplitude.api.AmplitudeClient,validateLogEvent,['logEvent'],Validate the event type being logged. Also verifies that the context and API key  have been set already with an initialize call.
+com.amplitude.api.AmplitudeClient,logEventAsync,['GeneralLogEvent'],Log event async. Internal method to handle the synchronous logging of events.
+com.amplitude.api.AmplitudeClient,logEvent,['GeneralLogEvent'],Log event. Internal method to handle the asynchronous logging of events on background  thread.
+com.amplitude.api.AmplitudeClient,setUserProperties,['GeneralUserProperty'],Deprecated. 
+com.amplitude.api.AmplitudeClient,setUserProperties,['GeneralUserProperty'],Sets user properties. This is a convenience wrapper around the  Identify API to set multiple user properties with a single  command.
+com.amplitude.api.AmplitudeClient,getUserId,['UserID'],Gets the user's id. Can be null.
+com.amplitude.api.AmplitudeClient,setUserId,['UserID'],
+com.amplitude.api.AmplitudeClient,setDeviceId,"['Device', 'ID']",
+com.amplitude.api.AmplitudeClient,regenerateDeviceId,"['Device', 'ID']","Regenerates a new random deviceId for current user. Note: this is not recommended unless you  know what you are doing. This can be used in conjunction with setUserId(null) to anonymize  users after they log out. With a null userId and a completely new deviceId, the current user  would appear as a brand new user in dashboard."
+com.amplitude.api.AmplitudeClient,getDeviceId,"['Device', 'ID']",Get the current device id. Can be null if deviceId hasn't been initialized yet.
+com.amplitude.unity.plugins.AmplitudePlugin,logEvent,['GeneralLogEvent'],
+com.amplitude.unity.plugins.AmplitudePlugin,logEvent,['GeneralLogEvent'],
+com.amplitude.unity.plugins.AmplitudePlugin,logEvent,['GeneralLogEvent'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserId,['UserID'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperties,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,getDeviceId,"['Device', 'ID']",
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserPropertyDict,['setUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserPropertyList,['setUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,addUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,addUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,addUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,addUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,addUserProperty,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,addUserPropertyDict,['addUserProperty'],
+com.amplitude.api.DeviceInfo,getAdvertisingId,"['Advertising', 'ID']",
+com.amplitude.api.DeviceInfo,getMostRecentLocation,['Location'],
+com.amplitude.api.DeviceInfo,setLocationListening,['Location'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Identify,add,['GeneralUserProperty'],
+com.amplitude.api.Identify,add,['GeneralUserProperty'],
+com.amplitude.api.Identify,add,['GeneralUserProperty'],
+com.amplitude.api.Identify,add,['GeneralUserProperty'],
+com.amplitude.api.Identify,add,['GeneralUserProperty'],
+com.amplitude.api.Identify,add,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,append,['GeneralUserProperty'],
+com.amplitude.api.Identify,setOnce,['GeneralUserProperty'],
+com.amplitude.api.Identify,set,['GeneralUserProperty'],
+com.amplitude.api.Revenue,setPrice,['Price'],

@@ -1,0 +1,89 @@
+com.tune.ITune,getAndroidId,['AndroidID'],Gets the ANDROID_ID of the device if it was auto collected.
+com.tune.ITune,getDeviceId,"['Device', 'ID']","Gets the Device ID, also known as IMEI/MEID, if any."
+com.tune.ITune,getFacebookUserId,['UserID'],Gets the Facebook user ID previously set.
+com.tune.ITune,getGender,['Gender'],
+com.tune.ITune,getGoogleUserId,['UserID'],Gets the Google user ID previously set.
+com.tune.ITune,getLocation,['Location'],Get the device location.
+com.tune.ITune,getPlatformAdvertisingId,"['Advertising', 'ID']",Gets the Platform Advertising ID.
+com.tune.ITune,getTwitterUserId,['UserID'],Gets the Twitter user ID previously set.
+com.tune.ITune,getUserId,['UserID'],Gets the custom user ID.
+com.tune.ITune,getUserName,['Username'],Gets the custom user name.
+com.tune.ITune,setFacebookUserId,['UserID'],Sets the user ID to associate with Facebook.
+com.tune.ITune,setGender,['Gender'],
+com.tune.ITune,setGoogleUserId,['UserID'],Sets the user ID to associate with Google.
+com.tune.ITune,setLocation,['Location'],Sets the device location.  Manually setting the location through this method disables geo-location auto-collection.
+com.tune.ITune,setLocation,['Location'],Sets the device location.  Manually setting the location through this method disables geo-location auto-collection.
+com.tune.ITune,setPhoneNumber,"['Phone', 'Number']",Sets the device phone number.
+com.tune.ITune,setTwitterUserId,['UserID'],Sets the user ID to associate with Twitter.
+com.tune.ITune,setUserId,['UserID'],Sets the custom user ID.
+com.tune.ITune,setUserName,['Username'],Sets the custom user name.
+com.tune.TuneEvent,withCurrencyCode,['Currency'],
+com.tune.TuneEvent,getCurrencyCode,['Currency'],
+com.tune.TuneEventItem,withUnitPrice,['Price'],
+com.tune.integrations.facebook.TuneFBBridge,logEvent,['GeneralLogEvent'],
+com.tune.TuneInternal,getAndroidId,['AndroidID'],Description copied from interface: ITune
+com.tune.TuneInternal,getDeviceId,"['Device', 'ID']",Description copied from interface: ITune
+com.tune.TuneInternal,getFacebookUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,getGender,['Gender'],
+com.tune.TuneInternal,getGoogleUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,getLocation,['Location'],Description copied from interface: ITune
+com.tune.TuneInternal,getPlatformAdvertisingId,"['Advertising', 'ID']",Description copied from interface: ITune
+com.tune.TuneInternal,getTwitterUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,getUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,getUserName,['Username'],Description copied from interface: ITune
+com.tune.TuneInternal,setAndroidId,['AndroidID'],
+com.tune.TuneInternal,setFacebookUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,setFireAdvertisingId,"['Advertising', 'ID']",
+com.tune.TuneInternal,setGender,['Gender'],
+com.tune.TuneInternal,setGoogleAdvertisingId,"['Advertising', 'ID']",
+com.tune.TuneInternal,setGoogleUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,setLocation,['Location'],Description copied from interface: ITune
+com.tune.TuneInternal,setLocation,['Location'],Description copied from interface: ITune
+com.tune.TuneInternal,setPhoneNumber,"['Phone', 'Number']",Description copied from interface: ITune
+com.tune.TuneInternal,setTwitterUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,setUserId,['UserID'],Description copied from interface: ITune
+com.tune.TuneInternal,setUserName,['Username'],Description copied from interface: ITune
+com.tune.location.TuneLocationListener,getLastLocation,['Location'],Gets the last location.  Asks for location updates if last location seen is not valid anymore
+com.tune.TuneParameters,getAndroidId,['AndroidID'],
+com.tune.TuneParameters,setAndroidId,['AndroidID'],
+com.tune.TuneParameters,getAndroidIdMd5,['AndroidID'],
+com.tune.TuneParameters,setAndroidIdMd5,['AndroidID'],
+com.tune.TuneParameters,getAndroidIdSha1,['AndroidID'],
+com.tune.TuneParameters,setAndroidIdSha1,['AndroidID'],
+com.tune.TuneParameters,getAndroidIdSha256,['AndroidID'],
+com.tune.TuneParameters,setAndroidIdSha256,['AndroidID'],
+com.tune.TuneParameters,getDeviceId,"['Device', 'ID']",
+com.tune.TuneParameters,setDeviceId,"['Device', 'ID']",
+com.tune.TuneParameters,getFacebookUserId,['UserID'],
+com.tune.TuneParameters,setFacebookUserId,['UserID'],
+com.tune.TuneParameters,getGender,['Gender'],
+com.tune.TuneParameters,setGender,['Gender'],
+com.tune.TuneParameters,getGoogleUserId,['UserID'],
+com.tune.TuneParameters,setGoogleUserId,['UserID'],
+com.tune.TuneParameters,setLocation,['Location'],
+com.tune.TuneParameters,setLocation,['Location'],
+com.tune.TuneParameters,getLocation,['Location'],
+com.tune.TuneParameters,getMacAddress,"['MAC', 'Address']",
+com.tune.TuneParameters,setMacAddress,"['MAC', 'Address']",
+com.tune.TuneParameters,getPhoneNumber,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumber,"['Phone', 'Number']",
+com.tune.TuneParameters,getPhoneNumberMd5,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumberMd5,"['Phone', 'Number']",
+com.tune.TuneParameters,getPhoneNumberSha1,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumberSha1,"['Phone', 'Number']",
+com.tune.TuneParameters,getPhoneNumberSha256,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumberSha256,"['Phone', 'Number']",
+com.tune.TuneParameters,getPlatformAdvertisingId,"['Advertising', 'ID']",
+com.tune.TuneParameters,setPlatformAdvertisingId,"['Advertising', 'ID']",
+com.tune.TuneParameters,getTwitterUserId,['UserID'],
+com.tune.TuneParameters,setTwitterUserId,['UserID'],
+com.tune.TuneParameters,getUserId,['UserID'],
+com.tune.TuneParameters,setUserId,['UserID'],
+com.tune.TuneParameters,getUserName,['Username'],
+com.tune.TuneParameters,setUserName,['Username'],
+com.tune.TuneParameters,getUserNameMd5,['Username'],
+com.tune.TuneParameters,setUserNameMd5,['Username'],
+com.tune.TuneParameters,getUserNameSha1,['Username'],
+com.tune.TuneParameters,setUserNameSha1,['Username'],
+com.tune.TuneParameters,getUserNameSha256,['Username'],
+com.tune.TuneParameters,setUserNameSha256,['Username'],

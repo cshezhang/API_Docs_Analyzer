@@ -1,0 +1,4 @@
+com.gimbal.android.CommunicationListener,onNotificationClicked,['Click'],
+com.gimbal.android.Coordinate,getLatitude,['Latitude'],
+com.gimbal.android.EstablishedLocationsManager,getEstablishedLocations,['Location'],
+com.gimbal.experience.android.ExperienceListener,onNotificationClicked,['Click'],

@@ -1,0 +1,19 @@
+com.mapbox.mapboxsdk.geometry.ILatLng,getLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLng,setLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLng,getLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLngBounds,getLatitudeSpan,['Latitude'],"Get the absolute distance, in degrees, between the north and  south boundaries of this LatLngBounds"
+com.mapbox.mapboxsdk.geometry.LatLngSpan,getLatitudeSpan,['Latitude'],Returns the latitude span.
+com.mapbox.mapboxsdk.geometry.LatLngSpan,setLatitudeSpan,['Latitude'],Sets the latitude span.
+com.mapbox.mapboxsdk.location.LocationSource,getLastLocation,['Location'],Returns the Last known location is the location provider is connected and location permissions are granted.
+com.mapbox.mapboxsdk.maps.MapboxMap,getMyLocationViewSettings,['Location'],
+com.mapbox.mapboxsdk.maps.MapboxMap,getMyLocation,['Location'],"Returns the currently displayed user location, or null if there is no location data available."
+com.mapbox.mapboxsdk.maps.MapboxMapOptions,getMyLocationForegroundDrawable,['Location'],Get the current configured MyLocationView foreground drawable.
+com.mapbox.mapboxsdk.maps.MapboxMapOptions,getMyLocationForegroundBearingDrawable,['Location'],Get the current configured MyLocationView foreground bearing drawable.
+com.mapbox.mapboxsdk.maps.MapboxMapOptions,getMyLocationBackgroundDrawable,['Location'],Get the current configured MyLocationView background drawable.
+com.mapbox.mapboxsdk.maps.MapboxMapOptions,getMyLocationBackgroundPadding,['Location'],Get the current configured MyLocationView background padding.
+com.mapbox.mapboxsdk.maps.MapboxMapOptions,getMyLocationAccuracyAlpha,['Location'],Get the current configured MyLocationView accuracy circle alpha value.
+com.mapbox.mapboxsdk.annotations.MarkerViewManager,onClickMarkerView,['Click'],
+com.mapbox.mapboxsdk.maps.widgets.MyLocationView,getLocation,['Location'],
+com.mapbox.mapboxsdk.maps.widgets.MyLocationView,setLocation,['Location'],
+com.mapbox.mapboxsdk.maps.Projection,getMetersPerPixelAtLatitude,['Latitude'],  Returns the distance spanned by one pixel at the specified latitude and current zoom level.    The distance between pixels decreases as the latitude approaches the poles.  This relationship parallels the relationship between longitudinal coordinates at different latitudes.
+com.mapbox.mapboxsdk.maps.TrackingSettings,setDismissLocationTrackingOnGesture,['Location'],Set the dismissal of the tracking modes if a gesture occurs.

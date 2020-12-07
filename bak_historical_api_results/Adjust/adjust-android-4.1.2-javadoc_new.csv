@@ -1,0 +1,6 @@
+com.adjust.sdk.IActivityHandler,trackEvent,['GeneralLogEvent'],
+com.adjust.sdk.plugin.MacAddressUtil,getMacAddress,"['MAC', 'Address']",
+com.adjust.sdk.Reflection,getPlayAdId,['adid'],
+com.adjust.sdk.Reflection,getMacAddress,"['MAC', 'Address']",
+com.adjust.sdk.Reflection,getAndroidId,['AndroidID'],
+com.adjust.sdk.Util,getPlayAdId,['adid'],

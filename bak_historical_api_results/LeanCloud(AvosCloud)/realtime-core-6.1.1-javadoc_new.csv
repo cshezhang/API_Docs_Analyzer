@@ -1,0 +1,8 @@
+cn.leancloud.Messages.SessionCommand.Builder,getDeviceId,"['Device', 'ID']",
+cn.leancloud.Messages.SessionCommand.Builder,getDeviceIdBytes,"['Device', 'ID']",optional string deviceId = 7;
+cn.leancloud.Messages.SessionCommand.Builder,setDeviceId,"['Device', 'ID']",
+cn.leancloud.Messages.SessionCommand.Builder,setDeviceIdBytes,"['Device', 'ID']",
+cn.leancloud.Messages.SessionCommand,getDeviceId,"['Device', 'ID']",
+cn.leancloud.Messages.SessionCommand,getDeviceIdBytes,"['Device', 'ID']",optional string deviceId = 7;
+cn.leancloud.Messages.SessionCommandOrBuilder,getDeviceId,"['Device', 'ID']",
+cn.leancloud.Messages.SessionCommandOrBuilder,getDeviceIdBytes,"['Device', 'ID']",optional string deviceId = 7;

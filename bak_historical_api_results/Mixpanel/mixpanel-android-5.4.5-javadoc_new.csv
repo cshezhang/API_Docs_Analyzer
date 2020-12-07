@@ -1,0 +1,2 @@
+com.mixpanel.android.mpmetrics.MixpanelAPI,getUserId,['UserID'],"Returns the user id with which identify is called  and all the with events sent using  track(String, JSONObject) will have this id as a user id"
+com.mixpanel.android.mpmetrics.MPConfig,getUseIpAddressForGeolocation,['Location'],

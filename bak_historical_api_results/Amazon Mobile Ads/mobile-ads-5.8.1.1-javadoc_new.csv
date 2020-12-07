@@ -1,0 +1,2 @@
+com.amazon.device.ads.AdTargetingOptions,setFloorPrice,['Price'],
+com.amazon.device.ads.AdTargetingOptions,getFloorPrice,['Price'],Gets the floor price in micro-dollars

@@ -1,0 +1,2 @@
+com.estimote.mgmtsdk.connection.api.BeaconConnection,getMacAddress,"['MAC', 'Address']",Deprecated. 
+com.estimote.mgmtsdk.common.exceptions.NotOwnerException,getDeviceId,"['Device', 'ID']",   Skip navigation links     Overview Package Class Tree Deprecated Index Help  

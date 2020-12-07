@@ -1,0 +1,19 @@
+net.hockeyapp.android.Constants,getDeviceIdentifier,"['Device', 'Identifier']",
+net.hockeyapp.android.CrashManagerListener,includeDeviceIdentifier,"['Device', 'Identifier']","Return false to remove the stable device identifier from the  crash log, e.g. if there are privacy concerns."
+net.hockeyapp.android.CrashManagerListener,getUserID,['UserID'],"Return a user ID or similar; note that this has privacy implications,  so you might want to return nil for release builds! The string will be  limited to 255 characters."
+net.hockeyapp.android.objects.CrashMetaData,getUserID,['UserID'],
+net.hockeyapp.android.objects.CrashMetaData,setUserID,['UserID'],
+net.hockeyapp.android.FeedbackActivity,onClick,['Click'],Called when the Send Feedback Button is tapped. Sends the feedback and disables  the button to avoid multiple taps.
+net.hockeyapp.android.FeedbackManager,getRequireUserName,['Username'],
+net.hockeyapp.android.FeedbackManager,setRequireUserName,['Username'],
+net.hockeyapp.android.FeedbackManager,setUserName,['Username'],Sets the user's name to pre-fill the feedback form with
+net.hockeyapp.android.metrics.model.Internal,getAccountId,['AccountID'],Gets the AccountId property.
+net.hockeyapp.android.metrics.model.Internal,setAccountId,['AccountID'],Sets the AccountId property.
+net.hockeyapp.android.metrics.MetricsManager,trackEvent,['GeneralLogEvent'],
+net.hockeyapp.android.metrics.MetricsManager,trackEvent,['GeneralLogEvent'],
+net.hockeyapp.android.metrics.MetricsManager,trackEvent,['GeneralLogEvent'],   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+net.hockeyapp.android.UpdateFragment,onClick,['Click'],Called when the download button is tapped. Starts the download task and  disables the button to avoid multiple taps.
+net.hockeyapp.android.metrics.model.User,getAccountId,['AccountID'],Gets the AccountId property.
+net.hockeyapp.android.metrics.model.User,setAccountId,['AccountID'],Sets the AccountId property.
+net.hockeyapp.android.metrics.model.User,getAuthUserId,['UserID'],Gets the AuthUserId property.
+net.hockeyapp.android.metrics.model.User,setAuthUserId,['UserID'],Sets the AuthUserId property.

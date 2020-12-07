@@ -1,0 +1,11 @@
+com.mapbox.mapboxsdk.maps.AttributionDialogManager,onClick,['Click'],
+com.mapbox.mapboxsdk.maps.AttributionDialogManager,onClick,['Click'],   Skip navigation links     Overview Package Class Tree Deprecated Index Help  Mapbox Maps SDK for Android 6.0.0-beta.4 Reference 
+com.mapbox.mapboxsdk.geometry.ILatLng,getLatitude,['Latitude'],"Get the latitude, in degrees."
+com.mapbox.mapboxsdk.geometry.LatLng,setLatitude,['Latitude'],"Set the latitude, in degrees.    This value is in the range of [-90, 90], see GeometryConstants.MIN_LATITUDE and  GeometryConstants.MAX_LATITUDE "
+com.mapbox.mapboxsdk.geometry.LatLng,getLatitude,['Latitude'],"Get the latitude, in degrees.    This value is in the range of [-90, 90], see GeometryConstants.MIN_LATITUDE and  GeometryConstants.MAX_LATITUDE "
+com.mapbox.mapboxsdk.geometry.LatLngBounds,getLatitudeSpan,['Latitude'],"Get the absolute distance, in degrees, between the north and  south boundaries of this LatLngBounds"
+com.mapbox.mapboxsdk.geometry.LatLngSpan,getLatitudeSpan,['Latitude'],Returns the latitude span.
+com.mapbox.mapboxsdk.geometry.LatLngSpan,setLatitudeSpan,['Latitude'],Sets the latitude span.
+com.mapbox.mapboxsdk.maps.MapboxMap.OnPolygonClickListener,onPolygonClick,['Click'],
+com.mapbox.mapboxsdk.annotations.MarkerViewManager,onClickMarkerView,['Click'],
+com.mapbox.mapboxsdk.maps.Projection,getMetersPerPixelAtLatitude,['Latitude'],  Returns the distance spanned by one pixel at the specified latitude and current zoom level.    The distance between pixels decreases as the latitude approaches the poles.  This relationship parallels the relationship between longitudinal coordinates at different latitudes.

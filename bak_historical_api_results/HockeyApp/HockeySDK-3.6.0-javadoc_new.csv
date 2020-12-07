@@ -1,0 +1,10 @@
+net.hockeyapp.android.CrashManagerListener,includeDeviceIdentifier,"['Device', 'Identifier']","Return false to remove the stable device identifier from the  crash log, e.g. if there are privacy concerns."
+net.hockeyapp.android.CrashManagerListener,getUserID,['UserID'],
+net.hockeyapp.android.objects.CrashMetaData,getUserID,['UserID'],
+net.hockeyapp.android.objects.CrashMetaData,setUserID,['UserID'],
+net.hockeyapp.android.FeedbackActivity,onClick,['Click'],Called when the Send Feedback Button is tapped. Sends the feedback and disables  the button to avoid multiple taps.
+net.hockeyapp.android.FeedbackManager,getRequireUserName,['Username'],
+net.hockeyapp.android.FeedbackManager,setRequireUserName,['Username'],
+net.hockeyapp.android.LoginActivity,onClick,['Click'],
+net.hockeyapp.android.UpdateActivity,onClick,['Click'],Called when the download button is tapped. Starts the download task and  disables the button to avoid multiple taps.
+net.hockeyapp.android.UpdateFragment,onClick,['Click'],Called when the download button is tapped. Starts the download task and  disables the button to avoid multiple taps.

@@ -1,0 +1,3 @@
+io.smooch.core.Settings,getUserId,['UserID'],The User ID used to identify the user    The default value is empty string.
+io.smooch.core.Settings,setUserId,['UserID'],The User ID used to identify the user    The default value is empty string.
+io.smooch.core.Smooch,getGoogleCloudMessagingProjectId,"['Google', 'ID']",Accessor method to get the Google Cloud Messaging project id that was  linked to the application via the Web portal.

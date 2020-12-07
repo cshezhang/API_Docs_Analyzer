@@ -1,0 +1,7 @@
+io.smooch.core.Conversation.Delegate,onPaymentProcessed,['Payment'],
+io.smooch.core.Conversation,processPayment,['Payment'],
+io.smooch.ui.ConversationActivity,onPaymentProcessed,['Payment'],
+io.smooch.core.MessageAction,getCurrency,['Currency'],The type of currency
+io.smooch.core.MessageAction,setCurrency,['Currency'],Sets the type of currency
+io.smooch.core.User,getUserId,['UserID'],"String representing the user's userId. This property is set by calling Smooch.login(String, String, SmoochCallback).    Unlike appUserId, this value is assigned and managed by the developer, and is used to identify a user across devices and app installations."
+io.smooch.core.User,getAppUserId,['UserID'],"The assigned appUserId for this user.    Unlike getUserId(), this property is set automatically by Smooch, and is not configurable.  This is analogous to appUser._id in the REST API response. A user is assigned an appUserId once  they start a conversation or when an existing user is logged in by calling Smooch.login(String, String, SmoochCallback)."

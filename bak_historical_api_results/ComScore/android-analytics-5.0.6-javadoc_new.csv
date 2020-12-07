@@ -1,0 +1,2 @@
+com.comscore.PublisherConfiguration.Builder,publisherUniqueDeviceId,"['Device', 'ID']",
+com.comscore.PublisherConfiguration,getPublisherUniqueDeviceId,"['Device', 'ID']",Returns the c12.

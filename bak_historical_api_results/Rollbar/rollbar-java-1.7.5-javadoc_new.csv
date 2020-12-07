@@ -1,0 +1,2 @@
+com.rollbar.notifier.config.Config,fingerPrintGenerator,['Fingerprint'],
+com.rollbar.notifier.config.ConfigBuilder,fingerPrintGenerator,['Fingerprint'],

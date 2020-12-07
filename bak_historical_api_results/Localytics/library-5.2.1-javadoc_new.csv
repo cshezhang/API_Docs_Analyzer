@@ -1,0 +1,15 @@
+com.localytics.android.CircularRegion.Builder,setLatitude,['Latitude'],
+com.localytics.android.Customer.Builder,setEmailAddress,"['Email', 'Address']",
+com.localytics.android.Customer,getEmailAddress,"['Email', 'Address']",   Skip navigation links     Package Class Tree Deprecated Index Help  
+com.localytics.android.InAppCampaign,getDisplayLocation,['Location'],"Get the location where the campaign creative displays on the device.  (top, center, etc.)"
+com.localytics.android.InAppCampaign,getDismissButtonLocation,['Location'],
+com.localytics.android.InAppConfiguration,setDismissButtonLocation,['Location'],
+com.localytics.android.Localytics,tagAddedToCart,"['Add', 'To', 'Cart']",A standard event to tag the addition of a single item to a cart (after the action has occurred)
+com.localytics.android.Localytics,appendAdidToInAppUrls,['adid'],Set whether ADID parameter is added to In-App call to action URLs. By default      the ADID parameter will be added to call to action URLs.
+com.localytics.android.Localytics,appendAdidToInboxUrls,['adid'],Set whether ADID parameter is added to In-App call to action URLs. By default      the ADID parameter will be added to call to action URLs.
+com.localytics.android.Localytics,setLocation,['Location'],Set a user's location.
+com.localytics.android.Localytics,setInAppMessageDismissButtonLocation,['Location'],
+com.localytics.android.Localytics,getInAppMessageDismissButtonLocation,['Location'],
+com.localytics.android.Region,getLatitude,['Latitude'],Get the latitude.
+com.localytics.android.Region,setLatitude,['Latitude'],
+com.localytics.android.Region,getOriginLocation,['Location'],Get the origin of this region as an android Location object.

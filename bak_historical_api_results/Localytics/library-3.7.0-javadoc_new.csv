@@ -1,0 +1,3 @@
+com.localytics.android.Localytics,setLocation,['Location'],Set a user's location.
+com.localytics.android.Localytics,setInAppMessageDismissButtonLocation,['Location'],
+com.localytics.android.Localytics,getInAppMessageDismissButtonLocation,['Location'],

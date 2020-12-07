@@ -1,0 +1,21 @@
+Lcom/gameanalytics/sdk/GooglePlayServicesClient$GooglePlayServicesInfo;,getGpsAdid,['adid']
+Lcom/gameanalytics/sdk/GooglePlayServicesClient$GooglePlayServicesInterface;,getGpsAdid,['adid']
+Lcom/gameanalytics/sdk/device/GADevice;,getAndroidId,['AndroidID']
+Lcom/gameanalytics/sdk/device/GADevice;,getGoogleAdId,['adid']
+Lcom/gameanalytics/sdk/device/GADevice;,getImeiJson,['IMEI']
+Lcom/gameanalytics/sdk/device/GADevice;,setGoogleAdId,['adid']
+Lcom/gameanalytics/sdk/state/GAState;,getUserId,['UserID']
+Lcom/gameanalytics/sdk/state/GAState;,setUserId,['UserID']
+Lcom/gameanalytics/sdk/utilities/AndroidIdUtil;,getAndroidId,['AndroidID']
+Lcom/gameanalytics/sdk/utilities/GAUtilities;,getAndroidId,['AndroidID']
+Lcom/gameanalytics/sdk/utilities/GAUtilities;,getMacAddress,"['MAC', 'Address']"
+Lcom/gameanalytics/sdk/utilities/GAUtilities;,getPlayAdId,['adid']
+Lcom/gameanalytics/sdk/utilities/MacAddressUtil;,getMacAddress,"['MAC', 'Address']"
+Lcom/gameanalytics/sdk/utilities/MacAddressUtil;,getRawMacAddress,"['MAC', 'Address']"
+Lcom/gameanalytics/sdk/utilities/MacAddressUtil;,loadAddress,['Address']
+Lcom/gameanalytics/sdk/utilities/Reflection;,getImeiJson,['IMEI']
+Lcom/gameanalytics/sdk/utilities/Reflection;,getPlayAdId,['adid']
+Lcom/gameanalytics/sdk/validators/GAValidator;,validateBusinessEventWithCurrency,['Currency']
+Lcom/gameanalytics/sdk/validators/GAValidator;,validateCurrency,['Currency']
+Lcom/gameanalytics/sdk/validators/GAValidator;,validateGender,['Gender']
+Lcom/gameanalytics/sdk/validators/GAValidator;,validateUserId,['UserID']

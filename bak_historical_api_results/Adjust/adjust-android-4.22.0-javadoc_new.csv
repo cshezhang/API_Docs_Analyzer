@@ -1,0 +1,21 @@
+com.adjust.sdk.ActivityHandler,trackEvent,['GeneralLogEvent'],
+com.adjust.sdk.ActivityHandler,getAdid,['adid'],
+com.adjust.sdk.Adjust,trackEvent,['GeneralLogEvent'],
+com.adjust.sdk.Adjust,getGoogleAdId,['adid'],
+com.adjust.sdk.Adjust,getAmazonAdId,['adid'],Called to get value of Amazon Advertising Identifier.
+com.adjust.sdk.Adjust,getAdid,['adid'],Called to get value of unique Adjust device identifier.
+com.adjust.sdk.AdjustConfig,setExternalDeviceId,"['Device', 'ID']",
+com.adjust.sdk.AdjustInstance,trackEvent,['GeneralLogEvent'],
+com.adjust.sdk.AdjustInstance,getAdid,['adid'],Called to get value of unique Adjust device identifier.
+com.adjust.sdk.AndroidIdUtil,getAndroidId,['AndroidID'],   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+com.adjust.sdk.GooglePlayServicesClient.GooglePlayServicesInfo,getGpsAdid,['adid'],
+com.adjust.sdk.IActivityHandler,trackEvent,['GeneralLogEvent'],
+com.adjust.sdk.IActivityHandler,getAdid,['adid'],
+com.adjust.sdk.MacAddressUtil,getMacAddress,"['MAC', 'Address']",   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+com.adjust.sdk.OnDeviceIdsRead,onGoogleAdIdRead,['adid'],   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+com.adjust.sdk.Reflection,getPlayAdId,['adid'],
+com.adjust.sdk.Util,getPlayAdId,['adid'],
+com.adjust.sdk.Util,getGoogleAdId,['adid'],
+com.adjust.sdk.Util,getMacAddress,"['MAC', 'Address']",
+com.adjust.sdk.Util,getAndroidId,['AndroidID'],
+com.adjust.sdk.Util,getFireAdvertisingId,"['Advertising', 'ID']",

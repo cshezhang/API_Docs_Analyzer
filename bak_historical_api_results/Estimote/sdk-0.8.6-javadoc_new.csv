@@ -1,0 +1,7 @@
+com.estimote.sdk.Beacon,getMacAddress,"['MAC', 'Address']",
+com.estimote.sdk.connection.BeaconConnection,getMacAddress,"['MAC', 'Address']",
+com.estimote.sdk.cloud.model.BeaconInfo.Builder,setMacAddress,"['MAC', 'Address']",
+com.estimote.sdk.cloud.internal.InternalEstimoteApi,remindPassword,['Password'],
+com.estimote.sdk.cloud.internal.InternalEstimoteCloud,remindPassword,['Password'],
+com.estimote.sdk.repackaged.okhttp_v2_2_0.com.squareup.okhttp.internal.Network,resolveInetAddresses,['Address'],
+com.estimote.sdk.repackaged.okhttp_v2_2_0.com.squareup.okhttp.Route,getAddress,['Address'],

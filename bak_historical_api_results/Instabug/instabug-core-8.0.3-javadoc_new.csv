@@ -1,0 +1,15 @@
+com.instabug.library.Instabug.Builder,setCommentFieldRequired,['Comment'],
+"The core Instabug SDK class.
+ Logging
+The Instabug SDK can provide logs that may be helpful if you want to test out the
+ integration or trace the SDK process. To turn it on, just enable debugging by setting
+ Instabug.DEBUG = true;
+
+ For more info, please refer to.Logging",setUsername,['Username'],
+"The core Instabug SDK class.
+ Logging
+The Instabug SDK can provide logs that may be helpful if you want to test out the
+ integration or trace the SDK process. To turn it on, just enable debugging by setting
+ Instabug.DEBUG = true;
+
+ For more info, please refer to.Logging",setCommentFieldRequired,['Comment'],

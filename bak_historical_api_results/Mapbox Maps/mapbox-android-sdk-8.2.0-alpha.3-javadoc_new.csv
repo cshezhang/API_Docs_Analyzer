@@ -1,0 +1,18 @@
+com.mapbox.mapboxsdk.maps.AttributionDialogManager,onClick,['Click'],
+com.mapbox.mapboxsdk.maps.AttributionDialogManager,onClick,['Click'],
+com.mapbox.mapboxsdk.geometry.LatLng,setLatitude,['Latitude'],"Set the latitude, in degrees.    This value is in the range of [-90, 90], see GeometryConstants.MIN_LATITUDE and  GeometryConstants.MAX_LATITUDE "
+com.mapbox.mapboxsdk.geometry.LatLng,getLatitude,['Latitude'],"Get the latitude, in degrees.    This value is in the range of [-90, 90], see GeometryConstants.MIN_LATITUDE and  GeometryConstants.MAX_LATITUDE "
+com.mapbox.mapboxsdk.geometry.LatLngBounds,getLatitudeSpan,['Latitude'],"Get the absolute distance, in degrees, between the north and  south boundaries of this LatLngBounds"
+com.mapbox.mapboxsdk.geometry.LatLngSpan,getLatitudeSpan,['Latitude'],Returns the latitude span.
+com.mapbox.mapboxsdk.geometry.LatLngSpan,setLatitudeSpan,['Latitude'],Sets the latitude span.
+com.mapbox.mapboxsdk.location.LocationComponent,getLocationComponentOptions,['Location'],
+com.mapbox.mapboxsdk.location.LocationComponent,setLocationEngine,['Location'],
+com.mapbox.mapboxsdk.location.LocationComponent,setLocationEngineRequest,['Location'],
+com.mapbox.mapboxsdk.location.LocationComponent,getLocationEngineRequest,['Location'],
+com.mapbox.mapboxsdk.location.LocationComponent,getLocationEngine,['Location'],
+com.mapbox.mapboxsdk.location.LocationComponent,getLastKnownLocation,['Location'],
+com.mapbox.mapboxsdk.maps.MapboxMap,getLocationComponent,['Location'],
+com.mapbox.mapboxsdk.maps.MapboxMap.OnPolygonClickListener,onPolygonClick,['Click'],
+com.mapbox.mapboxsdk.maps.MapView.OnCameraDidChangeListener,onCameraDidChange,['adid'],Called when the camera did change.
+com.mapbox.mapboxsdk.maps.Projection,getMetersPerPixelAtLatitude,['Latitude'],  Returns the distance spanned by one pixel at the specified latitude and current zoom level.    The distance between pixels decreases as the latitude approaches the poles.  This relationship parallels the relationship between longitudinal coordinates at different latitudes.
+com.mapbox.mapboxsdk.maps.Transform,onCameraDidChange,['adid'],Description copied from interface: MapView.OnCameraDidChangeListener

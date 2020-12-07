@@ -1,0 +1,8 @@
+ly.count.sdk.android.Config,setCustomDeviceId,"['Device', 'ID']",
+ly.count.sdk.android.Config,setDeviceIdFallbackAllowed,"['Device', 'ID']",
+ly.count.sdk.android.Countly,resetDeviceId,"['Device', 'ID']","Resetting id without merging profiles on server, just set device id to new one:   End current session if any Begin new session with new id if previously ended a session "
+ly.count.sdk.android.Countly,changeDeviceId,"['Device', 'ID']",
+ly.count.sdk.android.Countly,setLocation,['Location'],
+ly.count.sdk.android.Countly,resetDeviceId,"['Device', 'ID']",
+ly.count.sdk.android.internal.ModuleAttribution,onDeviceId,"['Device', 'ID']",Getting Config.DeviceIdRealm#ADVERTISING_ID procedure.  Works in line with onContextAcquired(Ctx)} in some cases.
+ly.count.sdk.android.internal.ModuleBase,onDeviceId,"['Device', 'ID']",

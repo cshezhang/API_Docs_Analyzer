@@ -1,0 +1,9 @@
+Lcom/gameanalytics/sdk/imei/GAImei;,readImei,['IMEI']
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getDefaultDeviceId,"['Device', 'ID']"
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getDefaultImei,['IMEI']
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getDeviceIdByIndex,"['Device', 'ID']"
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getDeviceIds,"['Device', 'ID']"
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getImeiByIndex,['IMEI']
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,getImeis,['IMEI']
+Lcom/gameanalytics/sdk/imei/TelephonyIdsUtil;,injectImei,['IMEI']
+Lcom/gameanalytics/sdk/imei/Util;,getImeiJson,['IMEI']

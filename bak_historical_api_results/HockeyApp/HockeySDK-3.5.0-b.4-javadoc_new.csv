@@ -1,0 +1,5 @@
+net.hockeyapp.android.CrashManagerListener,getUserID,['UserID'],"Return a user ID or similar; note that this has privacy implications,  so you might want to return nil for release builds! The string will be  limited to 255 characters."
+net.hockeyapp.android.FeedbackActivity,onClick,['Click'],Called when the Send Feedback Button is tapped. Sends the feedback and disables   the button to avoid multiple taps.
+net.hockeyapp.android.LoginActivity,onClick,['Click'],
+net.hockeyapp.android.UpdateActivity,onClick,['Click'],Called when the download button is tapped. Starts the download task and  disables the button to avoid multiple taps.
+net.hockeyapp.android.UpdateFragment,onClick,['Click'],Called when the download button is tapped. Starts the download task and  disables the button to avoid multiple taps.

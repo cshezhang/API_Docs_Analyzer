@@ -13,8 +13,7 @@ from util.MethodChecker import filter_api, check_api_by_class
 
 class JavaLikeDocParser:
 
-    def __init__(self, sdk_name, target_folder=""):
-        self.sdk_name = sdk_name
+    def __init__(self, target_folder=""):
         self.apis = set()
         self.processing_class = ""
         self.sensitive_keywords = set()

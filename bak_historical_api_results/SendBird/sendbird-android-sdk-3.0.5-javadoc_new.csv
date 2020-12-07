@@ -1,0 +1,15 @@
+com.sendbird.android.GroupChannel,createChannelWithUserIds,['UserID'],
+com.sendbird.android.GroupChannel,createChannelWithUserIds,['UserID'],
+com.sendbird.android.GroupChannel,inviteWithUserId,['UserID'],
+com.sendbird.android.GroupChannel,inviteWithUserIds,['UserID'],
+com.sendbird.android.GroupChannel,getLastSeenAtByWithUserId,['UserID'],Gets the timestamp of which time the User with the given ID last saw this GroupChannel.
+com.sendbird.android.GroupChannelListQuery,setUserIdsFilter,['UserID'],Sets User IDs filter. GroupChannel list containing the passed User IDs will be returned.  This does not cooperate with setNicknamesContainsFilter(List).
+com.sendbird.android.OpenChannel,createChannelWithOperatorUserIds,['UserID'],
+com.sendbird.android.OpenChannel,updateChannelWithOperatorUserIds,['UserID'],
+com.sendbird.android.OpenChannel,banUserWithUserId,['UserID'],
+com.sendbird.android.OpenChannel,unbanUserWithUserId,['UserID'],
+com.sendbird.android.OpenChannel,muteUserWithUserId,['UserID'],
+com.sendbird.android.OpenChannel,unmuteUserWithUserId,['UserID'],
+com.sendbird.android.SendBird,blockUserWithUserId,['UserID'],
+com.sendbird.android.SendBird,unblockUserWithUserId,['UserID'],
+com.sendbird.android.User,getUserId,['UserID'],Returns User ID.

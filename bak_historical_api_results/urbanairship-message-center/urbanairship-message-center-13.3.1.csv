@@ -1,0 +1,7 @@
+Lcom/urbanairship/channel/ChannelRegistrationPayload$Builder;,setUserId,['UserID']
+Lcom/urbanairship/messagecenter/DefaultMultiChoiceModeListener;,onActionItemClicked,['Click']
+Lcom/urbanairship/messagecenter/MessageFragment$3;,onClick,['Click']
+Lcom/urbanairship/messagecenter/MessageItemView$1;,onClick,['Click']
+Lcom/urbanairship/messagecenter/MessageItemView$2;,onClick,['Click']
+Lcom/urbanairship/messagecenter/MessageListFragment$4$1;,onClick,['Click']
+Lcom/urbanairship/messagecenter/User;,getPassword,['Password']

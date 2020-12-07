@@ -1,0 +1,3 @@
+com.yandex.metrica.YandexMetrica,setLocation,['Location'],"Sets Location to be used as location for reports of AppMetrica. If location is set using this method, it will be used instead of auto collected location.  To switch back to auto collected location, pass null to setLocation(Location). NOTE: Permissions:  Manifest.permission.ACCESS_COARSE_LOCATION,  Manifest.permission.ACCESS_FINE_LOCATION  improve the quality of auto collected location."
+com.yandex.metrica.YandexMetricaConfig.Builder,setLocation,['Location'],
+com.yandex.metrica.YandexMetricaConfig,getLocation,['Location'],Returns location to be used as location for reports of AppMetrica

@@ -1,0 +1,11 @@
+com.parse.ParseAnalytics,trackEvent,['GeneralLogEvent'],Deprecated. Please use ParseAnalytics.trackEventInBackground(String) instead.
+com.parse.ParseAnalytics,trackEvent,['GeneralLogEvent'],"Deprecated. Please use ParseAnalytics.trackEventInBackground(String, java.util.Map) instead."
+com.parse.ParseGeoPoint,setLatitude,['Latitude'],"Set latitude. Valid range is (-90.0, 90.0). Extremes should not be used."
+com.parse.ParseGeoPoint,getLatitude,['Latitude'],Get latitude.
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseGeoPoint,getCurrentLocationInBackground,['Location'],
+com.parse.ParseUser,setUsername,['Username'],Sets the username. Usernames cannot be null or blank.
+com.parse.ParseUser,getUsername,['Username'],Retrieves the username.
+com.parse.ParseUser,setPassword,['Password'],Sets the password.

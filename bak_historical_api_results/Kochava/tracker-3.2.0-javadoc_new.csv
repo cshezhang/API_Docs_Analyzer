@@ -1,0 +1,5 @@
+com.kochava.base.Tracker.Event,setCurrency,['Currency'],
+com.kochava.base.Tracker.Event,setPrice,['Price'],
+com.kochava.base.Tracker.Event,setUserId,['UserID'],
+com.kochava.base.Tracker.Event,setUserName,['Username'],
+com.kochava.base.Tracker,getDeviceId,"['Device', 'ID']",Retrieve the generated unique Device ID.    This is available anytime the Tracker is configured.    Note: Different apps or users on the same device will have their own unique Device ID.  Also an app reinstall will generate a new Device ID.

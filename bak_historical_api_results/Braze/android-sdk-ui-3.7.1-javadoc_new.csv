@@ -1,0 +1,40 @@
+com.appboy.Appboy,logPushNotificationActionClicked,['Click'],Description copied from interface: IAppboy
+com.appboy.Appboy,logPushStoryPageClicked,['Click'],Description copied from interface: IAppboy
+com.appboy.Appboy,setGoogleAdvertisingId,"['Advertising', 'ID']",Description copied from interface: IAppboy
+com.appboy.Appboy,getDeviceId,"['Device', 'ID']","Get the device ID - a randomly generated, app specific ID that is stored on the device.  A  new ID will be generated if the user clears the data for the app or removes/re-installs the app.  The ID will persist across changeUser(String) calls."
+com.appboy.ui.contentcards.listeners.AppboyContentCardsActionListener,onContentCardClicked,['Click'],
+com.appboy.ui.feed.listeners.AppboyDefaultFeedClickActionListener,onFeedCardClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.AppboyDefaultHtmlInAppMessageActionListener,onCloseClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.AppboyDefaultHtmlInAppMessageActionListener,onNewsfeedClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.AppboyDefaultInAppMessageManagerListener,onInAppMessageClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.AppboyDefaultInAppMessageManagerListener,onInAppMessageButtonClicked,['Click'],
+com.appboy.models.AppboyGeofence,getLatitude,['Latitude'],
+com.appboy.ui.inappmessage.jsinterface.AppboyInAppMessageHtmlUserJavascriptInterface,setGender,['Gender'],
+com.appboy.ui.inappmessage.jsinterface.AppboyInAppMessageHtmlUserJavascriptInterface,setPhoneNumber,"['Phone', 'Number']",
+com.appboy.ui.inappmessage.jsinterface.AppboyInAppMessageHtmlUserJavascriptInterface,setLocationCustomUserAttribute,['Location'],   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+com.appboy.ui.inappmessage.listeners.AppboyInAppMessageViewLifecycleListener,onClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.AppboyInAppMessageViewLifecycleListener,onButtonClicked,['Click'],
+com.appboy.push.AppboyNotificationUtils,logBaiduNotificationClick,['Click'],Logs a notification click with Braze if the extras passed down  indicate that they are from Braze and contain a campaign Id.    A Braze session must be active to log a push notification.
+com.appboy.AppboyUser,setGender,['Gender'],
+com.appboy.AppboyUser,setPhoneNumber,"['Phone', 'Number']",Sets the phone number of the user. Used to collect information about the user.  Provided phone numbers must pass phone number validation. The validation methods used is available in  ValidationUtils.isValidPhoneNumber(String)
+com.appboy.AppboyUser,getUserId,['UserID'],Returns the currently tracked user id.
+com.appboy.AppboyUser,setLastKnownLocation,['Location'],"Sets the last known location for the user. Intended for use with com_appboy_enable_location_collection set to false  in the `appboy.xml` configuration file, so that the only locations being set are by the integrating app. Otherwise, calls to this  method will be contending with automatic location update events.     latitude and longitude are required; altitude and accuracy may be set to null"
+com.appboy.AppboyUser,setLocationCustomAttribute,['Location'],
+com.appboy.events.ContentCardsUpdatedEvent,getUserId,['UserID'],
+com.appboy.events.FeedUpdatedEvent,getUserId,['UserID'],
+com.appboy.IAppboy,logPushNotificationActionClicked,['Click'],Reports that the user clicked on a push notification action button.
+com.appboy.IAppboy,logPushStoryPageClicked,['Click'],Reports that the user clicked on a push story page.
+com.appboy.IAppboy,setGoogleAdvertisingId,"['Advertising', 'ID']",Sets the Google Advertising ID and associated ad-tracking enabled field for this device. Note that the SDK does not  automatically collect this data.
+com.appboy.ui.contentcards.listeners.IContentCardsActionListener,onContentCardClicked,['Click'],
+com.appboy.ui.feed.listeners.IFeedClickActionListener,onFeedCardClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener,onCloseClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener,onNewsfeedClicked,['Click'],
+com.appboy.models.IInAppMessageHtml,logButtonClick,['Click'],Logs a click on a button in your html in-app message.   Button clicks may only be logged once per in-app message.
+com.appboy.models.IInAppMessageImmersive,logButtonClick,['Click'],
+com.appboy.ui.inappmessage.listeners.IInAppMessageManagerListener,onInAppMessageClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.IInAppMessageManagerListener,onInAppMessageButtonClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.IInAppMessageViewLifecycleListener,onClicked,['Click'],
+com.appboy.ui.inappmessage.listeners.IInAppMessageViewLifecycleListener,onButtonClicked,['Click'],
+com.appboy.events.InAppMessageEvent,getUserId,['UserID'],
+com.appboy.models.InAppMessageHtmlBase,logButtonClick,['Click'],See IInAppMessageHtml.logButtonClick(String)
+com.appboy.models.InAppMessageImmersiveBase,logButtonClick,['Click'],

@@ -1,0 +1,96 @@
+com.tune.Tune,getAndroidId,['AndroidID'],Gets the ANDROID_ID of the device that was set with setAndroidId(String).
+com.tune.Tune,getCurrencyCode,['Currency'],Gets the ISO 4217 currency code.
+com.tune.Tune,getDeviceId,"['Device', 'ID']","Gets the Device ID, also known as IMEI/MEID, if any."
+com.tune.Tune,getFacebookUserId,['UserID'],Gets the Facebook user ID previously set.
+com.tune.Tune,getFireAdvertisingId,"['Advertising', 'ID']",Deprecated. As of SDK v5.1.0.   Use getPlatformAdvertisingId()
+com.tune.Tune,getGender,['Gender'],
+com.tune.Tune,getGoogleAdvertisingId,"['Advertising', 'ID']",Deprecated. As of SDK v5.1.0.   Use getPlatformAdvertisingId()
+com.tune.Tune,getGoogleUserId,['UserID'],Gets the Google user ID previously set.
+com.tune.Tune,getLatitude,['Latitude'],Gets the device latitude.  NOTE: Must be set by setLatitude(double). This value is not automatically retrieved.
+com.tune.Tune,getMacAddress,"['MAC', 'Address']",Gets the MAC address of device.
+com.tune.Tune,getPlatformAdvertisingId,"['Advertising', 'ID']",Gets the Platform Advertising ID.
+com.tune.Tune,getTwitterUserId,['UserID'],Gets the Twitter user ID previously set.
+com.tune.Tune,getUserId,['UserID'],Gets the custom user ID.
+com.tune.Tune,getUserName,['Username'],Gets the custom user name.
+com.tune.Tune,setAndroidId,['AndroidID'],Sets the ANDROID ID.
+com.tune.Tune,setAndroidIdMd5,['AndroidID'],Sets the ANDROID ID MD5 hash.
+com.tune.Tune,setAndroidIdSha1,['AndroidID'],Sets the ANDROID ID SHA-1 hash.
+com.tune.Tune,setAndroidIdSha256,['AndroidID'],Sets the ANDROID ID SHA-256 hash.
+com.tune.Tune,setCurrencyCode,['Currency'],Sets the ISO 4217 currency code.
+com.tune.Tune,setDeviceId,"['Device', 'ID']",Sets the device IMEI/MEID.
+com.tune.Tune,setFacebookUserId,['UserID'],Sets the user ID to associate with Facebook.
+com.tune.Tune,setFireAdvertisingId,"['Advertising', 'ID']",Sets the Amazon Fire Advertising ID.  Note that this is auto-collected at initialization if running on a Fire device
+com.tune.Tune,setGender,['Gender'],
+com.tune.Tune,setGoogleAdvertisingId,"['Advertising', 'ID']",Sets the Google Play Services Advertising ID.  Note that this is auto-collected at initialization if Google Play Services is available
+com.tune.Tune,setGoogleUserId,['UserID'],Sets the user ID to associate with Google.
+com.tune.Tune,setLocation,['Location'],Sets the device location.
+com.tune.Tune,setLocation,['Location'],
+com.tune.Tune,setLatitude,['Latitude'],Sets the device latitude.  Manually setting the latitude through this method disables geo-location auto-collection.
+com.tune.Tune,setMacAddress,"['MAC', 'Address']",Sets the device MAC address.
+com.tune.Tune,setPhoneNumber,"['Phone', 'Number']",Sets the device phone number.
+com.tune.Tune,setTwitterUserId,['UserID'],Sets the user ID to associate with Twitter.
+com.tune.Tune,setUserId,['UserID'],Sets the custom user ID.
+com.tune.Tune,setUserName,['Username'],Sets the custom user name.
+com.tune.Tune,setShouldAutoCollectDeviceLocation,['Location'],Whether to autocollect device location if location is enabled.
+com.tune.Tune,setCustomProfileGeolocation,['Location'],
+com.tune.Tune,getCustomProfileGeolocation,['Location'],
+com.tune.Tune,getIAMDeviceId,"['Device', 'ID']",Deprecated. IAM functionality. This method will be removed in Tune Android SDK v6.0.0
+com.tune.ma.analytics.model.TuneAnalyticsSubmitter,getGoogleAdvertisingId,"['Advertising', 'ID']",Deprecated. 
+com.tune.ma.analytics.model.TuneAnalyticsSubmitter,getDeviceId,"['Device', 'ID']",Deprecated. 
+com.tune.ma.inapp.model.banner.TuneBanner,getLocation,['Location'],
+com.tune.ma.inapp.model.banner.TuneBanner,setLocation,['Location'],
+com.tune.ma.configuration.TuneConfiguration,setShouldAutoCollectDeviceLocation,['Location'],Set whether to autocollect device location if location is enabled
+com.tune.TuneEvent,withCurrencyCode,['Currency'],
+com.tune.TuneEvent,getCurrencyCode,['Currency'],
+com.tune.TuneEventItem,withUnitPrice,['Price'],
+com.tune.ma.eventbus.event.TuneGetAdvertisingIdCompleted,getDeviceId,"['Device', 'ID']",
+com.tune.TuneLocation,getLatitude,['Latitude'],
+com.tune.TuneLocation,setLatitude,['Latitude'],
+com.tune.location.TuneLocationListener,getLastLocation,['Location'],Gets the last location  Asks for location updates if last location seen is not valid anymore
+com.tune.TuneParameters,getAndroidId,['AndroidID'],
+com.tune.TuneParameters,setAndroidId,['AndroidID'],
+com.tune.TuneParameters,getAndroidIdMd5,['AndroidID'],
+com.tune.TuneParameters,setAndroidIdMd5,['AndroidID'],
+com.tune.TuneParameters,getAndroidIdSha1,['AndroidID'],
+com.tune.TuneParameters,setAndroidIdSha1,['AndroidID'],
+com.tune.TuneParameters,getAndroidIdSha256,['AndroidID'],
+com.tune.TuneParameters,setAndroidIdSha256,['AndroidID'],
+com.tune.TuneParameters,getCurrencyCode,['Currency'],
+com.tune.TuneParameters,setCurrencyCode,['Currency'],
+com.tune.TuneParameters,getDeviceId,"['Device', 'ID']",
+com.tune.TuneParameters,setDeviceId,"['Device', 'ID']",
+com.tune.TuneParameters,getFacebookUserId,['UserID'],
+com.tune.TuneParameters,setFacebookUserId,['UserID'],
+com.tune.TuneParameters,getGender,['Gender'],
+com.tune.TuneParameters,setGender,['Gender'],
+com.tune.TuneParameters,getGoogleUserId,['UserID'],
+com.tune.TuneParameters,setGoogleUserId,['UserID'],
+com.tune.TuneParameters,getLatitude,['Latitude'],
+com.tune.TuneParameters,setLatitude,['Latitude'],
+com.tune.TuneParameters,getLocation,['Location'],
+com.tune.TuneParameters,setLocation,['Location'],
+com.tune.TuneParameters,getMacAddress,"['MAC', 'Address']",
+com.tune.TuneParameters,setMacAddress,"['MAC', 'Address']",
+com.tune.TuneParameters,getPhoneNumber,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumber,"['Phone', 'Number']",
+com.tune.TuneParameters,getPhoneNumberMd5,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumberMd5,"['Phone', 'Number']",
+com.tune.TuneParameters,getPhoneNumberSha1,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumberSha1,"['Phone', 'Number']",
+com.tune.TuneParameters,getPhoneNumberSha256,"['Phone', 'Number']",
+com.tune.TuneParameters,setPhoneNumberSha256,"['Phone', 'Number']",
+com.tune.TuneParameters,getPlatformAdvertisingId,"['Advertising', 'ID']",
+com.tune.TuneParameters,setPlatformAdvertisingId,"['Advertising', 'ID']",
+com.tune.TuneParameters,getTwitterUserId,['UserID'],
+com.tune.TuneParameters,setTwitterUserId,['UserID'],
+com.tune.TuneParameters,getUserId,['UserID'],
+com.tune.TuneParameters,setUserId,['UserID'],
+com.tune.TuneParameters,getUserName,['Username'],
+com.tune.TuneParameters,setUserName,['Username'],
+com.tune.TuneParameters,getUserNameMd5,['Username'],
+com.tune.TuneParameters,setUserNameMd5,['Username'],
+com.tune.TuneParameters,getUserNameSha1,['Username'],
+com.tune.TuneParameters,setUserNameSha1,['Username'],
+com.tune.TuneParameters,getUserNameSha256,['Username'],
+com.tune.TuneParameters,setUserNameSha256,['Username'],
+com.tune.ma.profile.TuneUserProfile,getDeviceId,"['Device', 'ID']",Deprecated. 

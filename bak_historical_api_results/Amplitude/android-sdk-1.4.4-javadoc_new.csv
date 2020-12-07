@@ -1,0 +1,20 @@
+com.amplitude.api.Amplitude,logEvent,['GeneralLogEvent'],
+com.amplitude.api.Amplitude,logEvent,['GeneralLogEvent'],
+com.amplitude.api.Amplitude,setUserProperties,['GeneralUserProperty'],
+com.amplitude.api.Amplitude,setUserProperties,['GeneralUserProperty'],
+com.amplitude.api.Amplitude,setUserId,['UserID'],
+com.amplitude.api.Amplitude,getDeviceId,"['Device', 'ID']",      Overview Package Class Tree Deprecated Index Help  
+com.amplitude.api.Amplitude.Lib,logEvent,['GeneralLogEvent'],
+com.amplitude.api.Amplitude.Lib,logEvent,['GeneralLogEvent'],
+com.amplitude.api.Amplitude.Lib,setUserProperties,['GeneralUserProperty'],
+com.amplitude.api.Amplitude.Lib,setUserProperties,['GeneralUserProperty'],
+com.amplitude.api.Amplitude.Lib,setUserId,['UserID'],
+com.amplitude.api.Amplitude.Lib,getDeviceId,"['Device', 'ID']",
+com.amplitude.unity.plugins.AmplitudePlugin,logEvent,['GeneralLogEvent'],
+com.amplitude.unity.plugins.AmplitudePlugin,logEvent,['GeneralLogEvent'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserId,['UserID'],
+com.amplitude.unity.plugins.AmplitudePlugin,setUserProperties,['GeneralUserProperty'],
+com.amplitude.unity.plugins.AmplitudePlugin,getDeviceId,"['Device', 'ID']",      Overview Package Class Tree Deprecated Index Help  
+com.amplitude.api.DeviceInfo,getAdvertisingId,"['Advertising', 'ID']",
+com.amplitude.api.DeviceInfo,getMostRecentLocation,['Location'],
+com.amplitude.api.DeviceInfo,setLocationListening,['Location'],      Overview Package Class Tree Deprecated Index Help  

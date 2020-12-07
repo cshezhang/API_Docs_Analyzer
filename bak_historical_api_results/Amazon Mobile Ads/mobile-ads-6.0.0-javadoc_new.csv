@@ -1,0 +1,3 @@
+com.amazon.device.ads.AdTargetingOptions,setFloorPrice,['Price'],
+com.amazon.device.ads.AdTargetingOptions,getFloorPrice,['Price'],Gets the floor price in micro-dollars
+com.amazon.device.ads.AmazonFireServicesAdapter,getAdvertisingIdentifierInfo,"['Advertising', 'ID']",   Skip navigation links     Package Class Tree Deprecated Index Help  

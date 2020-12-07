@@ -1,0 +1,10 @@
+Lcom/gameanalytics/sdk/CppWrapper;,setGender,['Gender']
+Lcom/gameanalytics/sdk/CppWrapper;,setGooglePlayId,"['Google', 'ID']"
+Lcom/gameanalytics/sdk/GAPlatform;,androidID,['AndroidID']
+Lcom/gameanalytics/sdk/GAPlatform;,setGoogleAID,"['Google', 'ID']"
+Lcom/gameanalytics/sdk/GameAnalytics;,setGender,['Gender']
+Lcom/gameanalytics/sdk/GameAnalyticsSDKJNI;,CppWrapper_configureAndroidId,['AndroidID']
+Lcom/gameanalytics/sdk/GameAnalyticsSDKJNI;,CppWrapper_configureGoogleAdId,['adid']
+Lcom/gameanalytics/sdk/GameAnalyticsSDKJNI;,CppWrapper_configureUserId,['UserID']
+Lcom/gameanalytics/sdk/GameAnalyticsSDKJNI;,CppWrapper_setGender,['Gender']
+Lcom/gameanalytics/sdk/GameAnalyticsSDKJNI;,CppWrapper_setGooglePlayId,"['Google', 'ID']"

@@ -1,0 +1,7 @@
+com.raygun.raygun4android.messages.crashreporting.NetworkInfo,getiPAddress,"['IP', 'Address']",
+com.raygun.raygun4android.messages.crashreporting.NetworkInfo,setiPAddress,"['IP', 'Address']",   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+com.raygun.raygun4android.messages.crashreporting.RaygunBreadcrumbMessage.Builder,lineNumber,"['Line', 'Number']",
+com.raygun.raygun4android.messages.crashreporting.RaygunBreadcrumbMessage,getLineNumber,"['Line', 'Number']",   Skip navigation links     Overview Package Class Tree Deprecated Index Help  
+com.raygun.raygun4android.messages.crashreporting.RaygunErrorStackTraceLineMessage,getLineNumber,"['Line', 'Number']",
+com.raygun.raygun4android.messages.crashreporting.RaygunErrorStackTraceLineMessage,setLineNumber,"['Line', 'Number']",
+com.raygun.raygun4android.network.RaygunNetworkUtils,getDeviceUuid,"['Device', 'ID']",   Skip navigation links     Overview Package Class Tree Deprecated Index Help  

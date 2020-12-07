@@ -1,0 +1,7 @@
+ly.count.android.sdk.AdvertisingIdAdapter,setAdvertisingId,"['Advertising', 'ID']",
+ly.count.android.sdk.ConnectionQueue,setDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.ConnectionQueue,changeDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.Countly,changeDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.Countly,changeDeviceId,"['Device', 'ID']",Changes current device id to the one specified in parameter. Merges user profile with new id  (if any) with old profile.
+ly.count.android.sdk.Countly,setLocation,['Location'],
+ly.count.android.sdk.Countly,getOptionalParameterLocation,['Location'],

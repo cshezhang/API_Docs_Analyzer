@@ -1,0 +1,5 @@
+com.pubnub.api.endpoints.push.AddChannelsToPush,deviceId,"['Device', 'ID']",
+com.pubnub.api.endpoints.push.ListPushProvisions,deviceId,"['Device', 'ID']",
+com.pubnub.api.endpoints.push.RemoveAllPushChannelsForDevice,deviceId,"['Device', 'ID']",
+com.pubnub.api.endpoints.push.RemoveChannelsFromPush,deviceId,"['Device', 'ID']",
+com.pubnub.api.managers.RetrofitManager,getTransactionInstance,['Transaction'],

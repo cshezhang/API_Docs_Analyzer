@@ -1,0 +1,8 @@
+io.smooch.core.Conversation.Delegate,onPaymentProcessed,['Payment'],
+io.smooch.core.Conversation,processPayment,['Payment'],
+io.smooch.ui.ConversationActivity,onPaymentProcessed,['Payment'],
+io.smooch.core.MessageAction,getCurrency,['Currency'],The type of currency
+io.smooch.core.MessageAction,setCurrency,['Currency'],Sets the type of currency
+io.smooch.core.Settings,getUserId,['UserID'],The User ID used to identify the user    The default value is empty string.
+io.smooch.core.Settings,setUserId,['UserID'],The User ID used to identify the user    The default value is empty string.
+io.smooch.core.User,getUserId,['UserID'],String representing the user's userId

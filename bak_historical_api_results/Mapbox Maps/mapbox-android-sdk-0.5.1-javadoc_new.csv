@@ -1,0 +1,10 @@
+uk.co.senab.bitmapcache.BitmapLruCache.Builder,setDiskCacheLocation,['Location'],
+com.mapbox.mapboxsdk.geometry.BoundingBox,getLatitudeSpan,['Latitude'],"Get the absolute distance, in degrees, between the north and  south boundaries of this bounding box"
+com.mapbox.mapboxsdk.geometry.CoordinateSpan,getLatitudeSpan,['Latitude'],
+com.mapbox.mapboxsdk.geometry.CoordinateSpan,setLatitudeSpan,['Latitude'],
+com.mapbox.mapboxsdk.overlay.GpsLocationProvider,setLocationUpdateMinTime,['Location'],"Set the minimum interval for location updates. See LocationManager.requestLocationUpdates(String, long, float, LocationListener). Note that  you  should call this before calling enableMyLocation()."
+com.mapbox.mapboxsdk.overlay.GpsLocationProvider,getLastKnownLocation,['Location'],
+com.mapbox.mapboxsdk.api.ILatLng,getLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLng,getLatitude,['Latitude'],Returns the latitude value of this point
+com.mapbox.mapboxsdk.views.MapView,getUserLocation,['Location'],
+com.mapbox.mapboxsdk.overlay.UserLocationOverlay,getMyLocation,['Location'],

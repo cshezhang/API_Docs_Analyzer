@@ -1,0 +1,7 @@
+com.yandex.mobile.ads.AdRequest.Builder,withGender,['Gender'],
+com.yandex.mobile.ads.AdRequest,getGender,['Gender'],Returns user gender entered inside the app  that was set into AdRequest.Builder.
+com.yandex.mobile.ads.AdRequest,getLocation,['Location'],Returns the user's mLocation for targeting process  that was set into AdRequest.Builder.
+com.yandex.mobile.ads.nativeads.NativeAdAssets,getPrice,['Price'],Returns price.  Available in app install ads.
+com.yandex.mobile.ads.nativeads.NativeAdViewBinder.Builder,setPriceView,['Price'],
+com.yandex.mobile.ads.nativeads.NativeAppInstallAdView,setPriceView,['Price'],Sets view for app price.
+com.yandex.mobile.ads.rewarded.RewardedAd,setUserId,['UserID'],Sets a user id.

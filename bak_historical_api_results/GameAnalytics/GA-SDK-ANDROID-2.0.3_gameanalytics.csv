@@ -1,0 +1,4 @@
+Lcom/gameanalytics/sdk/GAPlatform;,androidID,['AndroidID']
+Lcom/gameanalytics/sdk/GAPlatform;,setGoogleAID,"['Google', 'ID']"
+Lcom/gameanalytics/sdk/GameAnalytics;,setGender,['Gender']
+Lcom/gameanalytics/sdk/GameAnalyticsSDKJNI;,GameAnalytics_setGender,['Gender']

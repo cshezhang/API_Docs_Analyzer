@@ -1,10 +1,7 @@
 # Java_Doc_Analyzer is used to automatically extract sensitive APIs from java-style api docs.
 # Senstive API is based on the related keyword match.
 
-import io
-import sys
 import csv
-from bs4 import BeautifulSoup
 
 from util.log import logger
 from util.config import Config
@@ -16,31 +13,19 @@ class MarkdownDocParser:
 
     def __init__(self):
         self.processing_class = ""
+        self.apis = []
         self.sensitive_keywords = set()
         self.sensitive_results = set()
         self.api_cnt = 0
 
     def run(self):
         get_sensitive_keywords()
-        print(self.sensitive_keywords)
-        sum_items = 0
-        sum_tp = 0
-        sum_fp = 0
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
         api_folders = get_first_layer_files(Config.target_folder)
         for api_folder in api_folders:
             logger.info("Processing Folder:" + str(api_folder))
-            (items, tp, fp) = self.processAPI(api_folder)
-            sum_items = sum_items + items
-            sum_tp = sum_tp + tp
-            sum_fp = sum_fp + fp
-        # print("SUM_ITEMS=" + str(sum_items))
-        # print("SUM_TP=" + str(sum_tp))
-        # print("SUM_FP=" + str(sum_fp))
+            self.process_api(api_folder)
         print("-----Sensitive Results-----")
-        # for sensitive_result in sensitive_results:
-        #     print(sensitive_result)
-        print("APIs Count=" + str(self.api_cnt))
+        print("APIs Count=" + str(len(self.apis)))
         print("Sensitive APIs Count=" + str(len(self.sensitive_results)))
 
     def get_privacy(self, tag_list):
@@ -127,29 +112,26 @@ class MarkdownDocParser:
         return (num_sensitive_apis, tp, fp, api_cnt)
 
     def process_api(self, folder):
-        sum_sensitive_apis = 0
-        tp = 0
-        fp = 0
         files_list = get_all_files(folder)
-        sum = 0
-        for i in range(0, len(files_list)):
-            file = files_list[i]
-            # logger.info("Processing File=" + str(file))
-            self.processing_class = file.split("\\")[-1].split(" ")[0]
-            # logger.info("Processing Class=" + processing_class)
-            soup = BeautifulSoup(open(file, encoding='utf-8'), features='html.parser')
-            tag_list = soup.find_all()
-            # print("tag list len=" + str(len(tag_list)))
-            (num_sensitive_apis, c_tp, c_fp, ac) = self.get_privacy(tag_list)
-            sum_sensitive_apis = sum_sensitive_apis + num_sensitive_apis
-            tp = tp + c_tp
-            fp = fp + c_fp
-            sum = sum + ac
-        print("Sum_Sensitive_APIs=" + str(sum_sensitive_apis))
-        print("TP=" + str(tp))
-        print("FP=" + str(fp))
-        print("SUM=" + str(sum))
-        return (sum_sensitive_apis, tp, fp)
+        for file in files_list:
+            md_file = open(file, "r")
+            lines = md_file.readlines()
+            method_section = False
+            pkg_name = ""
+            class_name = ""
+            for line in lines:
+                if "# Class" in line:
+                    class_name = line.strip()[8:-2]
+                if "Package `" in line:
+                    pkg_name = line.strip()[len("Package `"):-1]
+                if "## Method Summary" in line:
+                    method_section = True
+                if method_section and ("---" in line or "###" in line):
+                    method_section = False
+                if method_section and line.startswith("["):
+                    api_name = line.strip().split("]")[0][1:]
+                    self.apis.append(api_name)
+            self.processing_class = pkg_name + "." + class_name
 
     def print_to_csv(self):
         with open("./api_results/facebook.csv", "w") as csv_file:

@@ -1,0 +1,11 @@
+com.ad4screen.sdk.A4S,trackEvent,['GeneralLogEvent'],Sends an event with its accompanying information to Ad4Screen servers.
+com.ad4screen.sdk.A4S,trackAddToCart,"['Add', 'To', 'Cart']",
+com.ad4screen.sdk.A4S,getAndroidId,['AndroidID'],Returns Android (Secure) Id trough a callback if any or empty string  otherwise. Note this function is asynchronous.
+com.ad4screen.sdk.analytics.Item,getCurrency,['Currency'],
+com.ad4screen.sdk.analytics.Item,setCurrency,['Currency'],
+com.ad4screen.sdk.analytics.Item,getPrice,['Price'],
+com.ad4screen.sdk.analytics.Item,setPrice,['Price'],
+com.ad4screen.sdk.analytics.Purchase,getCurrency,['Currency'],Get the currency of this Purchase
+com.ad4screen.sdk.analytics.Purchase,setCurrency,['Currency'],Set the currency of this purchase
+com.ad4screen.sdk.analytics.Purchase,getTotalPrice,['Price'],Return the total price of this purchase
+com.ad4screen.sdk.analytics.Purchase,setTotalPrice,['Price'],Set the total Price of this Purchase

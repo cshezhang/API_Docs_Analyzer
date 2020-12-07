@@ -1,0 +1,6 @@
+com.yandex.metrica.IReporter,setUserProfileID,['UserProfile'],
+com.yandex.metrica.IReporter,reportUserProfile,['UserProfile'],
+com.yandex.metrica.YandexMetrica,setLocation,['Location'],"Sets Location to be used as location for reports of AppMetrica. If location is set using this method, it will be used instead of auto collected location.  To switch back to auto collected location, pass null to setLocation(Location). NOTE: Permissions:  Manifest.permission.ACCESS_COARSE_LOCATION,  Manifest.permission.ACCESS_FINE_LOCATION  improve the quality of auto collected location."
+com.yandex.metrica.YandexMetrica,setLocationTracking,['Location'],Sets whether AppMetrica should include location information within its reports. NOTE: Default value is  true
+com.yandex.metrica.YandexMetrica,setUserProfileID,['UserProfile'],Sets the ID of the user profile.   NOTE: The string value can contain up to 200 characters.
+com.yandex.metrica.YandexMetrica,reportUserProfile,['UserProfile'],Sends information about the user profile.

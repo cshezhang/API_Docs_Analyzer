@@ -1,0 +1,10 @@
+com.mapbox.mapboxsdk.geometry.ILatLng,getLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLng,setLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLng,getLatitude,['Latitude'],
+com.mapbox.mapboxsdk.geometry.LatLngBounds,getLatitudeSpan,['Latitude'],"Get the absolute distance, in degrees, between the north and  south boundaries of this LatLngBounds"
+com.mapbox.mapboxsdk.geometry.LatLngSpan,getLatitudeSpan,['Latitude'],Returns the latitude span.
+com.mapbox.mapboxsdk.geometry.LatLngSpan,setLatitudeSpan,['Latitude'],Sets the latitude span.
+com.mapbox.mapboxsdk.location.LocationServices,getLastLocation,['Location'],Last known location
+com.mapbox.mapboxsdk.maps.MapboxMap,getMyLocation,['Location'],"Returns the currently displayed user location, or null if there is no location data available."
+com.mapbox.mapboxsdk.maps.Projection,getMetersPerPixelAtLatitude,['Latitude'],  Returns the distance spanned by one pixel at the specified latitude and current zoom level.    The distance between pixels decreases as the latitude approaches the poles.  This relationship parallels the relationship between longitudinal coordinates at different latitudes.
+com.mapbox.mapboxsdk.maps.widgets.UserLocationView,getLocation,['Location'],

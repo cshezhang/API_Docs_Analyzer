@@ -1,0 +1,6 @@
+com.bugsnag.android.Bugsnag,setUserId,['UserID'],"Set a unique identifier for the user currently using your application.  By default, this will be an automatically generated unique id  You can search for this information in your Bugsnag dashboard."
+com.bugsnag.android.Bugsnag,setUserName,['Username'],Set the name of the current user.  You can search for this information in your Bugsnag dashboard.
+com.bugsnag.android.Client,setUserId,['UserID'],"Set a unique identifier for the user currently using your application.  By default, this will be an automatically generated unique id  You can search for this information in your Bugsnag dashboard."
+com.bugsnag.android.Client,setUserName,['Username'],Set the name of the current user.  You can search for this information in your Bugsnag dashboard.
+com.bugsnag.android.Error,setUserId,['UserID'],Set user id associated with this Error
+com.bugsnag.android.Error,setUserName,['Username'],Set user name associated with this Error

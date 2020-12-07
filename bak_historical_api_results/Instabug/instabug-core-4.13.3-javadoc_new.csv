@@ -1,0 +1,11 @@
+com.instabug.library.Instabug.Builder,setCommentFieldRequired,['Comment'],
+"The core Instabug SDK class.
+ Logging
+The Instabug SDK can provide logs that may be helpful if you want to test out the
+ integration or trace the SDK process. To turn it on, just enable debugging by setting
+ Instabug.DEBUG = true;.Logging",setUsername,['Username'],Deprecated. 
+"The core Instabug SDK class.
+ Logging
+The Instabug SDK can provide logs that may be helpful if you want to test out the
+ integration or trace the SDK process. To turn it on, just enable debugging by setting
+ Instabug.DEBUG = true;.Logging",setCommentFieldRequired,['Comment'],Sets whether comment field is required or not when submitting bug/feedback

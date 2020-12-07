@@ -1,0 +1,3 @@
+ly.count.android.sdk.AdvertisingIdAdapter,setAdvertisingId,"['Advertising', 'ID']",
+ly.count.android.sdk.ConnectionQueue,setDeviceId,"['Device', 'ID']",
+ly.count.android.sdk.Countly,setLocation,['Location'],
