@@ -1,4 +1,5 @@
 /.idea/
+/bak_historical_api_results/
 /api_results/
 /__pycache__/
 /parsers/__pycache__/
